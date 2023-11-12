@@ -1,5 +1,7 @@
+import 'package:appthon/homepage.dart';
 import 'package:flutter/material.dart';
-import 'signuplogin.dart';
+import 'auth.dart';
+import 'homepage.dart';
 class hscrn extends StatefulWidget {
   const hscrn({super.key});
 
@@ -26,10 +28,12 @@ class _hscrnState extends State<hscrn> {
               child: Text("What's",style: TextStyle(fontSize: 70,color: Colors.black),)),
          Align(
            widthFactor:10,
-           heightFactor: 4,
-           child: TextButton(onPressed: (){
-             Navigator.push(context, MaterialPageRoute(builder: (context)=>log()));
-           }, child: Text("             Next?",style: TextStyle(fontSize: 55,color: Colors.black),)),
+           heightFactor: 4.8,
+           child: GestureDetector(
+             onTap: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>mainsrc()));
+             },child: Text("                Next?",style: TextStyle(fontSize: 60,color: Colors.black,),),
+           )
          )
       ],
       ),

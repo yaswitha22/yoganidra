@@ -1,4 +1,4 @@
-import 'package:appthon/homescreen.dart';
+import 'package:appthon/slide.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 class Preuni extends StatefulWidget {
@@ -27,7 +27,7 @@ class _PreuniState extends State<Preuni> {
             children: [
               SizedBox(height: 50,),
               Text("Academic Progress",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),
-              SizedBox(height: 10,),
+              SizedBox(height: 40,),
               Row(
                 mainAxisAlignment:  MainAxisAlignment.spaceBetween,
                 children: [
