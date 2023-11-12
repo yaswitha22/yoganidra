@@ -1,3 +1,4 @@
+import 'package:appthon/home.dart';
 import 'package:flutter/material.dart';
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -25,10 +26,38 @@ class _profileState extends State<profile> {
       body: Center(
         child: Column(
           children: [
+            SizedBox(height: 40,),
             CircleAvatar(
-              radius: 80,
-              child: Center(child: Image(image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.OlnxO753VRgHKDLLDzCKoAHaHw&pid=Api&P=0&h=220"),))
-            )
+              backgroundColor: Colors.deepOrange,
+              radius: 50,
+              child: Text("Y",style: TextStyle(fontSize: 50),),
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Yaswitha Katragadda",style: TextStyle(fontSize: 25),),
+                SizedBox(width: 10,),
+                Icon(Icons.edit)
+              ],
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(onPressed: (){
+                  Navigator.pop(context);
+                }, child:Text("Cancel")),
+                SizedBox(width: 20,),
+                ElevatedButton(onPressed: (){
+                  Navigator.pop(context);
+                }, child: Text("Save"))
+              ],
+            ),
+            SizedBox(height: 20,),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
+            }, child:Text("Go To HomePage"))
           ],
         ),
       ),
