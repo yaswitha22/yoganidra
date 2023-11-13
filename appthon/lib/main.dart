@@ -1,6 +1,6 @@
 import 'package:appthon/editprofile.dart';
+import 'package:appthon/engineering.dart';
 import 'package:appthon/homepage.dart';
-import 'package:appthon/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: profile(),
+      home: engineering(),
     );
   }
 }

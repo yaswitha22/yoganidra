@@ -1,6 +1,16 @@
 import 'package:appthon/editprofile.dart';
 import 'package:appthon/profile.dart';
+import 'package:appthon/sciences.dart';
+import 'package:appthon/social.dart';
 import 'package:flutter/material.dart';
+import 'arts.dart';
+import 'business.dart';
+import 'commerce.dart';
+import 'education.dart';
+import 'engineering.dart';
+import 'handt.dart';
+import 'legal.dart';
+import 'medical.dart';
 class home extends StatefulWidget {
   const home({super.key});
 
@@ -24,6 +34,7 @@ class _homeState extends State<home> {
   ];
   @override
   Widget build(BuildContext context) {
+    final screens=[engineering(),commerce(),arts(),sciences(),medical(),business(),legalstudies(),hospandtour(),socialsci(),education()];
     return Scaffold(
         appBar: AppBar(
         title: Center(child: Text("STREAMS",
@@ -45,7 +56,11 @@ class _homeState extends State<home> {
         return Card(
         color: categories[index].color,
         child: InkWell(
-          onTap:(){},
+          onTap:(){
+            setState(() {
+            });
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>screens[index]));
+          },
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),

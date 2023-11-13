@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
   provider: ^6.1.1
   intl: ^0.18.1
+  flutter_bullet_list: ^0.0.4
 
 
 
