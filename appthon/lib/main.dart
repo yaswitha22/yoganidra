@@ -9,7 +9,8 @@ import 'name.dart';
 void main() async{
  /* WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();*/
-  runApp(ChangeNotifierProvider(
+  runApp(
+      ChangeNotifierProvider(
     create: (context)=>UserProfile(),
       child: MyApp()));
 }

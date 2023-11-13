@@ -10,6 +10,7 @@ class edit extends StatefulWidget {
 
 class _editState extends State<edit> {
   String? gender;
+  int selectedValue = 1;
   final dateController = TextEditingController();
   @override
   void dispose() {
@@ -66,12 +67,20 @@ class _editState extends State<edit> {
                   Text("Age:",style: TextStyle(fontSize: 20),),
                   SizedBox(width: 20,),
                   SizedBox(
-                    width: 200,
-                    child: TextField(
-                     // textAlign: TextAlign.center,
-                      onChanged: (value) => userProfile.updateUser(User(name: userProfile.user.name, age: value, gender: userProfile.user.gender, dob: userProfile.user.dob)),
-                      decoration: InputDecoration(labelText: 'Age'),
-                      keyboardType: TextInputType.number,
+                    width: 100,
+                    child: DropdownButton<int>(
+                      value: selectedValue,
+                      items: List.generate(100, (index) {
+                        return DropdownMenuItem<int>(
+                          value: index + 1,
+                          child: Text('${index + 1}'),
+                        );
+                      }),
+                      onChanged: (value) {
+                        setState(() {
+                          selectedValue = value!;
+                        });
+                      },
                     ),
                   ),
                 ],

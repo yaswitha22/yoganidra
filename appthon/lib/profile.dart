@@ -14,80 +14,75 @@ class _profileState extends State<profile> {
   Widget build(BuildContext context) {
     var userProfile = Provider.of<UserProfile>(context);
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Name: ${userProfile.user.name}'),
-            Text('Age: ${userProfile.user.age}'),
-            Text('Gender: ${userProfile.user.gender}'),
-            Text('Date of Birth: ${userProfile.user.dob}'),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => edit()),
-                );
-              },
-              child: Text('Edit Profile'),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 200.0,
+            floating: false,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [Colors.blueGrey, Colors.black],
+                  ),
+                ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      SizedBox(height: 20,),
+                      CircleAvatar(
+                        radius: 60,
+                        backgroundImage: NetworkImage(
+                            "https://tse4.mm.bing.net/th?id=OIP.Ii15573m21uyos5SZQTdrAHaHa&pid=Api&P=0&h=220"),
+                      ),
+                      SizedBox(height: 20,),
+                      Text('${userProfile.user.name}', style: TextStyle(fontSize: 35,color: Colors.white),),
+                    ],
+                  ),
+                ),
+              ),
             ),
-          ],
-        ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 20,),
+                  Text('Age: ${userProfile.user.age}',
+                      style: TextStyle(fontSize: 30,color: Colors.black)),
+                  SizedBox(height: 20,),
+                  Text('Gender: ${userProfile.user.gender}',
+                      style: TextStyle(fontSize: 30,color: Colors.black )),
+                  SizedBox(height: 20,),
+                  Text('Date of Birth: ${userProfile.user.dob}',
+                      style: TextStyle(fontSize: 30,color: Colors.black)),
+                  SizedBox(height: 20),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => edit()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey
+                      ),
+                      child: Text('Edit Profile', style: TextStyle(fontSize: 20)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
-/*return Scaffold(
-      appBar: AppBar(
-        title: Text("Profile",style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
-              )
-          ),
-        ),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 40,),
-            CircleAvatar(
-              backgroundColor: Colors.deepOrange,
-              radius: 50,
-              child: Text("Y",style: TextStyle(fontSize: 50),),
-            ),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Yaswitha Katragadda",style: TextStyle(fontSize: 25),),
-                SizedBox(width: 10,),
-                Icon(Icons.edit)
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(onPressed: (){
-                  Navigator.pop(context);
-                }, child:Text("Cancel")),
-                SizedBox(width: 20,),
-                ElevatedButton(onPressed: (){
-                  Navigator.pop(context);
-                }, child: Text("Save"))
-              ],
-            ),
-            SizedBox(height: 20,),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
-            }, child:Text("Go To HomePage"))
-          ],
-        ),
-      ),
-    );*/
 }
