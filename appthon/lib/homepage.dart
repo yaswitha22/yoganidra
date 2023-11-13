@@ -23,7 +23,14 @@ class _mainsrcState extends State<mainsrc> {
   }
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[index],
+      body: PageView(
+        children:screens,
+        onPageChanged: (idx){
+          setState(() {
+            index=idx;
+          });
+        },
+      ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(topLeft: Radius.circular(40.0),
             topRight: Radius.circular(40.0),

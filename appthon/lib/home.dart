@@ -8,6 +8,7 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  int index=0;
   final List<Category> categories = [
     Category("Engineering", Colors.blue,"https://cdn.pixabay.com/photo/2017/03/23/09/34/artificial-intelligence-2167835_1280.jpg"),
     Category("Commerce", Colors.green,"https://www.advictoriamsolutions.com/wp-content/uploads/2020/03/B2B-Commerce-Salesforce.jpg"),
@@ -43,34 +44,18 @@ class _homeState extends State<home> {
         return Card(
         color: categories[index].color,
         child: InkWell(
-        onTap: () {
-        // Add your onTap logic here
-        print('Category tapped: ${categories[index].name}');
-        },
-        child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Image(image: NetworkImage(categories[index].imgpath)),
-              SizedBox(height: 15,),
-              Text(
-              categories[index].name,
-              style: TextStyle(
-              color: Colors.black,
-              fontSize: 18.7,
-              fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-              ),
-            ],
-          ),
-        ),
-        ),
-        ),
-        );
-        },
-        ),
+          onTap:(){},
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Image(image: NetworkImage(categories[index].imgpath)),
+                  SizedBox(height: 15,),
+                  Text(
+                    categories[index].name, style: TextStyle(color: Colors.black, fontSize: 18.7, fontWeight: FontWeight.bold,), textAlign: TextAlign.center,),
+            ],),),),),);
+        },),
       drawer: Drawer(
         child: ListView(
           padding:EdgeInsets.all(0),

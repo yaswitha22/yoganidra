@@ -1,5 +1,7 @@
+import 'package:appthon/editprofile.dart';
 import 'package:appthon/home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 class profile extends StatefulWidget {
   const profile({super.key});
 
@@ -10,7 +12,33 @@ class profile extends StatefulWidget {
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
+    var userProfile = Provider.of<UserProfile>(context);
     return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Name: ${userProfile.user.name}'),
+            Text('Age: ${userProfile.user.age}'),
+            Text('Gender: ${userProfile.user.gender}'),
+            Text('Date of Birth: ${userProfile.user.dob}'),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => edit()),
+                );
+              },
+              child: Text('Edit Profile'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+/*return Scaffold(
       appBar: AppBar(
         title: Text("Profile",style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
         flexibleSpace: Container(
@@ -61,6 +89,5 @@ class _profileState extends State<profile> {
           ],
         ),
       ),
-    );
-  }
+    );*/
 }
