@@ -13,6 +13,11 @@ class _editState extends State<edit> {
   int selectedValue = 1;
   final dateController = TextEditingController();
   @override
+  void checkRadio(String value ) {
+    setState(() {
+      gender = value;
+    });
+  }
   void dispose() {
     // Clean up the controller when the widget is removed
     dateController.dispose();
@@ -94,6 +99,7 @@ class _editState extends State<edit> {
                         value: "male",
                         groupValue: gender,
                         onChanged: (value){
+                          checkRadio(value as String);
                           setState(() {
                             gender = value.toString();
                           });
@@ -104,6 +110,7 @@ class _editState extends State<edit> {
                         value: "female",
                         groupValue: gender,
                         onChanged: (value){
+                          checkRadio(value as String);
                           setState(() {
                             gender = value.toString();
                           });
@@ -115,6 +122,7 @@ class _editState extends State<edit> {
                         value: "other",
                         groupValue: gender,
                         onChanged: (value){
+                          checkRadio(value as String);
                           setState(() {
                             gender = value.toString();
                           });

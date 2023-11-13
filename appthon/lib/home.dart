@@ -1,3 +1,4 @@
+import 'package:appthon/editprofile.dart';
 import 'package:appthon/profile.dart';
 import 'package:flutter/material.dart';
 class home extends StatefulWidget {
@@ -62,7 +63,11 @@ class _homeState extends State<home> {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.blueGrey,Colors.black]
+                )
               ), //BoxDecoration
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Colors.white),
@@ -97,24 +102,10 @@ class _homeState extends State<home> {
               },
             ),
             ListTile(
-              leading:Icon(Icons.workspace_premium),
-              title:Text(' Go Premium '),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading:Icon(Icons.video_label),
-              title:Text(' Saved Videos '),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
               leading: Icon(Icons.edit),
               title:Text(' Edit Profile '),
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>edit()));
               },
             ),
             ListTile(

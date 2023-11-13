@@ -38,7 +38,7 @@ class _profileState extends State<profile> {
                         backgroundImage: NetworkImage(
                             "https://tse4.mm.bing.net/th?id=OIP.Ii15573m21uyos5SZQTdrAHaHa&pid=Api&P=0&h=220"),
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(height: 10,),
                       Text('${userProfile.user.name}', style: TextStyle(fontSize: 35,color: Colors.white),),
                     ],
                   ),
@@ -77,6 +77,15 @@ class _profileState extends State<profile> {
                       child: Text('Edit Profile', style: TextStyle(fontSize: 20)),
                     ),
                   ),
+                  SizedBox(height: 20,),
+                  Center(
+                    child: ElevatedButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
+                    }, style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey
+                    ),
+                        child:Text("Home",style: TextStyle(fontSize: 20),)),
+                  )
                 ],
               ),
             ),
