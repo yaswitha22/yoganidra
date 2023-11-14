@@ -33,6 +33,8 @@ dependencies:
   provider: ^6.1.1
   intl: ^0.18.1
   flutter_bullet_list: ^0.0.4
+  firebase_core:
+  firebase_auth:
 
 
 
@@ -45,8 +47,6 @@ dev_dependencies:
     sdk: flutter
   loading_animation_widget: ^1.2.0+4
   percent_indicator: ^4.2.3
-  firebase_auth: ^4.13.0
-  firebase_core: ^2.22.0
 
 
   # The "flutter_lints" package below contains a set of recommended lints to

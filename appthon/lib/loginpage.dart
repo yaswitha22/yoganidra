@@ -19,7 +19,7 @@ class _loginpageState extends State<loginpage> {
       auth.signInWithEmailAndPassword(email: email, password: pass).then((value){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>mainsrc()));
       }).onError((error, stackTrace){
-        print("Wrong credentials");
+        AlertDialog(title: Text("Wrong credentials"),);
       });
     }catch(err){
       throw Exception(err);
@@ -41,65 +41,74 @@ class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Form(
-        key: key,
-        child: Column(
-          children: [
-            SizedBox(height: 100,),
-            Text("Login",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            SizedBox(height: 20,),
-            TextFormField(
-              controller: email,
-              decoration: InputDecoration(
-                hintText: "Email",
-                icon: Icon(Icons.mail_outline)
+      body: SingleChildScrollView(
+        child: Form(
+          key: key,
+          child: Column(
+            children: [
+              SizedBox(height: 100,),
+              Text("Login",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold),),
+              SizedBox(height: 20,),
+              SizedBox(
+                width: 300,
+                child: TextFormField(
+                  controller: email,
+                  decoration: InputDecoration(
+                    hintText: "Email",
+                    icon: Icon(Icons.mail_outline)
+                  ),
+                  validator: (val)=>val!.isEmpty?"Enter email":null,
+                ),
               ),
-              validator: (val)=>val!.isEmpty?"Enter email":null,
-            ),
-            TextFormField(
-              controller: pass,
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: "Password",
-                icon: Icon(Icons.password_outlined)
+              SizedBox(
+                width: 300,
+                child: TextFormField(
+                  controller: pass,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: "Password",
+                    icon: Icon(Icons.password_outlined)
+                  ),
+                  validator: (val)=>val!.isEmpty?"Enter Password":null,
+                ),
               ),
-              validator: (val)=>val!.isEmpty?"Enter Password":null,
-            ),
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                GestureDetector(
-                  onTap: (){
-                    if(key.currentState!.validate()){
-                      forgotPass(email.text.trim());
-                    }
-                  },
-                  child: Text("Forgot Password",textAlign: TextAlign.end,),
-                )
-              ],
-            ),
-            SizedBox(height: 15,),
-            ElevatedButton(onPressed: (){
-              if(key.currentState!.validate()){
-                login(email.text.trim(), pass.text.trim());
-              }
-            }, child:Text("Login")),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text("Not a Member?"),
-                SizedBox(width: 5,),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.pop(context);
-                  },
-                  child: Text("Signup"),
-                )
-              ],
-            )
-          ],
+              SizedBox(height: 10,),
+              ElevatedButton(onPressed: (){
+                if(key.currentState!.validate()){
+                  login(email.text.trim(), pass.text.trim());
+                }
+              }, child:Text("Login")),
+              SizedBox(height: 15,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center
+                ,
+                children: [
+                  GestureDetector(
+                    onTap: (){
+                      if(key.currentState!.validate()){
+                        forgotPass(email.text.trim());
+                      }
+                    },
+                    child: Center(child: Text("Forgot Password?",style: TextStyle(color: Colors.blue),)),
+                  )
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Not a Member?"),
+                  SizedBox(width: 3,),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Text("Signup",style: TextStyle(color: Colors.blue),),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:appthon/homepage.dart';
+import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
 import 'auth.dart';
 import 'homepage.dart';
@@ -31,7 +32,7 @@ class _hscrnState extends State<hscrn> {
            heightFactor: 4.8,
            child: GestureDetector(
              onTap: (){
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>mainsrc()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Signuppage()));
              },child: Text("                Next?",style: TextStyle(fontSize: 60,color: Colors.black,),),
            )
          )

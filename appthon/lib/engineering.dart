@@ -1,7 +1,7 @@
 import 'package:appthon/be.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bullet_list/flutter_bullet_list.dart';
-
+import 'EngExam.dart';
 import 'btech.dart';
 class engineering extends StatefulWidget {
   const engineering({super.key});
@@ -84,7 +84,9 @@ class _engineeringState extends State<engineering> {
               Card(
                 color: Colors.yellow,
                 child: InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>exam()));
+                  },
                   child: Center(
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
