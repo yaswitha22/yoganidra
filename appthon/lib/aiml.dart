@@ -21,7 +21,43 @@ class _aimlState extends State<aiml> {
     ListItemModel(label: "Full Stack ML Developer"),
     ListItemModel(label: "Product manager"),
     ListItemModel(label: "Software Architect")
-
+  ];
+  final List<ListItemModel> comp=[
+    ListItemModel(label: "IBM"),
+    ListItemModel(label: " Microsoft"),
+    ListItemModel(label: "Google"),
+    ListItemModel(label: "Amazon"),
+    ListItemModel(label: "Motorola"),
+    ListItemModel(label: "Caterpillar"),
+    ListItemModel(label: "Walmart Labs"),
+    ListItemModel(label: "Facebook"),
+  ];
+  final List<ListItemModel> skills=[
+    ListItemModel(label: "programming skills",
+      data: [
+        ListItemModel(label: "Python"),
+        ListItemModel(label: "R"),
+      ]
+    ),
+    ListItemModel(label: "Mathematics and Statistics:",
+      data:[
+        ListItemModel(label: "Linear Algebra"),
+        ListItemModel(label: "Calculus"),
+        ListItemModel(label: "Probability and Statistics"),
+      ]
+    ),
+    ListItemModel(label: "Machine Learning Libraries and Frameworks:",
+        data: [
+          ListItemModel(label: "TensorFlow"),
+          ListItemModel(label: "PyTorch"),
+          ListItemModel(label: "Scikit-Learn"),
+        ]),
+    ListItemModel(label: "Data Science and Analytics:",
+        data: [
+          ListItemModel(label: "Pandas"),
+          ListItemModel(label: "NumPy"),
+          ListItemModel(label: "Matplotlib and Seaborn"),
+        ]),
   ];
   @override
   Widget build(BuildContext context) {
@@ -63,8 +99,18 @@ class _aimlState extends State<aiml> {
               SizedBox(height: 10,),
               Text("Some of the top career options that reputed companies hire after AIML degree include the following job role positions:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: _data,bulletSize: 1,bulletType: BulletType.square,),
-
+              FlutterBulletList(data: _data,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              SizedBox(height: 20,),
+              Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              SizedBox(height: 10,),
+              FlutterBulletList(data: skills,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              SizedBox(height: 10,),
+              Text("Core companies to hire AIML graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              SizedBox(height: 10,),
+              FlutterBulletList(data: comp,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              SizedBox(height: 10,),
+              Text("Between 10 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),

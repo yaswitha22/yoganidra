@@ -44,8 +44,8 @@ initScreen(BuildContext context){
         padding: const EdgeInsets.only(left: 50,bottom: 80),
         child: Row(
           children: [
-            Text("pathForge",style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold,color: Colors.black),),
-            SizedBox(width: 10,),
+            Text("pathForge",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.black),),
+            SizedBox(width: 5,),
             Icon(Icons.school_outlined,size: 60,),
           ],
         ),

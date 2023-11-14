@@ -1,35 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bullet_list/flutter_bullet_list.dart';
-class exam extends StatefulWidget {
-  const exam({super.key});
+class exam1 extends StatefulWidget {
+  const exam1({super.key});
 
   @override
-  State<exam> createState() => _examState();
+  State<exam1> createState() => _exam1State();
 }
 
-class _examState extends State<exam> {
+class _exam1State extends State<exam1> {
   final List<ListItemModel> nat=[
-    ListItemModel(label: "JEE-Mains"),
-    ListItemModel(label: "JEE-Advanced"),
-    ListItemModel(label: "BITSAT"),
-    ListItemModel(label: "COMED-K"),
-    ListItemModel(label: "Manipal"),
-    ListItemModel(label: "VITEEE"),
-    ListItemModel(label: "AMU"),
-    ListItemModel(label: "NDA Entrance with MPC"),
+    ListItemModel(label: "Symbiosis Entrance Test (SET)"),
+    ListItemModel(label: "National Entrance Examination in Design (NEED)"),
+    ListItemModel(label: "Common Proficiency Test (CPT)"),
+    ListItemModel(label: "CA Foundation"),
+    ListItemModel(label: "National Talent Search Exam (NTSE)"),
+    ListItemModel(label: "National Institute of Fashion Technology (NIFT) Entrance Exam:"),
   ];
   final List<ListItemModel> state=[
-    ListItemModel(label: "Andhra Pradesh: AP EAMCET (Andhra Pradesh Engineering, Agriculture and Medical Common Entrance Test )"),
-    ListItemModel(label: "Telangana: TS EAMCET (Telangana State Engineering, Agriculture and Medical Common Entrance Test)"),
-    ListItemModel(label: "Karnataka : KCET (Karnataka Common Entrance Test)"),
-    ListItemModel(label: "Maharashtra : Maharashtra Health and Technical Common Entrance Test"),
+    ListItemModel(label: "State-Specific CA Entrance Exams"),
+    ListItemModel(label: "Maharashtra Common Entrance Test (MH CET)"),
+    ListItemModel(label: "Gujarat Common Entrance Test (GUJCET)"),
+    ListItemModel(label: "Karnataka Common Entrance Test (KCET)"),
     ListItemModel(label: "West Bengal : WBJEE (WEST BENGAL JOINT ENTRANCE EXAMINATION)"),
-    ListItemModel(label: "Kerala : KEAM (Kerala Engg Agriculture Medical Exam)"),
-    ListItemModel(label: "Chattisgarh: CG PET (Chhattisgarh Pre Engineering Test)"),
-    ListItemModel(label: "Gujarat : GUJCET (Gujarat Common Entrance Test)"),
-    ListItemModel(label: "Jammu and Kashmir : JKCET (Jammu and Kashmir Common Entrance Test)"),
-    ListItemModel(label: "Odisha: OJEE (ODISHA JOINT ENTRANCE EXAMINATION )"),
-    ListItemModel(label: "Uttar Pradesh : UPSEE (Uttar Pradesh State Entrance Examination)"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -58,11 +50,11 @@ class _examState extends State<exam> {
                   height: 50,
                   width: 300,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                  gradient: LinearGradient(
+                      borderRadius: BorderRadius.circular(30),
+                      gradient: LinearGradient(
 
-                    colors: [Colors.black,Colors.blueGrey]
-                  )
+                          colors: [Colors.black,Colors.blueGrey]
+                      )
                   ),
                   child: Center(child: Text("National Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),

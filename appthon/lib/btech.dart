@@ -1,3 +1,9 @@
+import 'package:appthon/civil.dart';
+import 'package:appthon/cse.dart';
+import 'package:appthon/ece.dart';
+import 'package:appthon/eee.dart';
+import 'package:appthon/it.dart';
+import 'package:appthon/mech.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bullet_list/flutter_bullet_list.dart';
 
@@ -62,7 +68,7 @@ class _btechState extends State<btech> {
                     ),
                     InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>cse()));
                       },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -72,8 +78,20 @@ class _btechState extends State<btech> {
                           ],
                         )),
                     InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>it()));
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text("IT-(Information Technology)",style: TextStyle(fontSize: 16)),
+                            Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
+                          ],
+                        )
+                    ),
+                    InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ece()));
                       },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -84,7 +102,7 @@ class _btechState extends State<btech> {
                         )),
                      InkWell(
                        onTap: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>eee()));
                        },
                          child: Row(
                            mainAxisAlignment: MainAxisAlignment.start,
@@ -95,7 +113,7 @@ class _btechState extends State<btech> {
                          )),
                     InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>civil()));
                       },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -106,7 +124,7 @@ class _btechState extends State<btech> {
                         )),
                      InkWell(
                        onTap: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>mech()));
                        },
                          child: Row(
                            mainAxisAlignment: MainAxisAlignment.start,

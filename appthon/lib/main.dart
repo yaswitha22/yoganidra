@@ -1,11 +1,8 @@
+import 'package:appthon/bcom.dart';
 import 'package:appthon/editprofile.dart';
 import 'package:appthon/engineering.dart';
-import 'package:appthon/homepage.dart';
-import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:provider/provider.dart';
 import 'package:provider/provider.dart';
 import 'name.dart';
 void main() async{
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:name(),
+      home:engineering(),
     );
   }
 }
