@@ -80,6 +80,7 @@ class _engineeringState extends State<engineering> {
                   ),
                 ),
               ),
+              SizedBox(height: 20,),
               Card(
                 color: Colors.yellow,
                 child: InkWell(

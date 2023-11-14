@@ -1,6 +1,5 @@
 import 'package:appthon/commerceexam.dart';
 import 'package:flutter/material.dart';
-
 import 'bcom.dart';
 import 'bfin.dart';
 import 'chartedacc.dart';
@@ -40,6 +39,8 @@ class _commerceState extends State<commerce> {
               SizedBox(height: 20,),
               Card(
                 color: Colors.blue,
+                elevation: 20,
+                shadowColor: Colors.black87,
                 child: InkWell(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>bcom()));
@@ -62,6 +63,8 @@ class _commerceState extends State<commerce> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
+                  elevation: 10,
+                  shadowColor: Colors.black,
                   color: Colors.green,
                   child: InkWell(
                     onTap: (){
@@ -84,6 +87,8 @@ class _commerceState extends State<commerce> {
               ),
               SizedBox(height: 20,),
               Card(
+                elevation: 10,
+                shadowColor: Colors.black87,
                 color: Colors.yellow,
                 child: InkWell(
                   onTap: (){
@@ -103,9 +108,11 @@ class _commerceState extends State<commerce> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               Card(
-                color: Colors.pink,
+                elevation: 10,
+                shadowColor: Colors.black87,
+                color: Colors.pinkAccent,
                 child: InkWell(
                   onTap: (){
                     Navigator.push(context,MaterialPageRoute(builder: (context)=>exam1()));
