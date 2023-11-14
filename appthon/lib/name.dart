@@ -15,7 +15,7 @@ class _nameState extends State<name> {
     startTime();
   }
   startTime() async {
-    var duration = new Duration(seconds: 5);
+    var duration = new Duration(seconds: 8);
     return new Timer(duration, route);
   }
   route() {
