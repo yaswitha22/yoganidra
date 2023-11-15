@@ -31,7 +31,7 @@ class _hscrnState extends State<hscrn> {
            child: GestureDetector(
              onTap: (){
                Navigator.push(context, MaterialPageRoute(builder: (context)=>Signuppage()));
-             },child: Text("                Next?",style: TextStyle(fontSize: 60,color: Colors.black,),),
+             },child: Text("                Next?",style: TextStyle(fontSize: 60,color: Colors.black,textBaseline: TextBaseline.alphabetic),),
            )
          )
       ],
