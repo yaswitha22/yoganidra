@@ -9,33 +9,33 @@ class bem extends StatefulWidget {
 
 class _bemState extends State<bem> {
   final List<ListItemModel> _data=[
-    ListItemModel(label: "Government Lawyer"),
-    ListItemModel(label: "Legal Advisor"),
-    ListItemModel(label: "Corporate Lawyer"),
+    ListItemModel(label: "Corporate event manager"),
+    ListItemModel(label: "Sales director"),
+    ListItemModel(label: "Wedding planner"),
+    ListItemModel(label: "Event marketing manager"),
+    ListItemModel(label: "Tourism manager"),
   ];
   final List<ListItemModel> comp=[
-    ListItemModel(label: "All India Institute of Medical Sciences"),
-    ListItemModel(label: "Apollo Group"),
-    ListItemModel(label: "Indian Nursing Council"),
-    ListItemModel(label: "Fortis Hospitals"),
-    ListItemModel(label: "Manipal Group"),
-    ListItemModel(label: "Medica"),
+    ListItemModel(label: "Wizcraft"),
+    ListItemModel(label: "Lakme"),
+    ListItemModel(label: "CNBC TV"),
+    ListItemModel(label: "Ogilvy"),
   ];
   final List<ListItemModel> skills=[
-    ListItemModel(label: "Information analysis"),
+    ListItemModel(label: "Teamwork and Collaboration"),
     ListItemModel(label: "Communication Skills"),
-    ListItemModel(label: "Perseverance"),
-    ListItemModel(label: "Empathy"),
-    ListItemModel(label: "Judgement skills"),
-    ListItemModel(label: "Attention to Detail"),
-    ListItemModel(label: "Decision making skills"),
-    ListItemModel(label: "Research Skills")
+    ListItemModel(label: "Critical Thinking"),
+    ListItemModel(label: "Leadership skills"),
+    ListItemModel(label: "Adaptability"),
+    ListItemModel(label: "Time Management"),
+    ListItemModel(label: "Decison Making"),
+    ListItemModel(label: "problem solving")
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("LLB",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("BEM",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -58,30 +58,30 @@ class _bemState extends State<bem> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://tse3.mm.bing.net/th?id=OIP.S9rBYNFKAsqS6YGMsEKFrgHaD2&pid=Api&P=0&h=220"),
+                      child: Image(image: NetworkImage("https://www.digiomg.com/wp-content/uploads/2022/04/BEM-Course-640x334.jpg"),
                           fit: BoxFit.cover))
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
-              Text("LLB or Bachelor of Legislative Law, is an undergraduate degree programme in Law, of three-year or five-year duration that can be pursued after graduation and 10+2 respectively.\n\nBachelor of Legislative Law is a foundational course in law that provides students the knowledge about legal procedures followed in the law profession.\n\nLLB course helps the students in developing a logical, analytical and critical understanding of legal affairs and teaches them how to use these skills for resolving social, legal issues of the society",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 20,),
-              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
-              SizedBox(height: 10,),
-              Text("On completing a LLB course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: _data,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              Text("Bachelor of Event Management is the process of planning of project management to design and establishment of small and large-scale personal or organizational activities such as concerts, conventions, ceremonies, weddings\n\nSubsequently, at the master's level, applicants can pursue elaborate programs in the field of event management specialization.",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 20,),
               Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
               FlutterBulletList(data: skills,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              SizedBox(height: 20,),
+              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
-              Text("Core companies to hire LLB graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("On completing a BEM course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              SizedBox(height: 10,),
+              FlutterBulletList(data: _data,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              SizedBox(height: 20,),
+              Text("Core companies to hire BEM graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
               FlutterBulletList(data: comp,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("Between 5 LPA and 50 LPA based on specialisation",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Text("Between 5 LPA and 12 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),

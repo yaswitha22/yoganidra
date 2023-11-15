@@ -9,33 +9,33 @@ class bpsych extends StatefulWidget {
 
 class _bpsychState extends State<bpsych> {
   final List<ListItemModel> _data=[
-    ListItemModel(label: "Government Lawyer"),
-    ListItemModel(label: "Legal Advisor"),
-    ListItemModel(label: "Corporate Lawyer"),
+    ListItemModel(label: "Human Resources Assistant"),
+    ListItemModel(label: "Administrative Roles in Mental Health Organizations"),
+    ListItemModel(label: "Youth Counselor or Mentor"),
   ];
   final List<ListItemModel> comp=[
-    ListItemModel(label: "All India Institute of Medical Sciences"),
-    ListItemModel(label: "Apollo Group"),
-    ListItemModel(label: "Indian Nursing Council"),
-    ListItemModel(label: "Fortis Hospitals"),
-    ListItemModel(label: "Manipal Group"),
-    ListItemModel(label: "Medica"),
+    ListItemModel(label: "Employee Assistance Programs (EAPs)"),
+    ListItemModel(label: "Training and Development Departments"),
+    ListItemModel(label: "Behavioral Health Organizations"),
+    ListItemModel(label: "Social Work Agencies"),
+    ListItemModel(label: "Rehabilitation Centers"),
+    ListItemModel(label: "Counselling Centers"),
   ];
   final List<ListItemModel> skills=[
-    ListItemModel(label: "Information analysis"),
+    ListItemModel(label: "Critical Thinking"),
     ListItemModel(label: "Communication Skills"),
-    ListItemModel(label: "Perseverance"),
-    ListItemModel(label: "Empathy"),
-    ListItemModel(label: "Judgement skills"),
-    ListItemModel(label: "Attention to Detail"),
-    ListItemModel(label: "Decision making skills"),
+    ListItemModel(label: "Empathy and Interpersonal Skills"),
+    ListItemModel(label: "Problem-Solving"),
+    ListItemModel(label: "Counseling and Helping Skills"),
+    ListItemModel(label: "Time Management"),
+    ListItemModel(label: "Interviewing Skills"),
     ListItemModel(label: "Research Skills")
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("LLB",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("BPsych",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -58,17 +58,17 @@ class _bpsychState extends State<bpsych> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://tse3.mm.bing.net/th?id=OIP.S9rBYNFKAsqS6YGMsEKFrgHaD2&pid=Api&P=0&h=220"),
+                      child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.y9GFtnP8cYq6K6NSBw_mTQHaCt&pid=Api&P=0&h=220"),
                           fit: BoxFit.cover))
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
-              Text("LLB or Bachelor of Legislative Law, is an undergraduate degree programme in Law, of three-year or five-year duration that can be pursued after graduation and 10+2 respectively.\n\nBachelor of Legislative Law is a foundational course in law that provides students the knowledge about legal procedures followed in the law profession.\n\nLLB course helps the students in developing a logical, analytical and critical understanding of legal affairs and teaches them how to use these skills for resolving social, legal issues of the society",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("BPsych degree is a professional qualification that leads to registration with the Health Professions Council of South Africa (HPCSA) as a Registered Counsellor.\n\nThe BPsych degree empowers you with knowledge and essential “work ready” counselling and communication skills to provide short-term supportive counselling, psycho-education and psychological assessment.",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 20,),
               Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
-              Text("On completing a LLB course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("On completing a BPsych course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
               FlutterBulletList(data: _data,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 20,),
@@ -76,12 +76,12 @@ class _bpsychState extends State<bpsych> {
               SizedBox(height: 10,),
               FlutterBulletList(data: skills,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 10,),
-              Text("Core companies to hire LLB graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("Recruiters to hire BPsych graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
               FlutterBulletList(data: comp,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("Between 5 LPA and 50 LPA based on specialisation",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Text("Between 2.5 LPA and 5 LPA ",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),

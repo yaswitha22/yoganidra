@@ -9,33 +9,31 @@ class bhm extends StatefulWidget {
 
 class _bhmState extends State<bhm> {
   final List<ListItemModel> _data=[
-    ListItemModel(label: "Government Lawyer"),
-    ListItemModel(label: "Legal Advisor"),
-    ListItemModel(label: "Corporate Lawyer"),
+    ListItemModel(label: "Hotel Manager"),
+    ListItemModel(label: "Event Manager"),
+    ListItemModel(label: "Flight Attendant"),
   ];
   final List<ListItemModel> comp=[
-    ListItemModel(label: "All India Institute of Medical Sciences"),
-    ListItemModel(label: "Apollo Group"),
-    ListItemModel(label: "Indian Nursing Council"),
-    ListItemModel(label: "Fortis Hospitals"),
-    ListItemModel(label: "Manipal Group"),
-    ListItemModel(label: "Medica"),
+    ListItemModel(label: "The Park Hotels"),
+    ListItemModel(label: "JW Marriott"),
+    ListItemModel(label: "ITC"),
+    ListItemModel(label: "Oberoi Group of Hotels"),
+    ListItemModel(label: "Praxis Services"),
   ];
   final List<ListItemModel> skills=[
-    ListItemModel(label: "Information analysis"),
+    ListItemModel(label: "Customer Service skills"),
+    ListItemModel(label: "Ability to Multitask"),
+    ListItemModel(label: "Leadership Ability"),
+    ListItemModel(label: "Cultural Awareness"),
+    ListItemModel(label: "Managerial Skills"),
     ListItemModel(label: "Communication Skills"),
-    ListItemModel(label: "Perseverance"),
-    ListItemModel(label: "Empathy"),
-    ListItemModel(label: "Judgement skills"),
-    ListItemModel(label: "Attention to Detail"),
-    ListItemModel(label: "Decision making skills"),
-    ListItemModel(label: "Research Skills")
+    ListItemModel(label: "Leadership Ability")
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("LLB",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("BHM",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -58,17 +56,16 @@ class _bhmState extends State<bhm> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://tse3.mm.bing.net/th?id=OIP.S9rBYNFKAsqS6YGMsEKFrgHaD2&pid=Api&P=0&h=220"),
-                          fit: BoxFit.cover))
+                      child: Image(image: NetworkImage("https://leverageedu.com/blog/wp-content/uploads/2019/09/BHM-course-800x500.png"), fit: BoxFit.cover))
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
-              Text("LLB or Bachelor of Legislative Law, is an undergraduate degree programme in Law, of three-year or five-year duration that can be pursued after graduation and 10+2 respectively.\n\nBachelor of Legislative Law is a foundational course in law that provides students the knowledge about legal procedures followed in the law profession.\n\nLLB course helps the students in developing a logical, analytical and critical understanding of legal affairs and teaches them how to use these skills for resolving social, legal issues of the society",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("BHM full form is Bachelor of Hotel Management, and BHM course duration is four academic years.\n\nTo provide students with comprehensive knowledge of the hotel and hospitality industry.",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 20,),
               Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
-              Text("On completing a LLB course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("On completing a BHM course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
               FlutterBulletList(data: _data,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 20,),
@@ -76,12 +73,12 @@ class _bhmState extends State<bhm> {
               SizedBox(height: 10,),
               FlutterBulletList(data: skills,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 10,),
-              Text("Core companies to hire LLB graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("Top Recruiters or Core companies to hire BHM graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
               FlutterBulletList(data: comp,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("Between 5 LPA and 50 LPA based on specialisation",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Text("Between 2.5 LPA and 6 LPA based on specialisation",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),

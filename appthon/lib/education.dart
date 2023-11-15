@@ -1,5 +1,5 @@
 import 'package:appthon/bed.dart';
-import 'package:appthon/bmathed.dart';
+import 'package:appthon/bphy.dart';
 import 'package:appthon/eduexam.dart';
 import 'package:flutter/material.dart';
 class education extends StatefulWidget {
@@ -34,7 +34,7 @@ class _educationState extends State<education> {
             children: [
               Center(child: Text("EDUCATION(TEACHING)",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
               SizedBox(width: 15,),
-              Center(child: Text("(B.Ed and BMath.Ed ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
+              Center(child: Text("(B.Ed and B.Ph.Ed ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
                 elevation: 10,
@@ -65,16 +65,16 @@ class _educationState extends State<education> {
                 color: Colors.yellow,
                 child: InkWell(
                   onTap: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>bmathed()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>bphyd()));
                   },
                   child: Center(
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://www.collegerank.net/wp-content/uploads/2020/10/CR-BB-MathEducation-Header.jpg")),
+                          Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.LnYdCupDNv5zLz1iZ-pizQHaEo&pid=Api&P=0&h=220")),
                           SizedBox(height: 20,),
-                          Text("BMath.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Text("B.Ph.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
                       ),
                     ),

@@ -97,6 +97,15 @@ class _beState extends State<be> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20,),
+              Center(
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child: Image(image: NetworkImage("https://www.aiming.in/wp-content/uploads/2017/08/BE-Courses-Details.jpg"),
+                          fit: BoxFit.cover))
+              ),
+              SizedBox(height: 20,),
               Text("B.E-(Bachelor of Engineering):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
               Text("A Bachelor of Engineering (B.E.) program typically offers a variety of courses across different engineering disciplines. These academic programs are 4 years long. The course content is technical in nature. The academic program consists of classroom lectures and practical Sessions.",style: TextStyle(fontSize: 17,color: Colors.black),),
