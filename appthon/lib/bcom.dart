@@ -75,7 +75,7 @@ class _bcomState extends State<bcom> {
               SizedBox(height: 20,),
               Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
               SizedBox(height: 10,),
-              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BE are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the B.Com are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
               FlutterBulletList(data: fl,bulletType: BulletType.square,bulletSize: 1,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 10,),

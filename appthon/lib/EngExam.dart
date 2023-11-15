@@ -68,7 +68,7 @@ class _examState extends State<exam> {
                 ),
               ),
               SizedBox(height: 20,),
-              FlutterBulletList(data: nat,bulletType: BulletType.square,bulletSize: 1,textStyle: TextStyle(fontSize: 20),),
+              FlutterBulletList(data: nat,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20),),
               SizedBox(height: 20,),
               Center(
                 child: Container(
@@ -85,7 +85,7 @@ class _examState extends State<exam> {
                 ),
               ),
               SizedBox(height: 20,),
-              FlutterBulletList(data: state,bulletType: BulletType.square,bulletSize: 1,textStyle: TextStyle(fontSize: 20),),
+              FlutterBulletList(spaceBetweenItem:15,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20),),
             ],
           ),
         ),

@@ -9,36 +9,45 @@ class ca extends StatefulWidget {
 
 class _caState extends State<ca> {
   final List<ListItemModel> _data = [
-    ListItemModel(label: "BCom-General",),
-    ListItemModel(label: "BCom Honours",),
-    ListItemModel(label: "BCom LLB",),
+    ListItemModel(label: "Principles of Accounting",),
+    ListItemModel(label: "Business Correspondence and Reporting",),
+    ListItemModel(label: "Business Mathematics and logical reasoning",),
+    ListItemModel(label: "Business Laws",),
+    ListItemModel(label: "Cost and management accounting",),
+    ListItemModel(label: "Taxation",),
   ];
   final List<ListItemModel> data=[
-    ListItemModel(label: "Advanced Financial Accounting"),
-    ListItemModel(label: "Project Management"),
-    ListItemModel(label: "Tax Planning and Management"),
-    ListItemModel(label: "Financial Planning and Wealth Management"),
-    ListItemModel(label: "Human Resource Management")
+    ListItemModel(label: "Risk Management and Financial Services (IRM)"),
+    ListItemModel(label: "International Taxation (INTT)"),
+    ListItemModel(label: "Indirect Tax Laws (IDTL)"),
+    ListItemModel(label: "Global Financial Reporting Standards (GFRS)"),
+    ListItemModel(label: "Enterprise Risk Management (ERM)")
   ];
   final List<ListItemModel> fl=[
-    ListItemModel(label: "Accountant"),
-    ListItemModel(label: "Account Executive"),
-    ListItemModel(label: "Business Executive"),
+    ListItemModel(label: "Accounts clerk"),
+    ListItemModel(label: "chartered accountant"),
+    ListItemModel(label: "cost accountants"),
     ListItemModel(label: "Financial Analyst"),
-    ListItemModel(label: "Tax Consultant"),
-    ListItemModel(label: "Accounts Manager")
+    ListItemModel(label: "business services"),
+    ListItemModel(label: "accountants")
   ];
   final List<ListItemModel> comp=[
-    ListItemModel(label: "SBI"),
-    ListItemModel(label: "ICICI Bank"),
-    ListItemModel(label: "HDFC"),
-    ListItemModel(label: "LIC")
+    ListItemModel(label: "Amazon.com Inc."),
+    ListItemModel(label: "Tesla,Inc."),
+    ListItemModel(label: "Alibaba Group Holding Limited"),
+    ListItemModel(label: "Vodafone Group Plc")
+  ];
+  final List<ListItemModel> skills=[
+    ListItemModel(label: "Analytical Skills",),
+    ListItemModel(label: "Attention to details",),
+    ListItemModel(label: "Concentration and focus",),
+    ListItemModel(label: "Ethics and professionalism"),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("B.Com",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("C.A",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -55,10 +64,17 @@ class _caState extends State<ca> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(
+                child: Container(
+                    height: 150,
+                    width: 300,
+                    color: Colors.black,
+                    child:  Image(image: NetworkImage("https://spatulaproductions.com/wp-content/uploads/2019/07/chartered-accountants.jpg"),fit: BoxFit.cover,)),
+              ),
               SizedBox(height: 20,),
-              Text("B.Com-(Bachelor of Commerce):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("C.A-(Charted Accountancy):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("B.Com is a three-year UG degree course recognised by the Universities Grants Commission (UGC).  Students can pursue B.Com programmes as full-time BCom, Distance BCom, or Online BCom.\n\nThe three-year BCom course is divided into six semesters. Students pursuing the course can choose elective subjects of their choice in some semesters.\n\nBCom Subjects include Financial Accounting, Business Laws, Economics, Taxation, Auditing, and Cost Accounting, among others. ",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("Chartered accountancy revolves around the study of accounting and taxation procedures to be qualified as a professional who can take care of the accounting and the taxation for a business or a firm. ",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 20,),
               Text("Core Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink),),
               SizedBox(height: 10,),
@@ -73,19 +89,23 @@ class _caState extends State<ca> {
               SizedBox(height: 10,),
               FlutterBulletList(data: data,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18),),
               SizedBox(height: 20,),
+              Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              SizedBox(height: 10,),
+              FlutterBulletList(data: skills,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              SizedBox(height: 20,),
               Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
               SizedBox(height: 10,),
-              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BE are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the C.A are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
               FlutterBulletList(data: fl,bulletType: BulletType.square,bulletSize: 1,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 10,),
-              Text("A few companies that recruit B.Com graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("A few companies that recruit C.A graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
               FlutterBulletList(data: comp,bulletSize: 1,textStyle: TextStyle(fontSize: 18),bulletType: BulletType.square,),
               SizedBox(height: 10,),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("Between 1.75 LPA and 9 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Text("Between 3 LPA and 18 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),

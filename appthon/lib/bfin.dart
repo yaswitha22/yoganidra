@@ -9,36 +9,37 @@ class bfin extends StatefulWidget {
 
 class _bfinState extends State<bfin> {
   final List<ListItemModel> _data = [
-    ListItemModel(label: "BCom-General",),
-    ListItemModel(label: "BCom Honours",),
-    ListItemModel(label: "BCom LLB",),
+    ListItemModel(label: "Financial Accounting",),
+    ListItemModel(label: "Managerial Accounting",),
+    ListItemModel(label: "Corporate Finance",),
+    ListItemModel(label: "Financial Markets and Institutions",),
+    ListItemModel(label: "Business Statistics",),
   ];
   final List<ListItemModel> data=[
-    ListItemModel(label: "Advanced Financial Accounting"),
-    ListItemModel(label: "Project Management"),
-    ListItemModel(label: "Tax Planning and Management"),
-    ListItemModel(label: "Financial Planning and Wealth Management"),
-    ListItemModel(label: "Human Resource Management")
+    ListItemModel(label: "Derivatives and Risk Management"),
+    ListItemModel(label: "Behavioral Finance"),
+    ListItemModel(label: "Real Estate Finance"),
+    ListItemModel(label: "Professional Ethics in Finance"),
+    ListItemModel(label: "Business Core Courses")
   ];
   final List<ListItemModel> fl=[
-    ListItemModel(label: "Accountant"),
-    ListItemModel(label: "Account Executive"),
-    ListItemModel(label: "Business Executive"),
-    ListItemModel(label: "Financial Analyst"),
-    ListItemModel(label: "Tax Consultant"),
-    ListItemModel(label: "Accounts Manager")
+    ListItemModel(label: "Business Analystt"),
+    ListItemModel(label: "Finance Manager"),
+    ListItemModel(label: "Operations Manager"),
+    ListItemModel(label: "Bank Manager"),
+    ListItemModel(label: "Relationship Manager"),
   ];
   final List<ListItemModel> comp=[
-    ListItemModel(label: "SBI"),
+    ListItemModel(label: "HSBC"),
     ListItemModel(label: "ICICI Bank"),
     ListItemModel(label: "HDFC"),
-    ListItemModel(label: "LIC")
+    ListItemModel(label: "Morgan Stanley"),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("B.Com",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("B.Fin",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -53,12 +54,20 @@ class _bfinState extends State<bfin> {
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
+            //mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(
+                child: Container(
+                  height: 150,
+                    width: 300,
+                    color: Colors.black,
+                    child:  Image(image: NetworkImage("https://www.bachelor-and-more.de/fileadmin/user_upload/Studiengaenge/Wirtschaft_und_Management/Bachelor_Finance_750x334.jpg"),fit: BoxFit.cover,)),
+              ),
               SizedBox(height: 20,),
-              Text("B.Com-(Bachelor of Commerce):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("B.Fin-(Bachelor of Finance):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("B.Com is a three-year UG degree course recognised by the Universities Grants Commission (UGC).  Students can pursue B.Com programmes as full-time BCom, Distance BCom, or Online BCom.\n\nThe three-year BCom course is divided into six semesters. Students pursuing the course can choose elective subjects of their choice in some semesters.\n\nBCom Subjects include Financial Accounting, Business Laws, Economics, Taxation, Auditing, and Cost Accounting, among others. ",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("A Bachelor of Finance (B.Fin or BBA in Finance) is an undergraduate degree program that focuses on providing students with a comprehensive understanding of financial principles, markets, and management.\n\nThe program aims to equip students with the knowledge and skills needed to pursue careers in the finance industry. ",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 20,),
               Text("Core Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink),),
               SizedBox(height: 10,),
@@ -75,7 +84,7 @@ class _bfinState extends State<bfin> {
               SizedBox(height: 20,),
               Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
               SizedBox(height: 10,),
-              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BE are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the B.Fin are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
               FlutterBulletList(data: fl,bulletType: BulletType.square,bulletSize: 1,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 10,),
@@ -85,7 +94,7 @@ class _bfinState extends State<bfin> {
               SizedBox(height: 10,),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("Between 1.75 LPA and 9 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Text("Between 6 LPA and 12 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),
