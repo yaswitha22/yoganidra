@@ -54,12 +54,15 @@ class _bphydState extends State<bphyd> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                  child: Container(
-                      height: 150,
-                      width: 300,
-                      color: Colors.black,
-                      child: Image(image: NetworkImage("http://www.meloanimate.com/wp-content/uploads/2019/05/bped.png"),
-                          fit: BoxFit.cover))
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                        height: 150,
+                        width: 300,
+                        color: Colors.black,
+                        child: Image(image: NetworkImage("http://www.meloanimate.com/wp-content/uploads/2019/05/bped.png"),
+                            fit: BoxFit.cover)),
+                  )
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

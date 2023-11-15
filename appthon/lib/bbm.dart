@@ -63,11 +63,14 @@ class _bbmState extends State<bbm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                    height: 150,
-                    width: 350,
-                    color: Colors.black,
-                    child:  Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.vxX706-5HrfMIt0peCONfgHaDE&pid=Api&P=0&h=220"),fit: BoxFit.cover,)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 350,
+                      color: Colors.black,
+                      child:  Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.vxX706-5HrfMIt0peCONfgHaDE&pid=Api&P=0&h=220"),fit: BoxFit.cover,)),
+                ),
               ),
               SizedBox(height: 20,),
               Text("BBM-(Bachelor of Business Management):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),

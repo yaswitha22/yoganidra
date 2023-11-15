@@ -55,6 +55,16 @@ class _bcomState extends State<bcom> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child: Container(child: Image(image: NetworkImage("https://www.acs.ac.in/wp-content/uploads/2019/04/bconm.jpg"),fit: BoxFit.cover,))),
+                ),
+              ),
               SizedBox(height: 20,),
               Text("B.Com-(Bachelor of Commerce):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),

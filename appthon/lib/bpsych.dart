@@ -54,12 +54,15 @@ class _bpsychState extends State<bpsych> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                  child: Container(
-                      height: 150,
-                      width: 300,
-                      color: Colors.black,
-                      child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.y9GFtnP8cYq6K6NSBw_mTQHaCt&pid=Api&P=0&h=220"),
-                          fit: BoxFit.cover))
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                        height: 150,
+                        width: 300,
+                        color: Colors.black,
+                        child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.y9GFtnP8cYq6K6NSBw_mTQHaCt&pid=Api&P=0&h=220"),
+                            fit: BoxFit.cover)),
+                  )
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

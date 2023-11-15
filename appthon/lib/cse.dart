@@ -62,11 +62,14 @@ class _cseState extends State<cse> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                    height: 150,
-                    width: 300,
-                    color: Colors.black,
-                    child: Image(image: NetworkImage("https://www.analyticssteps.com/backend/media/thumbnail/9987645/2803978_1620722464_computer%20scienceArtboard%201%20(1).jpg"),fit: BoxFit.cover,)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child: Image(image: NetworkImage("https://www.analyticssteps.com/backend/media/thumbnail/9987645/2803978_1620722464_computer%20scienceArtboard%201%20(1).jpg"),fit: BoxFit.cover,)),
+                ),
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

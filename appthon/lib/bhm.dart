@@ -52,11 +52,14 @@ class _bhmState extends State<bhm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                  child: Container(
-                      height: 150,
-                      width: 300,
-                      color: Colors.black,
-                      child: Image(image: NetworkImage("https://leverageedu.com/blog/wp-content/uploads/2019/09/BHM-course-800x500.png"), fit: BoxFit.cover))
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                        height: 150,
+                        width: 300,
+                        color: Colors.black,
+                        child: Image(image: NetworkImage("https://leverageedu.com/blog/wp-content/uploads/2019/09/BHM-course-800x500.png"), fit: BoxFit.cover)),
+                  )
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

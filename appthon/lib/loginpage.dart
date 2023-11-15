@@ -70,6 +70,9 @@ class _loginpageState extends State<loginpage> {
                 child: TextFormField(
                   controller: email,
                   decoration: InputDecoration(
+                    labelText: "Email",
+                   // border: InputBorder.,
+                    floatingLabelAlignment: FloatingLabelAlignment.center,
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30)
                       ),

@@ -82,11 +82,14 @@ class _aimlState extends State<aiml> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                  height: 150,
-                    width: 300,
-                    color: Colors.black,
-                    child: Image(image: NetworkImage("https://dtmvamahs40ux.cloudfront.net/gl-academy/course/course-682-AIML.jpg"))),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child: Container(child: Image(image: NetworkImage("https://dtmvamahs40ux.cloudfront.net/gl-academy/course/course-682-AIML.jpg")))),
+                ),
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

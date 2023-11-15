@@ -62,11 +62,14 @@ class _bscState extends State<bsc> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                    height: 150,
-                    width: 300,
-                    color: Colors.black,
-                    child:  Image(image: NetworkImage("https://livenewspot.com/wp-content/uploads/2020/06/B.Sc-course.jpg"),fit: BoxFit.cover,)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child:  Image(image: NetworkImage("https://livenewspot.com/wp-content/uploads/2020/06/B.Sc-course.jpg"),fit: BoxFit.cover,)),
+                ),
               ),
               SizedBox(height: 20,),
               Text("B.Sc-(Bachelor of Science):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),

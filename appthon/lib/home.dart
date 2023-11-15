@@ -1,4 +1,3 @@
-import 'package:appthon/editprofile.dart';
 import 'package:appthon/profile.dart';
 import 'package:appthon/sciences.dart';
 import 'package:appthon/social.dart';
@@ -120,7 +119,7 @@ class _homeState extends State<home> {
               leading: Icon(Icons.edit),
               title:Text(' Edit Profile '),
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>edit()));
+
               },
             ),
             ListTile(

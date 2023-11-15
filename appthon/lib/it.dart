@@ -54,11 +54,14 @@ class _itState extends State<it> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                    height: 150,
-                    width: 300,
-                    color: Colors.black,
-                    child: Image(image: NetworkImage("https://www.shutterstock.com/image-photo/elearning-education-internet-lessons-online-260nw-2158034833.jpg"),fit: BoxFit.cover,)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child: Image(image: NetworkImage("https://www.shutterstock.com/image-photo/elearning-education-internet-lessons-online-260nw-2158034833.jpg"),fit: BoxFit.cover,)),
+                ),
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

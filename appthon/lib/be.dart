@@ -98,12 +98,15 @@ class _beState extends State<be> {
             children: [
               SizedBox(height: 20,),
               Center(
-                  child: Container(
-                      height: 150,
-                      width: 300,
-                      color: Colors.black,
-                      child: Image(image: NetworkImage("https://www.aiming.in/wp-content/uploads/2017/08/BE-Courses-Details.jpg"),
-                          fit: BoxFit.cover))
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                        height: 150,
+                        width: 300,
+                        color: Colors.black,
+                        child: Image(image: NetworkImage("https://www.aiming.in/wp-content/uploads/2017/08/BE-Courses-Details.jpg"),
+                            fit: BoxFit.cover)),
+                  )
               ),
               SizedBox(height: 20,),
               Text("B.E-(Bachelor of Engineering):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),

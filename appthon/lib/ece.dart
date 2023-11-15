@@ -63,11 +63,14 @@ class _eceState extends State<ece> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                    height: 150,
-                    width: 300,
-                    color: Colors.black,
-                    child: Image(image: NetworkImage("https://sreyas.ac.in/wp-content/uploads/2019/07/70-sr-1024x683.jpg"),fit: BoxFit.cover,)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child: Image(image: NetworkImage("https://sreyas.ac.in/wp-content/uploads/2019/07/70-sr-1024x683.jpg"),fit: BoxFit.cover,)),
+                ),
               ),
               SizedBox(height: 20,),
               Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),

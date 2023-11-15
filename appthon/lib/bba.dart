@@ -62,11 +62,14 @@ class _bbaState extends State<bba> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Container(
-                    height: 150,
-                    width: 300,
-                    color: Colors.black,
-                    child:  Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.031wCiL1stwLgBppoRRd9wHaDd&pid=Api&P=0&h=220"),fit: BoxFit.cover,)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                      height: 150,
+                      width: 300,
+                      color: Colors.black,
+                      child:  Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.031wCiL1stwLgBppoRRd9wHaDd&pid=Api&P=0&h=220"),fit: BoxFit.cover,)),
+                ),
               ),
               SizedBox(height: 20,),
               Text("BBA-(Bachelor of Business Administration):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
