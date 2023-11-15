@@ -74,7 +74,7 @@ class _bpharmState extends State<bpharm> {
               SizedBox(height: 10,),
               Text("On completing a B.Pharm course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.black),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: _data,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              FlutterBulletList(data: _data,spaceBetweenItem:15,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 20,),
               Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
               SizedBox(height: 10,),
@@ -82,7 +82,7 @@ class _bpharmState extends State<bpharm> {
               SizedBox(height: 10,),
               Text("Core companies to hire B.Pharm graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: comp,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              FlutterBulletList(data: comp,spaceBetweenItem:15,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
               Text("Between 2 LPA and 12 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)

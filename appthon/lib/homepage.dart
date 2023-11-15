@@ -34,8 +34,7 @@ class _mainsrcState extends State<mainsrc> {
             currentIndex: index,
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.blueGrey,
-            elevation: 30,
-
+            elevation: 20,
             //fixedColor: Colors.greenAccent,
             selectedIconTheme: IconThemeData(
                 color: Colors.white,
