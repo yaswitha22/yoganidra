@@ -53,6 +53,7 @@ class _homeState extends State<home> {
         itemCount: categories.length,
         itemBuilder: (context, index) {
         return Card(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         color: categories[index].color,
         child: InkWell(
           onTap:(){
@@ -65,7 +66,7 @@ class _homeState extends State<home> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Image(image: NetworkImage(categories[index].imgpath)),
+                  ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage(categories[index].imgpath)))),
                   SizedBox(height: 15,),
                   Text(
                     categories[index].name, style: TextStyle(color: Colors.black, fontSize: 18.7, fontWeight: FontWeight.bold,), textAlign: TextAlign.center,),
