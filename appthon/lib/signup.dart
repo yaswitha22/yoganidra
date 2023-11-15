@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'loginpage.dart';
 class Signuppage extends StatefulWidget {
-   Signuppage({super.key});
+  Signuppage({super.key});
   @override
   State<Signuppage> createState() => _SignuppageState();
 }
@@ -37,8 +37,8 @@ class _SignuppageState extends State<Signuppage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             const SizedBox(height: 200,),
-             Center(child: Text("Sign Up",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold),)),
+              const SizedBox(height: 200,),
+              Center(child: Text("Sign Up",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold),)),
               SizedBox(
                 height: 40,
               ),
@@ -78,7 +78,7 @@ class _SignuppageState extends State<Signuppage> {
                   validator: (val)=>val!.isEmpty?"Enter password":null,
                 ),
               ),
-             const SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               ElevatedButton(onPressed: (){
                 if(key.currentState!.validate()){
                   signup(email.text.trim(), pass.text.trim());
@@ -91,10 +91,10 @@ class _SignuppageState extends State<Signuppage> {
                   Text("Already a member?",style: TextStyle(fontSize: 16),),
                   SizedBox(width:5,),
                   GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
-                    },
-                    child: const Text("Login",style: TextStyle(color: Colors.blue),)
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
+                      },
+                      child: const Text("Login",style: TextStyle(color: Colors.blue),)
                   )
                 ],
               )
