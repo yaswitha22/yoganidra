@@ -34,7 +34,7 @@ class _hospandtourState extends State<hospandtour> {
             children: [
               Center(child: Text("HOSPITALITY AND TOURISM",style: TextStyle(fontSize: 30,color: Colors.red,fontWeight: FontWeight.bold),)),
               SizedBox(width: 15,),
-              Center(child: Text("(BEM and BHM ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
+              Center(child: Text("(BEM and BHM) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
                 elevation: 10,
