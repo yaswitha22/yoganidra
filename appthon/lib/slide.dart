@@ -1,8 +1,6 @@
-import 'package:appthon/homepage.dart';
+
 import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
-import 'auth.dart';
-import 'homepage.dart';
 class hscrn extends StatefulWidget {
   const hscrn({super.key});
 

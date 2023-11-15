@@ -67,8 +67,7 @@ class _profileState extends State<profile> {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => edit()),
+                          context,MaterialPageRoute(builder: (context) => edit()),
                         );
                       },
                       style: ElevatedButton.styleFrom(
@@ -87,6 +86,8 @@ class _profileState extends State<profile> {
                         child:Text("Home",style: TextStyle(fontSize: 20),)),
                   )
                 ],
+
+
               ),
             ),
           ),

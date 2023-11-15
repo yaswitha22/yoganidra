@@ -1,5 +1,3 @@
-import 'package:appthon/editprofile.dart';
-import 'package:appthon/profile.dart';
 import 'package:appthon/sciences.dart';
 import 'package:appthon/social.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +52,11 @@ class _homeState extends State<home> {
         itemCount: categories.length,
         itemBuilder: (context, index) {
         return Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          elevation: 20,
+        shadowColor: Colors.black,
         color: categories[index].color,
         child: InkWell(
           onTap:(){
@@ -66,73 +69,16 @@ class _homeState extends State<home> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Image(image: NetworkImage(categories[index].imgpath)),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(child: Image(image: NetworkImage(categories[index].imgpath)),
+                    ),
+                  ),
                   SizedBox(height: 15,),
                   Text(
                     categories[index].name, style: TextStyle(color: Colors.black, fontSize: 18.7, fontWeight: FontWeight.bold,), textAlign: TextAlign.center,),
             ],),),),),);
         },),
-      drawer: Drawer(
-        child: ListView(
-          padding:EdgeInsets.all(0),
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [Colors.blueGrey,Colors.black]
-                )
-              ), //BoxDecoration
-              child: UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Colors.white),
-                accountName: Text(
-                  "Yaswitha Katragadda",
-                  style: TextStyle(fontSize: 18,color: Colors.black),
-                ),
-                accountEmail: Text("21A91A6164@aec.edu.in",style: TextStyle(color: Colors.black),),
-                currentAccountPictureSize: Size.square(53),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.blue,
-                  child: Text(
-                    "Y",
-                    style: TextStyle(fontSize: 30.0, color: Colors.black),
-                  ), //Text
-                ), //circleAvatar
-              ), //UserAccountDrawerHeader
-            ),
-            //DrawerHeader
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text(' My Profile '),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.book),
-              title: Text(' My Course '),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.edit),
-              title:Text(' Edit Profile '),
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>edit()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title:  Text('LogOut'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
         );
   }
 }

@@ -37,6 +37,7 @@ class _hospandtourState extends State<hospandtour> {
               Center(child: Text("(BEM and BHM ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.green,
@@ -49,7 +50,7 @@ class _hospandtourState extends State<hospandtour> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_auto,w_iw,c_fill,g_face,ar_16:9/v1602830620/04%20-%20Karriere/Bachelor/Eventmanagement/2010-eventmanagement-karriere-1_i1olol.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_auto,w_iw,c_fill,g_face,ar_16:9/v1602830620/04%20-%20Karriere/Bachelor/Eventmanagement/2010-eventmanagement-karriere-1_i1olol.jpg")))),
                           SizedBox(height: 20,),
                           Text("BEM",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -60,6 +61,7 @@ class _hospandtourState extends State<hospandtour> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.yellow,
@@ -72,7 +74,7 @@ class _hospandtourState extends State<hospandtour> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("http://www.plic.edu.np/sites/default/files/images/courses/plic_hotel_management.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("http://www.plic.edu.np/sites/default/files/images/courses/plic_hotel_management.jpg")))),
                           SizedBox(height: 20,),
                           Text("BHM",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -83,6 +85,7 @@ class _hospandtourState extends State<hospandtour> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.pinkAccent,
@@ -95,7 +98,7 @@ class _hospandtourState extends State<hospandtour> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
