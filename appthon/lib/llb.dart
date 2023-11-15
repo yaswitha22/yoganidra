@@ -14,12 +14,12 @@ class _llbState extends State<llb> {
     ListItemModel(label: "Corporate Lawyer"),
   ];
   final List<ListItemModel> comp=[
-    ListItemModel(label: "All India Institute of Medical Sciences"),
-    ListItemModel(label: "Apollo Group"),
-    ListItemModel(label: "Indian Nursing Council"),
-    ListItemModel(label: "Fortis Hospitals"),
-    ListItemModel(label: "Manipal Group"),
-    ListItemModel(label: "Medica"),
+    ListItemModel(label: "Trilegal"),
+    ListItemModel(label: "Amarchand and Mangaldas and Suresh A Shroff Co."),
+    ListItemModel(label: "S & R Associates"),
+    ListItemModel(label: "Khaitan and Co"),
+    ListItemModel(label: "Talwar Thakore and Associates"),
+    ListItemModel(label: "Luthra and Luthra Law Offices"),
   ];
   final List<ListItemModel> skills=[
     ListItemModel(label: "Information analysis"),
@@ -58,7 +58,7 @@ class _llbState extends State<llb> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://tse3.mm.bing.net/th?id=OIP.S9rBYNFKAsqS6YGMsEKFrgHaD2&pid=Api&P=0&h=220"),
+                      child: Image(image: NetworkImage("https://www.study-bridge.co.uk/wp-content/uploads/2017/09/LLB-Law.jpg"),
                           fit: BoxFit.cover))
               ),
               SizedBox(height: 20,),
@@ -76,12 +76,12 @@ class _llbState extends State<llb> {
               SizedBox(height: 10,),
               FlutterBulletList(data: skills,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               SizedBox(height: 10,),
-              Text("Core companies to hire LLB graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("Top Recruiters or Core Companies to hire LLB graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
               FlutterBulletList(data: comp,spaceBetweenItem:15,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
               SizedBox(height: 10,),
-              Text("Between 5 LPA and 50 LPA based on specialisation",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Text("Between 4 LPA and 10 LPA based on specialisation",style: TextStyle(fontSize: 17,color: Colors.black),)
             ],
           ),
         ),

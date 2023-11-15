@@ -9,7 +9,7 @@ class bmathed extends StatefulWidget {
 
 class _bmathedState extends State<bmathed> {
   final List<ListItemModel> _data=[
-    ListItemModel(label: "Government Lawyer"),
+    ListItemModel(label: "Teacher"),
     ListItemModel(label: "Legal Advisor"),
     ListItemModel(label: "Corporate Lawyer"),
   ];

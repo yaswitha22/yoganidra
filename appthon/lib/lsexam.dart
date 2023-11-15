@@ -9,15 +9,16 @@ class lsexam extends StatefulWidget {
 
 class _lsexamState extends State<lsexam> {
   final List<ListItemModel> nat=[
-    ListItemModel(label: "National Eligibility cum Entrance Test (NEET)"),
-    ListItemModel(label: "All India Institute of Medical Sciences (AIIMS)"),
-    ListItemModel(label: "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)"),
-
+    ListItemModel(label: "CLAT (Common Law Admission Test)"),
+    ListItemModel(label: "AILET (All India Law Entrance Test)"),
+    ListItemModel(label: "LSAT-India (Law School Admission Test - India)"),
+    ListItemModel(label: "DULLB (Delhi University LLB Entrance Exam"),
   ];
   final List<ListItemModel> state=[
-    ListItemModel(label: "MHT CET (Maharashtra Common Entrance Test)"),
-    ListItemModel(label: "UPCPMT (Uttar Pradesh Combined Pre-Medical Test)"),
-    ListItemModel(label: "WBJEE (West Bengal Joint Entrance Examination)"),
+    ListItemModel(label: "MHCET Law (Maharashtra Common Entrance Test)"),
+    ListItemModel(label: "KLEE (Kerala Law Entrance Examination)"),
+    ListItemModel(label: "TSLAWCET (Telangana State Law Common Entrance Test)"),
+    ListItemModel(label: "AP LAWCET (Andhra Pradesh Law Common Entrance Test)"),
   ];
   @override
   Widget build(BuildContext context) {

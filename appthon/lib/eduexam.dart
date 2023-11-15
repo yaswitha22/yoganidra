@@ -9,15 +9,14 @@ class eduexam extends StatefulWidget {
 
 class _eduexamState extends State<eduexam> {
   final List<ListItemModel> nat=[
-    ListItemModel(label: "National Eligibility cum Entrance Test (NEET)"),
-    ListItemModel(label: "All India Institute of Medical Sciences (AIIMS)"),
-    ListItemModel(label: "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)"),
+    ListItemModel(label: "NTE (National Teacher Examination)"),
+    ListItemModel(label: "CTET (Central Teacher Eligibility Test)"),
+    ListItemModel(label: "UGC NET (National Eligibility Test) "),
 
   ];
   final List<ListItemModel> state=[
-    ListItemModel(label: "MHT CET (Maharashtra Common Entrance Test)"),
-    ListItemModel(label: "UPCPMT (Uttar Pradesh Combined Pre-Medical Test)"),
-    ListItemModel(label: "WBJEE (West Bengal Joint Entrance Examination)"),
+    ListItemModel(label: "STET (State Teacher Eligibility Test) "),
+    ListItemModel(label: "TET (Teacher Eligibility Test)"),
   ];
   @override
   Widget build(BuildContext context) {
