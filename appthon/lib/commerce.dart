@@ -33,6 +33,10 @@ class _commerceState extends State<commerce> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(child: Text("COMMERCE",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
+              SizedBox(width: 10,),
+              Center(child: Text("(B.Com or B.Fin) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
+              SizedBox(height: 20,),
               Card(
                 color: Colors.blue,
                 elevation: 20,
@@ -46,9 +50,7 @@ class _commerceState extends State<commerce> {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                              child: Container(child: Image(image: NetworkImage("http://www.gostudy.net/img/f7a51f7b-68de-4f0f-97ab-2063b36ba446/featured/ahi/bachelor-of-commerce-bcom.jpg")))),
+                          Image(image: NetworkImage("http://www.gostudy.net/img/f7a51f7b-68de-4f0f-97ab-2063b36ba446/featured/ahi/bachelor-of-commerce-bcom.jpg")),
                           SizedBox(height: 20,),
                           Text("B.Com",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

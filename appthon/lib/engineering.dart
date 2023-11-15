@@ -37,6 +37,7 @@ class _engineeringState extends State<engineering> {
               Center(child: Text("(B.E. or B.TECH) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: Colors.blue,
                   child: InkWell(
                     onTap: (){
@@ -47,7 +48,7 @@ class _engineeringState extends State<engineering> {
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
                           children: [
-                            Image(image: NetworkImage("https://cache.careers360.mobi/media/presets/860X430/presets/860X429/article_images/2020/3/2/Bachelor-Of-Engineering-Course.jpg")),
+                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://cache.careers360.mobi/media/presets/860X430/presets/860X429/article_images/2020/3/2/Bachelor-Of-Engineering-Course.jpg")))),
                             SizedBox(height: 20,),
                             Text("B.E",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                           ],
@@ -60,6 +61,7 @@ class _engineeringState extends State<engineering> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: Colors.green,
                   child: InkWell(
                     onTap: (){
@@ -70,7 +72,7 @@ class _engineeringState extends State<engineering> {
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
                           children: [
-                            Image(image: NetworkImage("https://static.janbharattimes.com/wp-content/uploads/2021/07/B.Tech-Course.jpg")),
+                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://static.janbharattimes.com/wp-content/uploads/2021/07/B.Tech-Course.jpg")))),
                             SizedBox(height: 20,),
                             Text("B.TECH",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                           ],
@@ -82,6 +84,7 @@ class _engineeringState extends State<engineering> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.yellow,
                 child: InkWell(
                   onTap: (){
@@ -92,7 +95,9 @@ class _engineeringState extends State<engineering> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                              child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

@@ -1,6 +1,8 @@
+import 'package:appthon/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'homepage.dart';
+import 'package:appthon/newhome.dart';
+
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
 
@@ -17,7 +19,7 @@ class _loginpageState extends State<loginpage> {
     try{
       final FirebaseAuth auth=FirebaseAuth.instance;
       auth.signInWithEmailAndPassword(email: email, password: pass).then((value){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>mainsrc()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>newhome()));
       }).onError((error, stackTrace){
         AlertDialog(title: Text("Wrong credentials"),);
       });

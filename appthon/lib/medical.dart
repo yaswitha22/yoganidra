@@ -39,8 +39,9 @@ class _medicalState extends State<medical> {
               Center(child: Text("(MBBS or B.Pharm) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.blue,
-                elevation: 20,
+                elevation: 10,
                 shadowColor: Colors.black87,
                 child: InkWell(
                   onTap: (){
@@ -51,7 +52,7 @@ class _medicalState extends State<medical> {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://cdn.uniacco.com/blog/wp-content/uploads/2021/05/25165322/image.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://cdn.uniacco.com/blog/wp-content/uploads/2021/05/25165322/image.jpg")))),
                           SizedBox(height: 20,),
                           Text("MBBS",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -62,6 +63,7 @@ class _medicalState extends State<medical> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.pinkAccent,
@@ -74,7 +76,7 @@ class _medicalState extends State<medical> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://images.shiksha.com/mediadata/images/articles/1585945577phpJshsCH.jpeg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://images.shiksha.com/mediadata/images/articles/1585945577phpJshsCH.jpeg")))),
                           SizedBox(height: 20,),
                           Text("B.Pharm",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -85,6 +87,7 @@ class _medicalState extends State<medical> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.green,
@@ -97,7 +100,7 @@ class _medicalState extends State<medical> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.fcKRB3Zfen6oPtZcx__niwHaDs&pid=Api&P=0&h=220")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.fcKRB3Zfen6oPtZcx__niwHaDs&pid=Api&P=0&h=220")))),
                           SizedBox(height: 20,),
                           Text("B.Sc(Nursing)",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -108,6 +111,7 @@ class _medicalState extends State<medical> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.yellow,
@@ -120,7 +124,7 @@ class _medicalState extends State<medical> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

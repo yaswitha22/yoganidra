@@ -1,5 +1,7 @@
+import 'package:appthon/editprofile.dart';
 import 'package:appthon/home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 class profile extends StatefulWidget {
   const profile({super.key});
 
@@ -10,6 +12,7 @@ class profile extends StatefulWidget {
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
+    var userProfile = Provider.of<UserProfile>(context);
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -36,7 +39,7 @@ class _profileState extends State<profile> {
                             "https://tse4.mm.bing.net/th?id=OIP.Ii15573m21uyos5SZQTdrAHaHa&pid=Api&P=0&h=220"),
                       ),
                       SizedBox(height: 10,),
-                      Text('Name:', style: TextStyle(fontSize: 35,color: Colors.white),),
+                      Text('${userProfile.user.name}', style: TextStyle(fontSize: 35,color: Colors.white),),
                     ],
                   ),
                 ),
@@ -51,18 +54,22 @@ class _profileState extends State<profile> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20,),
-                  Text('Age: ',
+                  Text('Age: ${userProfile.user.age}',
                       style: TextStyle(fontSize: 30,color: Colors.black)),
                   SizedBox(height: 20,),
-                  Text('Gender: ',
+                  Text('Gender: ${userProfile.user.gender}',
                       style: TextStyle(fontSize: 30,color: Colors.black )),
                   SizedBox(height: 20,),
-                  Text('Date of Birth: ',
+                  Text('Date of Birth: ${userProfile.user.dob}',
                       style: TextStyle(fontSize: 30,color: Colors.black)),
                   SizedBox(height: 20),
                   Center(
                     child: ElevatedButton(
                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => edit()),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueGrey

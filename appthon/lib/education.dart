@@ -37,6 +37,7 @@ class _educationState extends State<education> {
               Center(child: Text("(B.Ed and B.Ph.Ed ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.blue,
@@ -49,7 +50,7 @@ class _educationState extends State<education> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://www.pulsephase.in/wp-content/uploads/2020/03/B.ED_.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://www.pulsephase.in/wp-content/uploads/2020/03/B.ED_.jpg")))),
                           SizedBox(height: 20,),
                           Text("B.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -60,6 +61,7 @@ class _educationState extends State<education> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.yellow,
@@ -72,7 +74,7 @@ class _educationState extends State<education> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.LnYdCupDNv5zLz1iZ-pizQHaEo&pid=Api&P=0&h=220")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.LnYdCupDNv5zLz1iZ-pizQHaEo&pid=Api&P=0&h=220")))),
                           SizedBox(height: 20,),
                           Text("B.Ph.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -83,6 +85,7 @@ class _educationState extends State<education> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.pinkAccent,
@@ -95,7 +98,7 @@ class _educationState extends State<education> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

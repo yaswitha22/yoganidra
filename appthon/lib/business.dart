@@ -38,8 +38,9 @@ class _businessState extends State<business> {
               Center(child: Text("(BBA or BBM) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.blue,
-                elevation: 20,
+                elevation: 10,
                 shadowColor: Colors.black87,
                 child: InkWell(
                   onTap: (){
@@ -61,6 +62,7 @@ class _businessState extends State<business> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.pinkAccent,
@@ -84,6 +86,7 @@ class _businessState extends State<business> {
               ),
               SizedBox(height: 20,),
               Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
                 shadowColor: Colors.black87,
                 color: Colors.yellow,
@@ -96,7 +99,7 @@ class _businessState extends State<business> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
