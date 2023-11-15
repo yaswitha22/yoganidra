@@ -37,16 +37,35 @@ class _SignuppageState extends State<Signuppage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 200,),
-              Center(child: Text("Sign Up",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold),)),
+             Container(
+               height: 300,
+               width: double.infinity,
+               decoration: BoxDecoration(
+                 gradient: LinearGradient(
+                   begin: Alignment.topLeft,
+                   end: Alignment.topRight,
+                   colors: [Colors.blueGrey,Colors.black]
+                 ),
+                 borderRadius: BorderRadius.only(bottomLeft:Radius.elliptical(70,70) ,bottomRight: Radius.elliptical(70,70))
+               ),
+               child:  Center(child: Column(
+                 children: [
+                   SizedBox(height: 200,),
+                   Text("Sign Up",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold,color: Colors.white),),
+                 ],
+               )),
+             ),
               SizedBox(
-                height: 40,
+                height: 50,
               ),
               SizedBox(
                 width:300,
                 child: TextFormField(
                   controller: name,
                   decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
                     icon: Icon(Icons.person),
                     hintText: "Name",
                   ),
@@ -59,6 +78,9 @@ class _SignuppageState extends State<Signuppage> {
                 child: TextFormField(
                   controller: email,
                   decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    ),
                     icon: Icon(Icons.mail_outline),
                     hintText: "Email",
                   ),
@@ -72,6 +94,9 @@ class _SignuppageState extends State<Signuppage> {
                   controller: pass,
                   obscureText: true,
                   decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    ),
                     icon: Icon(Icons.password_outlined),
                     hintText: "Password",
                   ),
@@ -83,7 +108,13 @@ class _SignuppageState extends State<Signuppage> {
                 if(key.currentState!.validate()){
                   signup(email.text.trim(), pass.text.trim());
                 }
-              }, child: Text("Signup")),
+              }, style:ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 20),
+                elevation: 30,
+                shadowColor: Colors.black,
+                backgroundColor: Colors.blueGrey,
+                fixedSize: Size(150, 50)
+              ),child: Text("Signup")),
               SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

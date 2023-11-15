@@ -48,39 +48,67 @@ class _loginpageState extends State<loginpage> {
           key: key,
           child: Column(
             children: [
-              SizedBox(height: 100,),
-              Text("Login",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold),),
-              SizedBox(height: 20,),
+              Container(
+                height: 300,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.topRight,
+                        colors: [Colors.blueGrey,Colors.black]
+                    ),
+                    borderRadius: BorderRadius.only(bottomLeft:Radius.elliptical(70,70) ,bottomRight: Radius.elliptical(70,70))
+                ),
+                child:  Center(child: Column(
+                  children: [
+                    SizedBox(height: 200,),
+                    Text("Login",style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold,color: Colors.white),),
+                  ],
+                )),
+              ),
+              SizedBox(height: 90,),
               SizedBox(
                 width: 300,
                 child: TextFormField(
                   controller: email,
                   decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)
+                      ),
                     hintText: "Email",
                     icon: Icon(Icons.mail_outline)
                   ),
                   validator: (val)=>val!.isEmpty?"Enter email":null,
                 ),
               ),
+              SizedBox(height: 20,),
               SizedBox(
                 width: 300,
                 child: TextFormField(
                   controller: pass,
                   obscureText: true,
                   decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)
+                      ),
                     hintText: "Password",
                     icon: Icon(Icons.password_outlined)
                   ),
                   validator: (val)=>val!.isEmpty?"Enter Password":null,
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 30,),
               ElevatedButton(onPressed: (){
                 if(key.currentState!.validate()){
                   login(email.text.trim(), pass.text.trim());
                 }
-              }, child:Text("Login")),
-              SizedBox(height: 15,),
+              }, style:ElevatedButton.styleFrom(
+                  textStyle: TextStyle(fontSize: 20),
+                  elevation: 30,
+                  shadowColor: Colors.black,
+                  backgroundColor: Colors.blueGrey,
+                  fixedSize: Size(150, 50)),child:Text("Login")),
+              SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center
                 ,
