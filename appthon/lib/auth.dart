@@ -1,7 +1,7 @@
+import 'package:appthon/newhome.dart';
 import 'package:flutter/material.dart';
 import 'signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'homepage.dart';
 class log extends StatefulWidget {
   const log({super.key});
 
@@ -16,7 +16,7 @@ class _logState extends State<log> {
        stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context,snapshot){
          if(snapshot.hasData){
-           return mainsrc();
+           return newhome();
          }
          else{
            return Signuppage();
