@@ -34,6 +34,8 @@ dependencies:
   flutter_bullet_list: ^0.0.4
   firebase_core:
   firebase_auth:
+  cloud_firestore:
+  provider:
 
 
 

@@ -15,7 +15,7 @@ class _nameState extends State<name> {
     startTime();
   }
   startTime() async {
-    var duration = new Duration(seconds: 8);
+    var duration = new Duration(seconds: 5);
     return new Timer(duration, route);
   }
   route() {
@@ -36,7 +36,9 @@ initScreen(BuildContext context){
       Container(
           height: MediaQuery.sizeOf(context).height,
           width: MediaQuery.sizeOf(context).width,
-          color: Colors.blueGrey,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topCenter,colors: [Colors.pinkAccent,Colors.deepPurple])
+          ),
           child: Opacity(
               opacity: 0.1,
               child: Image(image:AssetImage('assets/dest.jpg'),fit: BoxFit.fitHeight,))),
@@ -50,7 +52,7 @@ initScreen(BuildContext context){
           ],
         ),
       ),
-      SizedBox(height: 30,),
+      SizedBox(height: 20,),
       Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

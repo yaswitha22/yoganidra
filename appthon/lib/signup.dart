@@ -1,6 +1,9 @@
+import 'package:appthon/name.dart';
+import 'package:appthon/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'loginpage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 class Signuppage extends StatefulWidget {
   Signuppage({super.key});
   @override
@@ -8,27 +11,40 @@ class Signuppage extends StatefulWidget {
 }
 
 class _SignuppageState extends State<Signuppage> {
+  String? errorMessage = '';
+  String? currentUserUID = '';
   final key=GlobalKey<FormState>();
   final email=TextEditingController();
   final pass=TextEditingController();
   final name=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    Future signup(String email,String pass) async{
-      final FirebaseAuth auth=FirebaseAuth.instance;
-      try{
-        auth.createUserWithEmailAndPassword(email: email, password: pass).then((value) {
-          Navigator.push(context, MaterialPageRoute(builder:(context)=>loginpage()));
-        }).onError((error, stackTrace) {
-          if(error is FirebaseAuthException){
-            print(error.message);
-          }
+    final auth=FirebaseAuth.instance;
+    Future usernameadd(String name,String email,String uid) async {
+      await FirebaseFirestore.instance.collection('users').doc(auth.currentUser!.uid).set({
+        'name': name,
+        'uid': uid,
+        'email':email,
+      });
+    }
+    Future<void> createUserWithEmailAndPassword() async {
+      // final FirebaseAuth auth=FirebaseAuth.instance;
+      try {
+        await auth.createUserWithEmailAndPassword(
+          email: email.text,
+          password:pass.text,
+        );
+        usernameadd(
+            name.text,email.text,FirebaseAuth.instance.currentUser!.uid);
+        Navigator.push(context, MaterialPageRoute(builder:(context)=>loginpage()));
+
+      } on FirebaseAuthException catch (e) {
+        setState(() {
+          errorMessage = e.message;
         });
       }
-      catch(err){
-        throw Exception(err);
-      }
-    };
+    }
     return Scaffold(
       body: SingleChildScrollView(
         //scrollDirection: Axis.vertical,
@@ -41,12 +57,8 @@ class _SignuppageState extends State<Signuppage> {
                height: 300,
                width: double.infinity,
                decoration: BoxDecoration(
-                 gradient: LinearGradient(
-                   begin: Alignment.topLeft,
-                   end: Alignment.topRight,
-                   colors: [Colors.blueGrey,Colors.black]
-                 ),
-                 borderRadius: BorderRadius.only(bottomLeft:Radius.elliptical(70,70) ,bottomRight: Radius.elliptical(70,70))
+                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40),bottomRight: Radius.circular(40)),
+                   gradient: LinearGradient(begin: Alignment.topCenter,colors: [Colors.pinkAccent,Colors.deepPurple])
                ),
                child:  Center(child: Column(
                  children: [
@@ -106,13 +118,14 @@ class _SignuppageState extends State<Signuppage> {
               const SizedBox(height: 40,),
               ElevatedButton(onPressed: (){
                 if(key.currentState!.validate()){
-                  signup(email.text.trim(), pass.text.trim());
+                  createUserWithEmailAndPassword();
                 }
               }, style:ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                 textStyle: TextStyle(fontSize: 20),
                 elevation: 30,
                 shadowColor: Colors.black,
-                backgroundColor: Colors.blueGrey,
+                backgroundColor: Colors.deepPurple,
                 fixedSize: Size(150, 50)
               ),child: Text("Signup")),
               SizedBox(height: 20,),
