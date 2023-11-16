@@ -27,7 +27,6 @@ class _loginpageState extends State<loginpage> {
       throw Exception(err);
     }
   }
-
   Future forgotPass(String email) async{
     final FirebaseAuth auth=FirebaseAuth.instance;
     try{
@@ -52,12 +51,8 @@ class _loginpageState extends State<loginpage> {
                 height: 300,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.topRight,
-                        colors: [Colors.blueGrey,Colors.black]
-                    ),
-                    borderRadius: BorderRadius.only(bottomLeft:Radius.elliptical(70,70) ,bottomRight: Radius.elliptical(70,70))
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40),bottomRight: Radius.circular(40)),
+                    gradient: LinearGradient(begin: Alignment.topCenter,colors: [Colors.pinkAccent,Colors.deepPurple])
                 ),
                 child:  Center(child: Column(
                   children: [
@@ -106,15 +101,15 @@ class _loginpageState extends State<loginpage> {
                   login(email.text.trim(), pass.text.trim());
                 }
               }, style:ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   textStyle: TextStyle(fontSize: 20),
                   elevation: 30,
                   shadowColor: Colors.black,
-                  backgroundColor: Colors.blueGrey,
+                  backgroundColor: Colors.deepPurple,
                   fixedSize: Size(150, 50)),child:Text("Login")),
               SizedBox(height: 20,),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center
-                ,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: (){

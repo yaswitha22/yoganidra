@@ -1,6 +1,7 @@
 import 'package:appthon/favourite.dart';
 import 'package:appthon/home.dart';
 import 'package:appthon/profile.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'loginpage.dart';
@@ -13,6 +14,7 @@ class newhome extends StatefulWidget {
 }
 
 class _newhomeState extends State<newhome> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ class _newhomeState extends State<newhome> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -36,8 +38,10 @@ class _newhomeState extends State<newhome> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [SizedBox(height: 10,),
               Card(
+                elevation: 20,
+                shadowColor: Colors.black,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                color: Colors.blue,
+                color: Colors.deepPurple,
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => home()));
@@ -61,8 +65,10 @@ class _newhomeState extends State<newhome> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
+                  elevation: 20,
+                  shadowColor: Colors.black,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                  color: Colors.green,
+                  color: Colors.pinkAccent,
                   child: InkWell(
                     onTap: () {
                       Navigator.push(context,
@@ -86,8 +92,10 @@ class _newhomeState extends State<newhome> {
               ),
               SizedBox(height: 20,),
               Card(
+                elevation: 20,
+                shadowColor: Colors.black,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                color: Colors.yellow,
+                color: Colors.deepPurple,
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context,
@@ -124,13 +132,11 @@ class _newhomeState extends State<newhome> {
                       colors: [Colors.blueGrey,Colors.black]
                   )
               ), //BoxDecoration
+
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Colors.white),
-                accountName: Text(
-                  "Yaswitha Katragadda",
-                  style: TextStyle(fontSize: 18,color: Colors.black),
-                ),
-                accountEmail: Text("21A91A6164@aec.edu.in",style: TextStyle(color: Colors.black),),
+                accountName:Text("",style: TextStyle(color: Colors.black),),
+                accountEmail: Text("",style: TextStyle(color: Colors.black),),
                 currentAccountPictureSize: Size.square(53),
                 currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.blue,

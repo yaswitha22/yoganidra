@@ -1,5 +1,8 @@
 import 'package:appthon/home.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 class profile extends StatefulWidget {
   const profile({super.key});
 
@@ -8,83 +11,87 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  Future createUserInFirestore(User user, String username) async {
+    DocumentSnapshot doc = await _firestore.collection('users').doc(user.uid).get();
+
+    if (!doc.exists) {
+      _firestore.collection('users').doc(user.uid).set({
+        'username': username,
+        'email': user.email,
+        'createdOn': DateTime.now(),
+      });
+    }
+  }
+  Future updateUserProfile(User user, String newUsername) async {
+    await _firestore.collection('users').doc(user.uid).update({
+      'username': newUsername,
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 200.0,
-            floating: false,
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.blueGrey, Colors.black],
-                  ),
-                ),
-                child: Center(
-                  child: Column(
-                    children: [
-                      SizedBox(height: 20,),
-                      CircleAvatar(
-                        radius: 60,
-                        backgroundImage: NetworkImage(
-                            "https://tse4.mm.bing.net/th?id=OIP.Ii15573m21uyos5SZQTdrAHaHa&pid=Api&P=0&h=220"),
-                      ),
-                      SizedBox(height: 10,),
-                      Text('', style: TextStyle(fontSize: 35,color: Colors.white),),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
+      body: Center(
+        child: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+          stream:  FirebaseFirestore
+              .instance
+              .collection('users')
+              .doc(FirebaseAuth.instance.currentUser!.uid)
+              .snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
+            if (snapshot.hasError) {
+              return const Text('Something went wrong');
+            }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Text("Loading");
+            }
+            Map<String, dynamic> data =
+            snapshot.data!.data()! as Map<String, dynamic>;
+            return Center(
+              child: Stack(
                 children: [
-                  SizedBox(height: 20,),
-                  Text('Age: ',
-                      style: TextStyle(fontSize: 30,color: Colors.black)),
-                  SizedBox(height: 20,),
-                  Text('Gender:',
-                      style: TextStyle(fontSize: 30,color: Colors.black )),
-                  SizedBox(height: 20,),
-                  Text('Date of Birth: ',
-                      style: TextStyle(fontSize: 30,color: Colors.black)),
-                  SizedBox(height: 20),
+                  Container(
+                    color: Colors.blueGrey,
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
                   Center(
-                    child: ElevatedButton(
-                      onPressed: () {
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        height: 300,
+                        width: 360,
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(height: 50,),
+                              Center(child: CircleAvatar(radius: 60,child: Icon(Icons.person,size: 120,),)),
+                              SizedBox(height: 10,),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Name :  ${data['name']}",style: TextStyle(fontSize: 20,color: Colors.blue),textAlign: TextAlign.start,),
+                              ),
+                              SizedBox(height: 8,),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Email :  ${data['email']}",style: TextStyle(fontSize: 20,color: Colors.blue)),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                      child: Text('Edit Profile', style: TextStyle(fontSize: 20)),
                     ),
                   ),
-                  SizedBox(height: 20,),
-                  Center(
-                    child: ElevatedButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
-                    }, style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey
-                    ),
-                        child:Text("Home",style: TextStyle(fontSize: 20),)),
-                  )
                 ],
               ),
-            ),
-          ),
-        ],
+            );//
+          },
+        ),
       ),
     );
-  }
-}
+  }}

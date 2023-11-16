@@ -1,6 +1,7 @@
-
 import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 class hscrn extends StatefulWidget {
   const hscrn({super.key});
 
@@ -8,7 +9,19 @@ class hscrn extends StatefulWidget {
   State<hscrn> createState() => _hscrnState();
 }
 
+
 class _hscrnState extends State<hscrn> {
+  void initState() {
+  super.initState();
+  startTime();
+  }
+  startTime() async {
+  var duration = new Duration(seconds: 2);
+  return new Timer(duration, route);
+  }
+  route() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=>Signuppage()));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,17 +37,15 @@ class _hscrnState extends State<hscrn> {
           Align(
             widthFactor: 2.6,
               heightFactor: 2,
-              child: Text("What's",style: TextStyle(fontSize: 70,color: Colors.black),)),
+              child: Text("What's",style: TextStyle(fontSize: 60,color: Colors.black),)),
          Align(
            widthFactor:10,
            heightFactor: 4.8,
-           child: GestureDetector(
-             onTap: (){
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>Signuppage()));
-             },child: Text("                Next?",style: TextStyle(fontSize: 60,color: Colors.black,textBaseline: TextBaseline.alphabetic),),
-           )
-         )
+           child: Text("                Next?",style: TextStyle(fontSize: 60,color: Colors.black),)
+         ),
+          SizedBox(height: 20,)
       ],
+
       ),
     );
   }
