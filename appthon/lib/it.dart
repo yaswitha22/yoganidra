@@ -60,7 +60,7 @@ class _itState extends State<it> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://www.shutterstock.com/image-photo/elearning-education-internet-lessons-online-260nw-2158034833.jpg"),fit: BoxFit.cover,)),
+                      child: Image(image: AssetImage('assets/it.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

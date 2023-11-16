@@ -60,7 +60,7 @@ class _bemState extends State<bem> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://www.digiomg.com/wp-content/uploads/2022/04/BEM-Course-640x334.jpg"),
+                        child: Image(image: AssetImage('assets/bem1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

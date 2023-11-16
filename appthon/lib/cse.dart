@@ -68,7 +68,7 @@ class _cseState extends State<cse> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://www.analyticssteps.com/backend/media/thumbnail/9987645/2803978_1620722464_computer%20scienceArtboard%201%20(1).jpg"),fit: BoxFit.cover,)),
+                      child: Image(image: AssetImage('assets/cse.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

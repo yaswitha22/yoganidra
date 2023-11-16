@@ -62,7 +62,7 @@ class _bcomState extends State<bcom> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Container(child: Image(image: NetworkImage("https://www.acs.ac.in/wp-content/uploads/2019/04/bconm.jpg"),fit: BoxFit.cover,))),
+                      child: Container(child: Image(image: AssetImage('assets/bcom1.jpg'),fit: BoxFit.cover,))),
                 ),
               ),
               SizedBox(height: 20,),

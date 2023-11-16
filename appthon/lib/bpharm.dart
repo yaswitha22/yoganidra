@@ -64,7 +64,7 @@ class _bpharmState extends State<bpharm> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.9yfKeRNgEsq5mpgaeepIBQHaE9&pid=Api&P=0&h=220"),
+                        child: Image(image: AssetImage('assets/bpharm1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

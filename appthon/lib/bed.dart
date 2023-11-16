@@ -60,7 +60,7 @@ class _bedState extends State<bed> {
                         height: 170,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.K3Hx5jlF1IIqd9MrlY_IiQHaGM&pid=Api&P=0&h=220"),
+                        child: Image(image: AssetImage('assets/bed1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

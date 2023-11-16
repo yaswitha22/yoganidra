@@ -96,7 +96,7 @@ class _bswState extends State<bsw> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://tse3.mm.bing.net/th?id=OIP.sWuYExyHLyXb-y688z14-wAAAA&pid=Api&P=0&h=220"),
+                        child: Image(image:AssetImage('assets/bsw1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

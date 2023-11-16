@@ -69,7 +69,7 @@ class _bbmState extends State<bbm> {
                       height: 150,
                       width: 350,
                       color: Colors.black,
-                      child:  Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.vxX706-5HrfMIt0peCONfgHaDE&pid=Api&P=0&h=220"),fit: BoxFit.cover,)),
+                      child:  Image(image: AssetImage('assets/bbm1.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

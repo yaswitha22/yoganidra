@@ -61,7 +61,7 @@ class _mbbsState extends State<mbbs> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://tse3.mm.bing.net/th?id=OIP.S9rBYNFKAsqS6YGMsEKFrgHaD2&pid=Api&P=0&h=220"),
+                        child: Image(image: AssetImage('assets/mbbs1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

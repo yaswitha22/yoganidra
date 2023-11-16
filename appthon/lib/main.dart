@@ -1,4 +1,11 @@
-import 'package:appthon/loginpage.dart';
+import 'package:appthon/aiml.dart';
+import 'package:appthon/arts.dart';
+import 'package:appthon/ba.dart';
+import 'package:appthon/bba.dart';
+import 'package:appthon/bbm.dart';
+import 'package:appthon/btech.dart';
+import 'package:appthon/engineering.dart';
+import 'package:appthon/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'name.dart';
@@ -14,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:name(),
+      home:bba(),
     );
   }
 }

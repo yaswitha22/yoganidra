@@ -31,10 +31,6 @@ class _artsState extends State<arts> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("ARTS",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 10,),
-              Center(child: Text("(B.A) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.blue,
@@ -49,7 +45,7 @@ class _artsState extends State<arts> {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://i.pinimg.com/originals/40/18/29/401829048cee47688a5a741f542eba1d.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/ba.jpg')))),
                           SizedBox(height: 20,),
                           Text("B.A",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -76,7 +72,7 @@ class _artsState extends State<arts> {
                         padding: EdgeInsets.all(16.0),
                         child: Column(
                           children: [
-                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
+                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/exam.jpg')))),
                             SizedBox(height: 20,),
                             Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                             SizedBox(height: 20,)

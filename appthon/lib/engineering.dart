@@ -32,10 +32,6 @@ class _engineeringState extends State<engineering> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("ENGINEERING",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 10,),
-              Center(child: Text("(B.E. or B.TECH) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: Colors.blue,
@@ -48,7 +44,7 @@ class _engineeringState extends State<engineering> {
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
                           children: [
-                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://cache.careers360.mobi/media/presets/860X430/presets/860X429/article_images/2020/3/2/Bachelor-Of-Engineering-Course.jpg")))),
+                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage("assets/be.jpg")))),
                             SizedBox(height: 20,),
                             Text("B.E",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                           ],
@@ -62,7 +58,7 @@ class _engineeringState extends State<engineering> {
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  color: Colors.green,
+                  color: Colors.pinkAccent,
                   child: InkWell(
                     onTap: (){
                       Navigator.push(context,MaterialPageRoute(builder: (context)=>btech()));
@@ -72,7 +68,7 @@ class _engineeringState extends State<engineering> {
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
                           children: [
-                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://static.janbharattimes.com/wp-content/uploads/2021/07/B.Tech-Course.jpg")))),
+                            ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/btech.jpg')))),
                             SizedBox(height: 20,),
                             Text("B.TECH",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                           ],
@@ -97,7 +93,7 @@ class _engineeringState extends State<engineering> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                              child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
+                              child: Container(child: Image(image: AssetImage("assets/exam.jpg")))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

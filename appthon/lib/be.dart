@@ -104,7 +104,7 @@ class _beState extends State<be> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://www.aiming.in/wp-content/uploads/2017/08/BE-Courses-Details.jpg"),
+                        child: Image(image: NetworkImage(""),
                             fit: BoxFit.cover)),
                   )
               ),

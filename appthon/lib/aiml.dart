@@ -69,7 +69,7 @@ class _aimlState extends State<aiml> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -88,32 +88,105 @@ class _aimlState extends State<aiml> {
                     height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Container(child: Image(image: NetworkImage("https://dtmvamahs40ux.cloudfront.net/gl-academy/course/course-682-AIML.jpg")))),
+                      child: Container(child: Image(image: AssetImage('assets/aiml.jpg')))),
                 ),
               ),
               SizedBox(height: 20,),
-              Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("About Course",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
               SizedBox(height: 10,),
-              Text("Artificial Intelligence and Machine Learning is a branch of study that includes theories, standards, methods and innovations of various different domains like mathematics, cognitive science, electronics and embedded systems to make intelligent systems that mimic human behaviour.",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              Text("Artificial Intelligence and Machine Learning focus on collecting, categorizing, analyzing and interpreting data.\n\nIt is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.\n\nIt also incorporates the concepts of machine learning and deep learning model building for solving various computational and real-world business problems",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 140,
+                  width: 500,
+                  decoration: BoxDecoration(
+                  color: Colors.pinkAccent,
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("Artificial Intelligence and Machine Learning is a branch of study that includes theories and innovations of various different domains like mathematics, cognitive science,embedded systems to make intelligent systems that mimic human behaviour.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
               SizedBox(height: 20,),
-              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
-              SizedBox(height: 10,),
-              Text("Some of the top career options that reputed companies hire after AIML degree include the following job role positions:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              Container(
+                  height: 110,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("It is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
               SizedBox(height: 20,),
-              Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Container(
+                  height: 140,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("Artificial Intelligence and Machine Learning focus on collecting, categorizing, analyzing and interpreting data.It is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+              SizedBox(height: 20,),
+              Container(
+                  height: 100,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("It also incorporates the concepts of machine learning and deep learning model building for solving various computational and real-world business problems",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+              SizedBox(height: 20,),
+              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              Container(
+                  height: 100,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("Some of the top career options that reputed companies hire after AIML degree include the following job role positions:",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+              SizedBox(height: 20,),
+              Container(
+                height: 440,
+                  width: 500,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                  color: Colors.deepPurple,),
+                  child: Padding(
+                    padding: EdgeInsets.all(14),
+                      child: FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 18,color: Colors.white)))),
+              SizedBox(height: 20,),
+              Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text("Core companies to hire AIML graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Container(
+                  height: 480,
+                  width: 500,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.pinkAccent,),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.deepPurple,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
+                  )),
               SizedBox(height: 10,),
-              FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
-              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("Core companies to hire AIML graduates:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              Text("Between 10 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Container(
+                height: 275,
+                width: 500,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.deepPurple,),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Center(child: FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
+              SizedBox(height: 10,),
+              Container(
+                  height:50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.pinkAccent,),
+                  child: Center(child: Text("Between 10 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)))
             ],
           ),
         ),

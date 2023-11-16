@@ -1,6 +1,5 @@
 import 'package:appthon/sciexam.dart';
 import 'package:flutter/material.dart';
-
 import 'bsc.dart';
 class sciences extends StatefulWidget {
   const sciences({super.key});
@@ -32,10 +31,6 @@ class _sciencesState extends State<sciences> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("SCIENCE",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 10,),
-              Center(child: Text("(B.Sc) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.blue,
@@ -50,7 +45,7 @@ class _sciencesState extends State<sciences> {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://bcdn.mindler.com/bloglive/wp-content/uploads/2019/06/13154448/science-stream-subjects-after-10th-1024x512.png")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bsc.jpg')))),
                           SizedBox(height: 20,),
                           Text("B.Sc",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -74,7 +69,7 @@ class _sciencesState extends State<sciences> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/exam.jpg')))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

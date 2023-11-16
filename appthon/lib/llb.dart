@@ -60,7 +60,7 @@ class _llbState extends State<llb> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://www.study-bridge.co.uk/wp-content/uploads/2017/09/LLB-Law.jpg"),
+                        child: Image(image:AssetImage('assets/llb1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

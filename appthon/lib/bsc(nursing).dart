@@ -60,7 +60,7 @@ class _nursingState extends State<nursing> {
       height: 150,
       width: 300,
       color: Colors.black,
-      child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.KYcPq73eTGrDTwTnSUCSiAHaEc&pid=Api&P=0&h=220"),
+      child: Image(image: AssetImage('assets/bsc(nur)1.jpg'),
       fit: BoxFit.cover)),
     )
     ),

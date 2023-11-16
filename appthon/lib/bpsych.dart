@@ -60,7 +60,7 @@ class _bpsychState extends State<bpsych> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.y9GFtnP8cYq6K6NSBw_mTQHaCt&pid=Api&P=0&h=220"),
+                        child: Image(image: AssetImage('assets/bpsych1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

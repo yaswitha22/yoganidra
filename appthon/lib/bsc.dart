@@ -68,7 +68,7 @@ class _bscState extends State<bsc> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child:  Image(image: NetworkImage("https://livenewspot.com/wp-content/uploads/2020/06/B.Sc-course.jpg"),fit: BoxFit.cover,)),
+                      child:  Image(image: AssetImage(' assets/bsc1.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

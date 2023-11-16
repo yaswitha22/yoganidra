@@ -61,7 +61,7 @@ class _mechState extends State<mech> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://www.thoughtco.com/thmb/jxwAneFSvn3201zVygWFsLOhPyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/industry-4-0-car-frame---landscape-954178086-5bd99d1846e0fb0051a52d39.jpg"),fit: BoxFit.cover,)),
+                      child: Image(image: AssetImage('assets/mech.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

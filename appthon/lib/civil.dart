@@ -62,7 +62,7 @@ class _civilState extends State<civil> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://www.latrobe.edu.au/courses/images/LTU_ME_33123_1440.jpg/1680.jpg"),fit: BoxFit.cover,)),
+                      child: Image(image: AssetImage('assets/civil.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

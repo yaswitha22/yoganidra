@@ -58,7 +58,7 @@ class _bhmState extends State<bhm> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("https://leverageedu.com/blog/wp-content/uploads/2019/09/BHM-course-800x500.png"), fit: BoxFit.cover)),
+                        child: Image(image: AssetImage('assets/bhm1.jpg'), fit: BoxFit.cover)),
                   )
               ),
               SizedBox(height: 20,),

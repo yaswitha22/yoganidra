@@ -14,7 +14,7 @@ class _educationState extends State<education> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Social Sciences",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("Education",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -32,10 +32,6 @@ class _educationState extends State<education> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("EDUCATION(TEACHING)",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 15,),
-              Center(child: Text("(B.Ed and B.Ph.Ed ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
@@ -50,7 +46,7 @@ class _educationState extends State<education> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://www.pulsephase.in/wp-content/uploads/2020/03/B.ED_.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bed.jpg')))),
                           SizedBox(height: 20,),
                           Text("B.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -74,9 +70,9 @@ class _educationState extends State<education> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.LnYdCupDNv5zLz1iZ-pizQHaEo&pid=Api&P=0&h=220")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bped.jpg')))),
                           SizedBox(height: 20,),
-                          Text("B.Ph.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Text("B.P.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
                       ),
                     ),
@@ -98,7 +94,7 @@ class _educationState extends State<education> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/exam.jpg')))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

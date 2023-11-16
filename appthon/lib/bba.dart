@@ -49,7 +49,7 @@ class _bbaState extends State<bba> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -68,30 +68,92 @@ class _bbaState extends State<bba> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child:  Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.031wCiL1stwLgBppoRRd9wHaDd&pid=Api&P=0&h=220"),fit: BoxFit.cover,)),
+                      child:  Image(image: AssetImage('assets/bba1.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),
-              Text("BBA-(Bachelor of Business Administration):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
-              SizedBox(height: 10,),
-              Text("Bachelor of Business Administration degree or BBA online course is a three-year professional undergraduate course that is divided into six semesters and is open to candidates of science and commerce.\n\nBBA specialisation is available in accounting, finance management, cost and management accounting, human resource management, marketing, strategic management, entrepreneurship, hospitality, and tourism.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Text("BBA-(Bachelor of Business Administration):",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 20,),
-              Text("Core Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink),),
+              Container(
+                  height: 130,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(child: Text("BBA specialisation is available in accounting, finance management, cost and management accounting, human resource management, marketing, strategic management, entrepreneurship, hospitality, and tourism.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                    ),
+                  )),
+              SizedBox(height: 20,),
+              Container(
+                  height: 130,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(child: Text("Bachelor of Business Administration degree or BBA online course is a three-year professional undergraduate course that is divided into six semesters and is open to candidates of science and commerce.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                    ),
+                  )),
+              SizedBox(height: 20,),
+              Text("Core Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
               SizedBox(height: 10,),
-              FlutterBulletList(
-                data: _data,
-                textStyle: TextStyle(fontSize: 18),
-                bulletSize: 2,
-                bulletType: BulletType.square,
+              Container(
+                height: 150,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.pinkAccent,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Center(
+                    child: FlutterBulletList(
+                      data: _data,
+                      textStyle: TextStyle(fontSize: 18,color: Colors.white),
+                      bulletSize: 2,
+                      bulletType: BulletType.square,
+                      bulletColor: Colors.white,
+                    ),
+                  ),
+                ),
               ),
               SizedBox(height: 20,),
-              Text("Professional Development and Elective Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Text("Professional Development and Elective Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18),),
+              Container(
+                  height: 150,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Center(child: FlutterBulletList(bulletColor:Colors.pinkAccent,data: data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
-              Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              Container(
+                  height: 150,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Center(child: FlutterBulletList(data: skills,bulletColor:Colors.deepPurple,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
+                  )),
               SizedBox(height: 20,),
               Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
               SizedBox(height: 10,),

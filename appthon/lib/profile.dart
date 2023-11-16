@@ -50,27 +50,6 @@ class _profileState extends State<profile> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20,),
-                  Text('Age: ',
-                      style: TextStyle(fontSize: 30,color: Colors.black)),
-                  SizedBox(height: 20,),
-                  Text('Gender:',
-                      style: TextStyle(fontSize: 30,color: Colors.black )),
-                  SizedBox(height: 20,),
-                  Text('Date of Birth: ',
-                      style: TextStyle(fontSize: 30,color: Colors.black)),
-                  SizedBox(height: 20),
-                  Center(
-                    child: ElevatedButton(
-                      onPressed: () {
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey
-                      ),
-                      child: Text('Edit Profile', style: TextStyle(fontSize: 20)),
-                    ),
-                  ),
-                  SizedBox(height: 20,),
                   Center(
                     child: ElevatedButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));

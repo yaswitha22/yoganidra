@@ -60,7 +60,7 @@ class _bphydState extends State<bphyd> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage("http://www.meloanimate.com/wp-content/uploads/2019/05/bped.png"),
+                        child: Image(image: AssetImage('assets/bped1.jpg'),
                             fit: BoxFit.cover)),
                   )
               ),

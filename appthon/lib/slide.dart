@@ -1,4 +1,3 @@
-
 import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
 class hscrn extends StatefulWidget {

@@ -69,7 +69,7 @@ class _eceState extends State<ece> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child: Image(image: NetworkImage("https://sreyas.ac.in/wp-content/uploads/2019/07/70-sr-1024x683.jpg"),fit: BoxFit.cover,)),
+                      child: Image(image: AssetImage('assets/ece.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

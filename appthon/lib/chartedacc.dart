@@ -71,7 +71,7 @@ class _caState extends State<ca> {
                       height: 150,
                       width: 300,
                       color: Colors.black,
-                      child:  Image(image: NetworkImage("https://spatulaproductions.com/wp-content/uploads/2019/07/chartered-accountants.jpg"),fit: BoxFit.cover,)),
+                      child:  Image(image:AssetImage('assets/ca1.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

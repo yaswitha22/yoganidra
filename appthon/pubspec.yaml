@@ -70,7 +70,60 @@ flutter:
   assets:
       - assets/path.jpg
       - assets/dest.jpg
-
+      - assets/engineering.jpg
+      - assets/commerce.jpg
+      - assets/arts.jpg
+      - assets/science.jpg
+      - assets/medical.jpg
+      - assets/business.jpg
+      - assets/legalstudies.jpg
+      - assets/handt.jpg
+      - assets/social.jpg
+      - assets/education.jpg
+      - assets/be.jpg
+      - assets/btech.jpg
+      - assets/exam.jpg
+      - assets/be1.jpg
+      - assets/ba.jpg
+      - assets/ba1.jpg
+      - assets/aiml.jpg
+      - assets/cse.jpg
+      - assets/civil.jpg
+      - assets/ece.jpg
+      - assets/eee.jpg
+      - assets/it.jpg
+      - assets/bcom1.jpg
+      - assets/bba1.jpg
+      - assets/bbm1.jpg
+      - assets/bed1.jpg
+      - assets/bem1.jpg
+      - assets/bfin1.jpg
+      - assets/bhm1.jpeg
+      - assets/bpharm1.jpeg
+      - assets/bped1.jpg
+      - assets/bpsych1.jpeg
+      - assets/bsc(nur)1.jpeg
+      - assets/bsc1.jpg
+      - assets/bsw1.jpeg
+      - assets/bba.jpg
+      - assets/bbm.jpg
+      - assets/ca1.jpg
+      - assets/bcom.jpg
+      - assets/bed.jpg
+      - assets/bped.jpeg
+      - assets/bem.jpeg
+      - assets/bhm.jpg
+      - assets/llb.jpeg
+      - assets/lsexam.jpeg
+      - assets/llb1.jpg
+      - assets/mbbs1.jpeg
+      - assets/mech.jpg
+      - assets/mbbs.jpg
+      - assets/bpharm.jpeg
+      - assets/bsc(nur).jpeg
+      - assets/bsc.jpg
+      - assets/bsw.jpg
+      - assets/bpsyc.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

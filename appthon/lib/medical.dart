@@ -34,10 +34,6 @@ class _medicalState extends State<medical> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("MEDICAL",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 10,),
-              Center(child: Text("(MBBS or B.Pharm) Courses",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.blue,
@@ -52,7 +48,7 @@ class _medicalState extends State<medical> {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://cdn.uniacco.com/blog/wp-content/uploads/2021/05/25165322/image.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/mbbs.jpg')))),
                           SizedBox(height: 20,),
                           Text("MBBS",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -76,7 +72,7 @@ class _medicalState extends State<medical> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://images.shiksha.com/mediadata/images/articles/1585945577phpJshsCH.jpeg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bpharm.jpg')))),
                           SizedBox(height: 20,),
                           Text("B.Pharm",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -100,7 +96,7 @@ class _medicalState extends State<medical> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.fcKRB3Zfen6oPtZcx__niwHaDs&pid=Api&P=0&h=220")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bsc(nur).jpg')))),
                           SizedBox(height: 20,),
                           Text("B.Sc(Nursing)",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -124,7 +120,7 @@ class _medicalState extends State<medical> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/exam.jpg')))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

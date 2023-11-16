@@ -64,7 +64,7 @@ class _bfinState extends State<bfin> {
                     height: 150,
                       width: 300,
                       color: Colors.black,
-                      child:  Image(image: NetworkImage("https://www.bachelor-and-more.de/fileadmin/user_upload/Studiengaenge/Wirtschaft_und_Management/Bachelor_Finance_750x334.jpg"),fit: BoxFit.cover,)),
+                      child:  Image(image: AssetImage('assets/bfin1.jpg'),fit: BoxFit.cover,)),
                 ),
               ),
               SizedBox(height: 20,),

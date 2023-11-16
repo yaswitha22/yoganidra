@@ -32,10 +32,6 @@ class _hospandtourState extends State<hospandtour> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("HOSPITALITY AND TOURISM",style: TextStyle(fontSize: 30,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 15,),
-              Center(child: Text("(BEM and BHM ) Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
@@ -50,7 +46,7 @@ class _hospandtourState extends State<hospandtour> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_auto,w_iw,c_fill,g_face,ar_16:9/v1602830620/04%20-%20Karriere/Bachelor/Eventmanagement/2010-eventmanagement-karriere-1_i1olol.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bem.jpg')))),
                           SizedBox(height: 20,),
                           Text("BEM",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -74,7 +70,7 @@ class _hospandtourState extends State<hospandtour> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("http://www.plic.edu.np/sites/default/files/images/courses/plic_hotel_management.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bhm.jpg')))),
                           SizedBox(height: 20,),
                           Text("BHM",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -98,7 +94,7 @@ class _hospandtourState extends State<hospandtour> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://medhigh.com/wp-content/uploads/2015/12/02-600x-820x400.jpg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/exam.jpg')))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],

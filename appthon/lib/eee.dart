@@ -71,8 +71,7 @@ class _eeeState extends State<eee> {
                       width: 300,
                       color: Colors.black,
                       child: Image(
-                        image: NetworkImage(
-                            "https://tse2.mm.bing.net/th?id=OIP.ofitsh_DIb4R-ZsxIzH7gAHaFS&pid=Api&P=0&h=220"),
+                        image: AssetImage('assets/eee.jpg'),
                         fit: BoxFit.cover,)),
                 ),
               ),

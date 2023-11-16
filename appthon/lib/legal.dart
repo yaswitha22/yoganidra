@@ -31,10 +31,6 @@ class _legalstudiesState extends State<legalstudies> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("LEGAL STUDIES",style: TextStyle(fontSize: 35,color: Colors.red,fontWeight: FontWeight.bold),)),
-              SizedBox(width: 10,),
-              Center(child: Text("LLB Course",style: TextStyle(fontSize: 30,color: Colors.orange,fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 elevation: 10,
@@ -49,7 +45,7 @@ class _legalstudiesState extends State<legalstudies> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://images.shiksha.com/mediadata/images/articles/1645592158php0hAY0Z.jpeg")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/llb.jpg')))),
                           SizedBox(height: 20,),
                           Text("LLB",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
@@ -73,7 +69,7 @@ class _legalstudiesState extends State<legalstudies> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.HfpexX8Wy9cbRS5aaojhfgHaD4&pid=Api&P=0&h=220")))),
+                          ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/lsexam.jpg')))),
                           SizedBox(height: 20,),
                           Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                         ],
