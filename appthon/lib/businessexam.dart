@@ -28,13 +28,13 @@ class _businessexamState extends State<businessexam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Entrance Exams",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("Entrance Exams",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -53,15 +53,23 @@ class _businessexamState extends State<businessexam> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-
-                          colors: [Colors.black,Colors.blueGrey]
+                          colors: [Colors.deepPurple,Colors.pinkAccent]
                       )
                   ),
                   child: Center(child: Text("National Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),
               ),
               SizedBox(height: 20,),
-              FlutterBulletList(spaceBetweenItem:15,data: nat,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20),),
+              Container(
+                  height: 315,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.deepPurple,data: nat,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
               Center(
                 child: Container(
@@ -71,14 +79,23 @@ class _businessexamState extends State<businessexam> {
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
 
-                          colors: [Colors.blueGrey,Colors.black,]
+                          colors: [Colors.pinkAccent,Colors.deepPurple,]
                       )
                   ),
                   child: Center(child: Text("State Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),
               ),
               SizedBox(height: 20,),
-              FlutterBulletList(spaceBetweenItem:15,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20),),
+              Container(
+                  height: 460,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.pinkAccent,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                  )),
             ],
           ),
         ),

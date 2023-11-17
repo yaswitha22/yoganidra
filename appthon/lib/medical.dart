@@ -22,7 +22,7 @@ class _medicalState extends State<medical> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),

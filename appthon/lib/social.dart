@@ -20,7 +20,7 @@ class _socialsciState extends State<socialsci> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),

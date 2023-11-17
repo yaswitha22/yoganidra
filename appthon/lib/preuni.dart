@@ -35,7 +35,7 @@ class _PreuniState extends State<Preuni> {
                     width: 200,
                     lineHeight: 20.0,
                     linearStrokeCap: LinearStrokeCap.roundAll,
-                    progressColor: Colors.black87,
+                    progressColor: Colors.pinkAccent,
                   ),
                 ],
               ),
@@ -51,7 +51,8 @@ class _PreuniState extends State<Preuni> {
                         width: 200,
                         lineHeight: 20.0,
                         linearStrokeCap: LinearStrokeCap.roundAll,
-                        progressColor: Colors.black87,
+                        progressColor: Colors.pinkAccent
+                    ,
                   ),
                 ],
               ),
@@ -61,20 +62,21 @@ class _PreuniState extends State<Preuni> {
                 children: [
                   Text("+1,+2",style: TextStyle(fontSize: 30,color: Colors.white),),
                   LinearPercentIndicator(
+
                     animationDuration: 1600,
                     percent: 0.5,
                     animation: true,
                     width: 200,
                     lineHeight: 20.0,
                     linearStrokeCap: LinearStrokeCap.roundAll,
-                    progressColor: Colors.black87,
+                    progressColor: Colors.pinkAccent,
                   ),
                 ],
               ),
               SizedBox(height: 30,),
               IconButton(onPressed: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context)=>hscrn()));
-              }, icon: Icon(Icons.arrow_right_alt_outlined,size:60,color: Colors.white,)),
+              },alignment: Alignment.topRight, icon: Icon(Icons.arrow_right_alt_outlined,size:60,color: Colors.white,)),
             ],
           ),
         ),

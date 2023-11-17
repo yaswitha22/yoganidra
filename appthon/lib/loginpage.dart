@@ -1,4 +1,5 @@
 import 'package:appthon/home.dart';
+import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:appthon/newhome.dart';
@@ -129,7 +130,7 @@ class _loginpageState extends State<loginpage> {
                   SizedBox(width: 3,),
                   GestureDetector(
                     onTap: (){
-                      Navigator.pop(context);
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>Signuppage()));
                     },
                     child: Text("Signup",style: TextStyle(color: Colors.blue),),
                   )
