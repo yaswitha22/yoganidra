@@ -33,7 +33,7 @@ class _homeState extends State<home> {
   ];
   @override
   Widget build(BuildContext context) {
-    final screens=[engineering(),commerce(),arts(),sciences(),medical(),business(),legalstudies(),hospandtour(),socialsci(),education()];
+    final screens=[arts(),business(),commerce(),education(),engineering(),hospandtour(),legalstudies(),medical(),sciences(),socialsci()];
     return Scaffold(
         appBar: AppBar(
         title: Center(child: Text("STREAMS", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),

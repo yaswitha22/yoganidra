@@ -1,10 +1,3 @@
-import 'package:appthon/btech.dart';
-import 'package:appthon/favourite.dart';
-import 'package:appthon/home.dart';
-import 'package:appthon/it.dart';
-import 'package:appthon/newhome.dart';
-import 'package:appthon/profile.dart';
-import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'name.dart';
