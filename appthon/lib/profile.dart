@@ -1,4 +1,6 @@
 import 'package:appthon/home.dart';
+import 'package:appthon/loginpage.dart';
+import 'package:appthon/newhome.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +54,7 @@ class _profileState extends State<profile> {
               child: Stack(
                 children: [
                   Container(
-                    color: Colors.blueGrey,
+                    color: Colors.deepPurple,
                   ),
                   SizedBox(
                     height: 100,
@@ -61,25 +63,55 @@ class _profileState extends State<profile> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
-                        height: 300,
-                        width: 360,
+                        height: 380,
+                        width: 390,
                         color: Colors.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              SizedBox(height: 50,),
-                              Center(child: CircleAvatar(radius: 60,child: Icon(Icons.person,size: 120,),)),
+                              SizedBox(height: 30,),
+                              Center(child: CircleAvatar(radius: 80,backgroundColor: Colors.deepPurple,child: Icon(Icons.person,size: 140,color: Colors.white,),)),
                               SizedBox(height: 10,),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text("Name :  ${data['name']}",style: TextStyle(fontSize: 20,color: Colors.blue),textAlign: TextAlign.start,),
+                                child: Text("Name:  ${data['name']}",style: TextStyle(fontSize: 20,color: Colors.black),textAlign: TextAlign.start,),
                               ),
                               SizedBox(height: 8,),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text("Email :  ${data['email']}",style: TextStyle(fontSize: 20,color: Colors.blue)),
+                                child: Text("Email:  ${data['email']}",style: TextStyle(fontSize: 20,color: Colors.black)),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  ElevatedButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>newhome()));
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.deepPurple,
+                                    elevation: 20,
+                                    shadowColor: Colors.black,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)
+                                    )
+                                  ),
+                                      child: Text("Home",style: TextStyle(fontSize: 20),)),
+                                  SizedBox(width: 10,),
+                                  ElevatedButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
+                                  },
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.deepPurple,
+                                          elevation: 20,
+                                          shadowColor: Colors.black,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10)
+                                          )
+                                      ),
+                                      child: Text("Logout",style: TextStyle(fontSize: 20),)),
+                                ],
                               )
                             ],
                           ),

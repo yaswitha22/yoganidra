@@ -22,7 +22,7 @@ class _artsexamState extends State<artsexam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Entrance Exams",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("Entrance Exams",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -51,7 +51,7 @@ class _artsexamState extends State<artsexam> {
                           colors: [Colors.black,Colors.blueGrey]
                       )
                   ),
-                  child: Center(child: Text("National Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
+                  child: Center(child: Text("National Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),
               ),
               SizedBox(height: 20,),
@@ -68,7 +68,7 @@ class _artsexamState extends State<artsexam> {
                           colors: [Colors.blueGrey,Colors.black,]
                       )
                   ),
-                  child: Center(child: Text("State Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
+                  child: Center(child: Text("State Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),
               ),
               SizedBox(height: 20,),

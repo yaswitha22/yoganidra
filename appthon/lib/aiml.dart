@@ -63,7 +63,7 @@ class _aimlState extends State<aiml> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("AIML",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("AIML",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -186,7 +186,7 @@ class _aimlState extends State<aiml> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Colors.pinkAccent,),
-                  child: Center(child: Text("Between 10 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)))
+                  child: Center(child: Text("Between 10 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),
         ),

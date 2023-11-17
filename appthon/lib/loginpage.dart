@@ -1,4 +1,5 @@
 import 'package:appthon/home.dart';
+import 'package:appthon/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:appthon/newhome.dart';
@@ -21,7 +22,14 @@ class _loginpageState extends State<loginpage> {
       auth.signInWithEmailAndPassword(email: email, password: pass).then((value){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>newhome()));
       }).onError((error, stackTrace){
-        AlertDialog(title: Text("Wrong credentials"),);
+        showDialog(context:context, builder:(context)=>AlertDialog(
+          title: Text("Not registered?"),
+          actions: [
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Signuppage()));
+            }, child:Text("Signup"))
+          ],
+        ));
       });
     }catch(err){
       throw Exception(err);
@@ -31,9 +39,23 @@ class _loginpageState extends State<loginpage> {
     final FirebaseAuth auth=FirebaseAuth.instance;
     try{
       await auth.sendPasswordResetEmail(email: email).then((value){
-        print("Reset Password");
+        showDialog(context:context, builder:(context)=>AlertDialog(
+          title: Text("Email sent successfully"),
+          actions: [
+            ElevatedButton(onPressed: (){
+              Navigator.pop(context);
+            }, child:Text("Ok"))
+          ],
+        ));
       }).onError((error, stackTrace){
-        print("Not registered with $email");
+        showDialog(context:context, builder:(context)=>AlertDialog(
+          title: Text("Not registered?"),
+          actions: [
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Signuppage()));
+            }, child:Text("Signup"))
+          ],
+        ));
       });
     }catch(err){
       throw Exception(err);

@@ -122,49 +122,56 @@ class _newhomeState extends State<newhome> {
       ),
       drawer: Drawer(
         child: ListView(
-          padding:EdgeInsets.all(0),
+          padding:EdgeInsets.all(8.0),
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.blueGrey,Colors.black]
-                  )
+             decoration: BoxDecoration(
+             color: Colors.deepPurple,
               ), //BoxDecoration
-
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Colors.white),
                 accountName:Text("",style: TextStyle(color: Colors.black),),
                 accountEmail: Text("",style: TextStyle(color: Colors.black),),
                 currentAccountPictureSize: Size.square(53),
                 currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.blue,
-                  child: Text(
-                    "Y",
-                    style: TextStyle(fontSize: 30.0, color: Colors.black),
-                  ), //Text
+                  backgroundColor: Colors.deepPurple,
+                  child: Icon(Icons.person,size: 40,color: Colors.white,)
                 ), //circleAvatar
               ), //UserAccountDrawerHeader
             ),
             //DrawerHeader
+            SizedBox(height: 30,),
             ListTile(
-              leading: Icon(Icons.person),
-              title: Text(' My Profile '),
+              leading: Icon(Icons.person,color: Colors.white,),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              tileColor: Colors.pinkAccent,
+              title: Text(' My Profile ',style: TextStyle(fontSize: 20,color: Colors.white),),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
               },
             ),
+            SizedBox(height: 20,),
             ListTile(
-              leading: Icon(Icons.book),
-              title: Text(' My Course '),
+              leading: Icon(Icons.book,color: Colors.white,),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              tileColor: Colors.deepPurple,
+              title: Text(' My Course ',style: TextStyle(fontSize: 20,color: Colors.white)),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>favourite()));
               },
             ),
+            SizedBox(height: 20,),
             ListTile(
-              leading: Icon(Icons.logout),
-              title:  Text('LogOut'),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              leading: Icon(Icons.logout,color: Colors.white,),
+              tileColor: Colors.pinkAccent,
+              title:  Text(' LogOut',style: TextStyle(fontSize: 20,color: Colors.white)),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
               },

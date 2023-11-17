@@ -104,7 +104,7 @@ class _beState extends State<be> {
                         height: 150,
                         width: 300,
                         color: Colors.black,
-                        child: Image(image: NetworkImage(""),
+                        child: Image(image: AssetImage("assets/be.jpg"),
                             fit: BoxFit.cover)),
                   )
               ),

@@ -1,5 +1,7 @@
-import 'package:appthon/cse.dart';
-import 'package:appthon/loginpage.dart';
+import 'package:appthon/btech.dart';
+import 'package:appthon/favourite.dart';
+import 'package:appthon/home.dart';
+import 'package:appthon/it.dart';
 import 'package:appthon/newhome.dart';
 import 'package:appthon/profile.dart';
 import 'package:appthon/signup.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:cse(),
+      home:name(),
     );
   }
 }

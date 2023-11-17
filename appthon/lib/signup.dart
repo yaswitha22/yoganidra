@@ -43,6 +43,14 @@ class _SignuppageState extends State<Signuppage> {
         setState(() {
           errorMessage = e.message;
         });
+        showDialog(context:context, builder:(context)=>AlertDialog(
+          title: Text("Already a Member..!!!"),
+          actions: [
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
+            }, child:Text("Login"))
+          ],
+        ));
       }
     }
     return Scaffold(

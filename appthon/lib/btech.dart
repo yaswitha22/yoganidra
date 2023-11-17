@@ -20,195 +20,211 @@ class _btechState extends State<btech> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("B.TECH",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("B.TECH",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20,),
-              Text("B.TECH-(Bachelor of Technology):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("B.TECH-(Bachelor of Technology):",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 20,),
               Container(
                 height: 100,
                   width: 500,
                   decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(20)
                   ),
-                  child: Center(child: Text("The B.Tech program usually spans four years, with each year divided into semesters. B.Tech programs typically focus on engineering and technology disciplines. ",style: TextStyle(fontSize: 17,color: Colors.black),))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Center(child: Text("The B.Tech program usually spans four years, with each year divided into semesters. B.Tech programs typically focus on engineering and technology disciplines. ",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
-              Text("Core Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink),),
+              Text("Core Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
               SizedBox(height: 20,),
               Container(
-                height: 400,
+                height: 500,
                 width: 400,
                 decoration: BoxDecoration(
-                 // color: Colors.grey,
+                 color: Colors.pinkAccent,
                   borderRadius: BorderRadius.circular(30)
                 ),
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              color: Colors.blueGrey,
-                              borderRadius: BorderRadius.circular(30)
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SizedBox(height: 10,),
-                             Center(child: Text("AIML-(Artificial Intelligence and Machine Learning)",style: TextStyle(color: Colors.black,fontSize: 15),)),
-                              Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 20,),
-                      InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>cse()));
-                        },
-                          child: Container(
-                            height: 50,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                                color: Colors.blueGrey,
-                              borderRadius: BorderRadius.circular(30)
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text("CSE-(Computer Science and Engineering)",style: TextStyle(color: Colors.black,fontSize: 16),),
-                                Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
-                              ],
-                            ),
-                          )),
-                      SizedBox(height: 20,),
-                      InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>it()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>aiml()));
                           },
                           child: Container(
                             height: 50,
                             width: double.infinity,
                             decoration: BoxDecoration(
-                                color: Colors.blueGrey,
+                                color: Colors.deepPurple,
                                 borderRadius: BorderRadius.circular(30)
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("IT-(Information Technology)",style: TextStyle(fontSize: 16)),
-                                Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
+                                SizedBox(height: 10,),
+                               Padding(
+                                 padding: const EdgeInsets.all(8.0),
+                                 child: Center(child: Text("                                        AIML\n(Artificial Intelligence and Machine Learning)",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                               ),
+                                Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
                               ],
                             ),
-                          )
-                      ),
-                      SizedBox(height: 20,),
-                      InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ece()));
-                        },
-                          child: Center(
+                          ),
+                        ),
+                        SizedBox(height: 20,),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>cse()));
+                          },
                             child: Container(
                               height: 50,
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                  color: Colors.blueGrey,
+                                  color: Colors.deepPurple,
+                                borderRadius: BorderRadius.circular(30)
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("                                       CSE\n       (Computer Science and Engineering)",style: TextStyle(color: Colors.white,fontSize: 16),),
+                                  SizedBox(width: 30,),
+                                  Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
+                                ],
+                              ),
+                            )),
+                        SizedBox(height: 20,),
+                        InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>it()));
+                            },
+                            child: Container(
+                              height: 50,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurple,
                                   borderRadius: BorderRadius.circular(30)
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("ECE-(Electronics and Communication Engineering)",style: TextStyle(fontSize: 15),),
-                                  Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
+                                  Center(child: Text("                                        IT\n                     (Information Technology)",style: TextStyle(fontSize: 16,color: Colors.white))),
+                                  SizedBox(width: 50,),
+                                  Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
                                 ],
                               ),
-                            ),
-                          )),
-                      SizedBox(height: 20,),
-                       InkWell(
-                         onTap: (){
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=>eee()));
-                         },
-                           child: Container(
-                             height: 50,
-                             width: double.infinity,
-                             decoration: BoxDecoration(
-                                 color: Colors.blueGrey,
-                                 borderRadius: BorderRadius.circular(30)
-                             ),
-                             child: Row(
-                               mainAxisAlignment: MainAxisAlignment.center,
-                               children: [
-                                 Text("EEE-(Electrical and Electronics Engineering)",style: TextStyle(fontSize: 16),),
-                                 Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
-                               ],
-                             ),
-                           )),
-                      SizedBox(height: 20,),
-                      InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>civil()));
-                        },
-                          child: Container(
-                            height: 50,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                                color: Colors.blueGrey,
-                                borderRadius: BorderRadius.circular(30)
-                            ),
+                            )
+                        ),
+                        SizedBox(height: 20,),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>ece()));
+                          },
+                            child: Center(
+                              child: Container(
+                                height: 50,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                    color: Colors.deepPurple,
+                                    borderRadius: BorderRadius.circular(30)
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("                                          ECE\n     (Electronics and Communication Engineering)",style: TextStyle(fontSize: 15,color: Colors.white),),
+                                    SizedBox(width: 3,),
+                                    Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
+                                  ],
+                                ),
+                              ),
+                            )),
+                        SizedBox(height: 20,),
+                         InkWell(
+                           onTap: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>eee()));
+                           },
+                             child: Container(
+                               height: 50,
+                               width: double.infinity,
+                               decoration: BoxDecoration(
+                                   color: Colors.deepPurple,
+                                   borderRadius: BorderRadius.circular(30)
+                               ),
+                               child: Row(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                   Text("                                       EEE\n       (Electrical and Electronics Engineering)",style: TextStyle(fontSize: 16,color: Colors.white),),
+                                   SizedBox(width: 20,),
+                                   Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
+                                 ],
+                               ),
+                             )),
+                        SizedBox(height: 20,),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>civil()));
+                          },
+                            child: Container(
+                              height: 50,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurple,
+                                  borderRadius: BorderRadius.circular(30)
+                              ),
 
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text("Civil Engineering",style: TextStyle(fontSize: 16)),
-                                Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
-                              ],
-                            ),
-                          )
-                      ),
-                      SizedBox(height: 10,),
-                       InkWell(
-                         onTap: (){
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=>mech()));
-                         },
-                           child: Container(
-                             height: 50,
-                             width: double.infinity,
-                             decoration: BoxDecoration(
-                                 color: Colors.blueGrey,
-                                 borderRadius: BorderRadius.circular(30)
-                             ),
-                             child: Row(
-                               mainAxisAlignment: MainAxisAlignment.center,
-                               children: [
-                                 Text("Mechanical Engineering",style: TextStyle(fontSize: 16)),
-                                 Icon(Icons.arrow_right_outlined,color: Colors.black,size: 30,)
-                               ],
-                             ),
-                           )
-                       ),
-                    ],
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("                          Civil Engineering",style: TextStyle(fontSize: 16,color: Colors.white)),
+                                  SizedBox(width: 90,),
+                                  Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
+                                ],
+                              ),
+                            )
+                        ),
+                        SizedBox(height: 20,),
+                         InkWell(
+                           onTap: (){
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>mech()));
+                           },
+                             child: Container(
+                               height: 50,
+                               width: double.infinity,
+                               decoration: BoxDecoration(
+                                   color: Colors.deepPurple,
+                                   borderRadius: BorderRadius.circular(30)
+                               ),
+                               child: Row(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                   Text("                          Mechanical Engineering",style: TextStyle(fontSize: 16,color: Colors.white)),
+                                   SizedBox(width: 45,),
+                                   Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
+                                 ],
+                               ),
+                             )
+                         ),
+                      ],
+                    ),
                   ),
                 ),
               )
