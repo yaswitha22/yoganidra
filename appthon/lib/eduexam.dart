@@ -22,13 +22,13 @@ class _eduexamState extends State<eduexam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Entrance Exams",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("Entrance Exams",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -48,14 +48,23 @@ class _eduexamState extends State<eduexam> {
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
 
-                          colors: [Colors.black,Colors.blueGrey]
+                          colors: [Colors.pinkAccent,Colors.deepPurple]
                       )
                   ),
-                  child: Center(child: Text("National Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
+                  child: Center(child: Text("National Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),
               ),
               SizedBox(height: 20,),
-              FlutterBulletList(data: nat,spaceBetweenItem:15,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20),),
+              Container(
+                  height: 200,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Center(child: FlutterBulletList(data: nat,bulletColor:Colors.deepPurple,spaceBetweenItem:15,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
               Center(
                 child: Container(
@@ -64,15 +73,23 @@ class _eduexamState extends State<eduexam> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-
-                          colors: [Colors.blueGrey,Colors.black,]
+                          colors: [Colors.pinkAccent,Colors.deepPurple,]
                       )
                   ),
-                  child: Center(child: Text("State Level",style: TextStyle(fontSize: 27,color: Colors.white,fontWeight: FontWeight.bold),)),
+                  child: Center(child: Text("State Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
                 ),
               ),
               SizedBox(height: 20,),
-              FlutterBulletList(data: state,spaceBetweenItem:15,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20),),
+              Container(
+                  height: 150,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: Center(child: FlutterBulletList(data: state,bulletColor:Colors.pinkAccent,spaceBetweenItem:15,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                  )),
             ],
           ),
         ),

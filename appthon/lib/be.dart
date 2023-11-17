@@ -79,13 +79,13 @@ class _beState extends State<be> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("B.E",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("B.E",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.topRight,
-              colors: [Colors.blueGrey,Colors.black]
+              colors: [Colors.pinkAccent,Colors.deepPurple]
             )
           ),
         ),
@@ -109,37 +109,149 @@ class _beState extends State<be> {
                   )
               ),
               SizedBox(height: 20,),
-              Text("B.E-(Bachelor of Engineering):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("B.E-(Bachelor of Engineering):",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold,)),
               SizedBox(height: 10,),
-              Text("A Bachelor of Engineering (B.E.) program typically offers a variety of courses across different engineering disciplines. These academic programs are 4 years long. The course content is technical in nature. The academic program consists of classroom lectures and practical Sessions.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 110,
+                  width: 530,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("A Bachelor of Engineering (B.E.) program typically offers a variety of courses across different engineering disciplines and these academic programs are 4 years long.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
-              Text("Core Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink),),
+              Container(
+                  height: 100,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(child: Text("The course content is technical in nature. The academic program consists of classroom lectures and practical Sessions.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
+              SizedBox(height: 20,),
+              Text("Core Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
               SizedBox(height: 10,),
-              FlutterBulletList(
-                data: _data,
-                textStyle: TextStyle(fontSize: 18),
-                bulletSize: 2,
-                bulletType: BulletType.square,
+              Container(
+                height: 650,
+                width: 600,
+                decoration: BoxDecoration(
+                    color: Colors.pinkAccent,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(14.0),
+                  child: Center(
+                    child: FlutterBulletList(
+                      data: _data,
+                      textStyle: TextStyle(fontSize: 18,color: Colors.white),
+                      bulletSize: 2,
+                      bulletType: BulletType.square,
+                      bulletColor: Colors.deepPurple,
+                    ),
+                  ),
+                ),
               ),
               SizedBox(height: 20,),
-              Text("Professional Development and Elective Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Text("Professional Development and Elective Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18),),
+              Container(
+                  height: 200,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: Center(child: FlutterBulletList(data: data,bulletColor:Colors.pinkAccent,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white),)),
+                  )),
               SizedBox(height: 10,),
-              Text("Final year Project",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              Text("Most B.E. programs include a final year project where students work on a substantial engineering project under the guidance of faculty members.",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 20,),
-              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Container(
+                  height: 300,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text("Some of the job profiles that you can opt for after completing the BE are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                          ),
+                          SizedBox(height: 10,),
+                          Container(
+                              height: 200,
+                              width: 600,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurple,
+                                  borderRadius: BorderRadius.circular(30)
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: FlutterBulletList(data: fl,bulletColor:Colors.pinkAccent,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 18,color: Colors.white)),
+                              )),
+                        ],
+                      ),
+                    ),
+                  )),
               SizedBox(height: 10,),
-              Text("After completing the BE, you can easily choose to work in a company related to your field. You can easily get a starting salary of 4.2-6.0 Lakhs in a reputed company. \n\nDepending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BE are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 260,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Text("A few companies that recruit Engineering graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                      ),
+                      SizedBox(height: 10,),
+                      Container(
+                          height: 160,
+                          width: 600,
+                          decoration: BoxDecoration(
+                              color: Colors.pinkAccent,
+                              borderRadius: BorderRadius.circular(30)
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: FlutterBulletList(data: comp,bulletSize: 2,textStyle: TextStyle(fontSize: 18,color: Colors.white),bulletColor:Colors.deepPurple,bulletType: BulletType.square,)
+                          )),
+                    ],
+                  ),
+                ),
+              )),
               SizedBox(height: 10,),
-              FlutterBulletList(data: fl,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 18)),
+              Text("Average Starting Salary",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              Text("A few companies that recruit Engineering graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: comp,bulletSize: 2,textStyle: TextStyle(fontSize: 18),bulletType: BulletType.square,)
-              
+              Container(
+                  height:50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.pinkAccent,
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text("Between 4 LPA and 10 LPA",style: TextStyle(fontSize: 17,color: Colors.white),),
+                    ),
+                  )),
             ],
           ),
         ),
