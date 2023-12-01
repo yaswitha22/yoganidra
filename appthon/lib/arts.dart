@@ -19,7 +19,7 @@ class _artsState extends State<arts> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple,Colors.pinkAccent]
               )
           ),
         ),
@@ -47,7 +47,14 @@ class _artsState extends State<arts> {
                         children: [
                           ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/ba.jpg')))),
                           SizedBox(height: 20,),
-                          Text("B.A",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("B.A",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 40,),
+                              IconButton(onPressed: (){}, icon:Icon(Icons.favorite_outline_sharp,size: 30,color: Colors.black,))
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -74,7 +81,7 @@ class _artsState extends State<arts> {
                           children: [
                             ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/exam.jpg')))),
                             SizedBox(height: 20,),
-                            Text("Common Entrance Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                            Text("Common Entrance Exams",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
                             SizedBox(height: 20,)
                           ],
                         ),

@@ -43,7 +43,7 @@ class _itState extends State<it> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -72,7 +72,7 @@ class _itState extends State<it> {
                   height: 150,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Center(
@@ -98,7 +98,7 @@ class _itState extends State<it> {
                   height: 100,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Padding(
@@ -128,7 +128,7 @@ class _itState extends State<it> {
                           height: 170,
                           width: 350,
                           decoration: BoxDecoration(
-                              color: Colors.pinkAccent,
+                              color: Colors.deepPurple,
                               borderRadius: BorderRadius.circular(30)
                           ),
                           child: Padding(
@@ -144,7 +144,7 @@ class _itState extends State<it> {
                   height: 150,
                   width: 350,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Padding(
@@ -163,7 +163,7 @@ class _itState extends State<it> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: FlutterBulletList(data: comp,bulletSize: 1,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                    child: FlutterBulletList(data: comp,bulletSize: 1,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
                   )),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
@@ -171,7 +171,7 @@ class _itState extends State<it> {
                 height: 50,
                   width: 300,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Center(child: Text("Between 4.8 LPA and 10 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))

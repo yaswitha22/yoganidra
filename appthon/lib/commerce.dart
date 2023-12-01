@@ -21,7 +21,7 @@ class _commerceState extends State<commerce> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -49,7 +49,13 @@ class _commerceState extends State<commerce> {
                         children: [
                           ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bcom.jpg')))),
                           SizedBox(height: 20,),
-                          Text("B.Com",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            children: [
+                              Text("B.Com",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 20,),
+                              Icon(Icons.favorite_outlined,color: Colors.black,)
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -75,7 +81,13 @@ class _commerceState extends State<commerce> {
                           children: [
                             ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://eassests.s3.amazonaws.com/article-images/finance-bachelor.jpg")))),
                             SizedBox(height: 20,),
-                            Text("B.Fin",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                            Row(
+                              children: [
+                                Text("B.Fin",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                                SizedBox(width: 20,),
+                                Icon(Icons.favorite_outlined,color: Colors.black,)
+                              ],
+                            )
                           ],
                         ),
                       ),
@@ -100,7 +112,13 @@ class _commerceState extends State<commerce> {
                         children: [
                           ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: NetworkImage("https://wallpapercave.com/wp/wp7149560.jpg")))),
                           SizedBox(height: 20,),
-                          Text("Chartered Accountancy (CA)",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            children: [
+                              Text("Chartered Accountancy (CA)",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 20,),
+                              Icon(Icons.favorite_outlined,color: Colors.black,)
+                            ],
+                          )
                         ],
                       ),
                     ),

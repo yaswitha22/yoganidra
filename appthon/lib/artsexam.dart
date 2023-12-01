@@ -28,7 +28,7 @@ class _artsexamState extends State<artsexam> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -47,7 +47,7 @@ class _artsexamState extends State<artsexam> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-                          colors: [Colors.deepPurple,Colors.pinkAccent]
+                          colors: [Colors.deepPurple]
                       )
                   ),
                   child: Center(child: Text("National Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
@@ -58,7 +58,7 @@ class _artsexamState extends State<artsexam> {
                   height: 234,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(18.0),
@@ -72,7 +72,7 @@ class _artsexamState extends State<artsexam> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-                          colors: [Colors.pinkAccent,Colors.deepPurple]
+                          colors: [Colors.deepPurple]
                       )
                   ),
                   child: Center(child: Text("State Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
@@ -88,7 +88,7 @@ class _artsexamState extends State<artsexam> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
-                    child: Center(child: FlutterBulletList(data: state,spaceBetweenItem:15,bulletColor: Colors.pinkAccent,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                    child: Center(child: FlutterBulletList(data: state,spaceBetweenItem:15,bulletColor: Colors.white,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
                   )),
             ],
           ),

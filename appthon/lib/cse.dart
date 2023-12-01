@@ -49,7 +49,7 @@ class _cseState extends State<cse> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -78,7 +78,7 @@ class _cseState extends State<cse> {
                   height: 160,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(18.0),
@@ -102,7 +102,7 @@ class _cseState extends State<cse> {
                   height: 390,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -119,7 +119,7 @@ class _cseState extends State<cse> {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(12.0),
-                              child: FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                              child: FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
                             )),
                       ],
                     )),
@@ -136,7 +136,7 @@ class _cseState extends State<cse> {
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,bulletColor: Colors.pinkAccent,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                    child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,bulletColor: Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
                   )),
               SizedBox(height: 10,),
               Text("Core Companies to hire CSE graduates:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
@@ -145,7 +145,7 @@ class _cseState extends State<cse> {
                   height: 240,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(12.0),

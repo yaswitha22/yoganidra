@@ -33,7 +33,7 @@ class _exam1State extends State<exam1> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -52,7 +52,7 @@ class _exam1State extends State<exam1> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-                          colors: [Colors.deepPurple,Colors.pinkAccent]
+                          colors: [Colors.deepPurple]
                       )
                   ),
                   child: Center(child: Text("National Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
@@ -63,7 +63,7 @@ class _exam1State extends State<exam1> {
                   height: 330,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(16.0),
@@ -78,7 +78,7 @@ class _exam1State extends State<exam1> {
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
 
-                          colors: [Colors.pinkAccent,Colors.deepPurple,]
+                          colors: [Colors.deepPurple,]
                       )
                   ),
                   child: Center(child: Text("State Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
@@ -94,7 +94,7 @@ class _exam1State extends State<exam1> {
                   ),child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: Center(
-                      child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.pinkAccent,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color:Colors.white
+                      child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.white,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color:Colors.white
               ),),
                     ),
                   )),

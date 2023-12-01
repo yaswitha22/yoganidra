@@ -70,7 +70,13 @@ class _engineeringState extends State<engineering> {
                           children: [
                             ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/btech.jpg')))),
                             SizedBox(height: 20,),
-                            Text("B.TECH",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                            Row(
+                              children: [
+                                Text("B.TECH",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                                SizedBox(width: 20,),
+                                Icon(Icons.favorite_outlined,color: Colors.black,),
+                              ],
+                            )
                           ],
                         ),
                       ),

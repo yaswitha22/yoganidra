@@ -36,6 +36,7 @@ dependencies:
   firebase_auth:
   cloud_firestore:
   provider:
+  image_picker:
 
 
 
@@ -126,6 +127,9 @@ flutter:
       - assets/bsc.jpg
       - assets/bsw.jpg
       - assets/bpsyc.jpg
+      - assets/fav.jpg
+      - assets/streams.avif
+      - assets/profile.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -69,7 +69,7 @@ class _aimlState extends State<aiml> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple,Colors.pinkAccent]
               )
           ),
         ),
@@ -98,10 +98,13 @@ class _aimlState extends State<aiml> {
                   height: 140,
                   width: 500,
                   decoration: BoxDecoration(
-                  color: Colors.pinkAccent,
+                  color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(30)
                   ),
-                  child: Center(child: Text("Artificial Intelligence and Machine Learning is a branch of study that includes theories and innovations of various different domains like mathematics, cognitive science,embedded systems to make intelligent systems that mimic human behaviour.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+                  child: Center(child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Artificial Intelligence and Machine Learning is a branch of study that includes theories and innovations of various different domains like mathematics, cognitive science,embedded systems to make intelligent systems that mimic human behaviour.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,),
+                  ))),
               SizedBox(height: 20,),
               Container(
                   height: 110,
@@ -110,16 +113,22 @@ class _aimlState extends State<aiml> {
                       color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
-                  child: Center(child: Text("It is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+                  child: Center(child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("It is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,),
+                  ))),
               SizedBox(height: 20,),
               Container(
                   height: 140,
                   width: 500,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
-                  child: Center(child: Text("Artificial Intelligence and Machine Learning focus on collecting, categorizing, analyzing and interpreting data.It is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+                  child: Center(child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Artificial Intelligence and Machine Learning focus on collecting, categorizing, analyzing and interpreting data.It is a specialised branch that deals with the development of embedded systems like robotics and IoT based applications.",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,),
+                  ))),
               SizedBox(height: 20,),
               Container(
                   height: 100,
@@ -128,7 +137,10 @@ class _aimlState extends State<aiml> {
                       color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
-                  child: Center(child: Text("It also incorporates the concepts of machine learning and deep learning model building for solving various computational and real-world business problems",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+                  child: Center(child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("It also incorporates the concepts of machine learning and deep learning model building for solving various computational and real-world business problems",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,),
+                  ))),
               SizedBox(height: 20,),
               Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
@@ -136,10 +148,13 @@ class _aimlState extends State<aiml> {
                   height: 100,
                   width: 500,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
-                  child: Center(child: Text("Some of the top career options that reputed companies hire after AIML degree include the following job role positions:",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,))),
+                  child: Center(child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Some of the top career options that reputed companies hire after AIML degree include the following job role positions:",style: TextStyle(fontSize: 17,color: Colors.white),textAlign: TextAlign.center,),
+                  ))),
               SizedBox(height: 20,),
               Container(
                 height: 440,
@@ -149,7 +164,7 @@ class _aimlState extends State<aiml> {
                   color: Colors.deepPurple,),
                   child: Padding(
                     padding: EdgeInsets.all(14),
-                      child: FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 18,color: Colors.white)))),
+                      child: FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 18,color: Colors.white)))),
               SizedBox(height: 20,),
               Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
@@ -158,10 +173,10 @@ class _aimlState extends State<aiml> {
                   width: 500,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.pinkAccent,),
+                    color: Colors.deepPurple,),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Center(child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.deepPurple,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
+                    child: Center(child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
                   )),
               SizedBox(height: 10,),
               Text("Core companies to hire AIML graduates:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
@@ -174,7 +189,7 @@ class _aimlState extends State<aiml> {
                   color: Colors.deepPurple,),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Center(child: FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
+                  child: Center(child: FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
                 ),
               ),
               SizedBox(height: 20,),
@@ -185,7 +200,7 @@ class _aimlState extends State<aiml> {
                   width: 300,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.pinkAccent,),
+                    color: Colors.deepPurple,),
                   child: Center(child: Text("Between 10 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),

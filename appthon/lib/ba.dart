@@ -36,7 +36,7 @@ class _baState extends State<ba> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("BA",style: TextStyle(fontSize: 25,color: Colors.white),)),
+        title: Center(child: Text("B.A",style: TextStyle(fontSize: 25,color: Colors.white),)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -84,7 +84,7 @@ class _baState extends State<ba> {
                   height: 100,
                   width: 500,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Padding(
@@ -117,19 +117,12 @@ class _baState extends State<ba> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Text("On completing a B.A. degree course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("On completing a B.A. degree course there are various career aspects or choices that one can pursue for. Some of the profiles are:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        ),
                         SizedBox(height: 10,),
-                        Container(
-                            height: 100,
-                            width: 300,
-                            decoration: BoxDecoration(
-                                color: Colors.pinkAccent,
-                                borderRadius: BorderRadius.circular(30)
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: FlutterBulletList(data: _data,bulletSize: 2,bulletColor:Colors.deepPurple,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
-                            )),
+                    FlutterBulletList(data: _data,bulletSize: 2,bulletColor:Colors.white,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white))
                       ],
                     ),
                   ))),
@@ -140,12 +133,12 @@ class _baState extends State<ba> {
                   height: 170,
                   width: 300,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: FlutterBulletList(data: skills,bulletSize: 2,bulletColor:Colors.deepPurple,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                    child: FlutterBulletList(data: skills,bulletSize: 2,bulletColor:Colors.white,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
                   )),
               SizedBox(height: 20,),
               Text("Core companies to hire BA graduates:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
@@ -159,7 +152,7 @@ class _baState extends State<ba> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Center(child: FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.pinkAccent,textStyle: TextStyle(fontSize: 16,color: Colors.white))),
+                    child: Center(child: FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white))),
                   )),
               SizedBox(height: 20,),
               Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
@@ -169,7 +162,7 @@ class _baState extends State<ba> {
                   width: 300,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.pinkAccent,),
+                    color: Colors.deepPurple,),
                   child: Center(child: Text("Between 2 LPA and 8 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),

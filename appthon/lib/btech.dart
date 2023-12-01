@@ -26,7 +26,7 @@ class _btechState extends State<btech> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -58,7 +58,7 @@ class _btechState extends State<btech> {
                 height: 500,
                 width: 400,
                 decoration: BoxDecoration(
-                 color: Colors.pinkAccent,
+                 color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(30)
                 ),
                 child: SingleChildScrollView(

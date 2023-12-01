@@ -1,4 +1,3 @@
-import 'package:appthon/profile.dart';
 import 'package:appthon/sciences.dart';
 import 'package:appthon/social.dart';
 import 'package:flutter/material.dart';

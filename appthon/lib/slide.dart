@@ -8,8 +8,6 @@ class hscrn extends StatefulWidget {
   @override
   State<hscrn> createState() => _hscrnState();
 }
-
-
 class _hscrnState extends State<hscrn> {
   void initState() {
   super.initState();

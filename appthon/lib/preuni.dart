@@ -7,14 +7,13 @@ class Preuni extends StatefulWidget {
   @override
   State<Preuni> createState() => _PreuniState();
 }
-
 class _PreuniState extends State<Preuni> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body:Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(begin: Alignment.topCenter,colors: [Colors.pinkAccent,Colors.deepPurple])
+            color: Colors.pinkAccent
         ),
         child: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -30,12 +29,12 @@ class _PreuniState extends State<Preuni> {
                   Text("Primary",style: TextStyle(fontSize: 30,color: Colors.white)),
                   LinearPercentIndicator(
                     animationDuration: 1200,
-                    percent: 0.1,
+                    percent: 0.2,
                     animation: true,
                     width: 200,
-                    lineHeight: 20.0,
-                    linearStrokeCap: LinearStrokeCap.roundAll,
-                    progressColor: Colors.pinkAccent,
+                    lineHeight: 23.0,
+                    barRadius: Radius.circular(20),
+                    progressColor: Colors.deepPurple,
                   ),
                 ],
               ),
@@ -49,27 +48,26 @@ class _PreuniState extends State<Preuni> {
                         percent: 0.3,
                         animation: true,
                         width: 200,
-                        lineHeight: 20.0,
-                        linearStrokeCap: LinearStrokeCap.roundAll,
-                        progressColor: Colors.pinkAccent
+                        lineHeight: 23.0,
+                    barRadius: Radius.circular(20),
+                        progressColor: Colors.deepPurple
                     ,
                   ),
                 ],
               ),
               SizedBox(height: 30,),
               Row(
-                mainAxisAlignment:  MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("+1,+2",style: TextStyle(fontSize: 30,color: Colors.white),),
                   LinearPercentIndicator(
-
                     animationDuration: 1600,
                     percent: 0.5,
                     animation: true,
                     width: 200,
-                    lineHeight: 20.0,
-                    linearStrokeCap: LinearStrokeCap.roundAll,
-                    progressColor: Colors.pinkAccent,
+                    lineHeight: 23.0,
+                    barRadius: Radius.circular(20),
+                    progressColor: Colors.deepPurple,
                   ),
                 ],
               ),

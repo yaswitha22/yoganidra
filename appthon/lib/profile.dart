@@ -1,9 +1,10 @@
-import 'package:appthon/home.dart';
+
 import 'package:appthon/loginpage.dart';
 import 'package:appthon/newhome.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -112,7 +113,7 @@ class _profileState extends State<profile> {
                                       ),
                                       child: Text("Logout",style: TextStyle(fontSize: 20),)),
                                 ],
-                              )
+                              ),
                             ],
                           ),
                         ),

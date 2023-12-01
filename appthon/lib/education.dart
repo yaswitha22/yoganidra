@@ -20,7 +20,7 @@ class _educationState extends State<education> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.pinkAccent,Colors.deepPurple]
+                  colors: [Colors.deepPurple]
               )
           ),
         ),
@@ -48,7 +48,13 @@ class _educationState extends State<education> {
                         children: [
                           ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bed.jpg')))),
                           SizedBox(height: 20,),
-                          Text("B.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            children: [
+                              Text("B.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 20,),
+                              Icon(Icons.favorite_outlined,color: Colors.black,)
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -72,7 +78,13 @@ class _educationState extends State<education> {
                         children: [
                           ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage('assets/bped.jpg')))),
                           SizedBox(height: 20,),
-                          Text("B.P.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            children: [
+                              Text("B.P.Ed",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 20,),
+                              Icon(Icons.favorite_outlined,color: Colors.black,)
+                            ],
+                          )
                         ],
                       ),
                     ),
