@@ -158,11 +158,11 @@ class _newhomeState extends State<newhome> {
              color: Colors.deepPurple,
               ), //BoxDecoration
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius:BorderRadius.circular(45),
                 child: UserAccountsDrawerHeader(
                   decoration: BoxDecoration(color: Colors.white),
-                  accountName:Text("",style: TextStyle(color: Colors.black),),
-                  accountEmail: Text("",style: TextStyle(color: Colors.black),),
+                  accountName:Text("Venkat",style: TextStyle(color: Colors.black),),
+                  accountEmail: Text("venkatpolisettidrm@gmail.com",style: TextStyle(color: Colors.black),),
                   currentAccountPictureSize: Size.square(53),
                   currentAccountPicture: CircleAvatar(
                     backgroundColor: Colors.deepPurple,

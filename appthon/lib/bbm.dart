@@ -50,7 +50,7 @@ class _bbmState extends State<bbm> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -73,40 +73,120 @@ class _bbmState extends State<bbm> {
                 ),
               ),
               SizedBox(height: 20,),
-              Text("BBM-(Bachelor of Business Management):",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Text("BBM-(Bachelor of Business Management):",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              Text("It is an undergraduate degree programme where the students learn the principles of business management. The Bachelor of Business Management or BBM course is divided into six semesters in the time duration of three academic years.\n\nThe bachelor of business management degree is quite similar to BBA degree programme. Students who have basic knowledge of business and want to make a career in business can opt for Bachelor of Business Management or BBM course.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 150,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(child: Text("It is an undergraduate degree programme where the students learn the principles of business management. The Bachelor of Business Management or BBM course is divided into six semesters in the time duration of three academic years.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
-              Text("Core Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink),),
+              Container(
+                  height: 150,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text("The bachelor of business management degree is quite similar to BBA degree programme. Students who have basic knowledge of business and want to make a career in business can opt for Bachelor of Business Management or BBM course.",style: TextStyle(fontSize: 17,color: Colors.white),),
+                  )),
+              SizedBox(height: 20,),
+              Text("Core Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
               SizedBox(height: 10,),
-              FlutterBulletList(
-                data: _data,
-                textStyle: TextStyle(fontSize: 18),
-                bulletSize: 1,
-                bulletType: BulletType.square,
+              Container(
+                height: 110,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: FlutterBulletList(
+                      data: _data,
+                      bulletColor: Colors.white,
+                      textStyle: TextStyle(fontSize: 18,color: Colors.white),
+                      bulletSize: 1,
+                      bulletType: BulletType.square,
+                    ),
+                  ),
+                ),
               ),
               SizedBox(height: 20,),
-              Text("Professional Development and Elective Courses:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Text("Professional Development and Elective Courses:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: data,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18),),
+              Container(
+                  height: 180,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: FlutterBulletList(data: data,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white),bulletColor: Colors.white,),
+                  )),
               SizedBox(height: 20,),
-              Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18)),
+              Container(
+                  height: 140,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                        child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white),bulletColor: Colors.white,)),
+                  )),
               SizedBox(height: 20,),
-              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BBM are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                height: 500,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BBM are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        SizedBox(height: 10,),
+                        FlutterBulletList(data: fl,bulletType: BulletType.square,bulletColor:Colors.white,bulletSize: 2,textStyle: TextStyle(fontSize: 18,color: Colors.white)),
+                        SizedBox(height: 10,),
+                        Text("A few companies that recruit BBM graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        SizedBox(height: 10,),
+                        FlutterBulletList(data: comp,bulletSize: 2,textStyle: TextStyle(fontSize: 18,color: Colors.white),bulletType: BulletType.square,bulletColor: Colors.white,),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: fl,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 18)),
-              SizedBox(height: 10,),
-              Text("A few companies that recruit BBM graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: comp,bulletSize: 2,textStyle: TextStyle(fontSize: 18),bulletType: BulletType.square,),
-              SizedBox(height: 10,),
-              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
-              SizedBox(height: 10,),
-              Text("Between 3 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Container(
+                  height:50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.deepPurple,),
+                  child: Center(child: Text("Between 3 LPA and 15 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),
         ),

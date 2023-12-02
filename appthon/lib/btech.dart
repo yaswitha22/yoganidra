@@ -26,7 +26,7 @@ class _btechState extends State<btech> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.deepPurple]
+                  colors: [Colors.deepPurple,Colors.pinkAccent]
               )
           ),
         ),
@@ -41,7 +41,7 @@ class _btechState extends State<btech> {
               Text("B.TECH-(Bachelor of Technology):",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 20,),
               Container(
-                height: 100,
+                height: 120,
                   width: 500,
                   decoration: BoxDecoration(
                   color: Colors.deepPurple,
@@ -216,7 +216,7 @@ class _btechState extends State<btech> {
                                child: Row(
                                  mainAxisAlignment: MainAxisAlignment.center,
                                  children: [
-                                   Text("                          Mechanical Engineering",style: TextStyle(fontSize: 16,color: Colors.white)),
+                                   Text("                      Mechanical Engineering",style: TextStyle(fontSize: 16,color: Colors.white)),
                                    SizedBox(width: 45,),
                                    Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
                                  ],

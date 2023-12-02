@@ -49,7 +49,7 @@ class _cseState extends State<cse> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.deepPurple]
+                  colors: [Colors.deepPurple,Colors.pinkAccent]
               )
           ),
         ),

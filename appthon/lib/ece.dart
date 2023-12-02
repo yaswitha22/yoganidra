@@ -73,28 +73,101 @@ class _eceState extends State<ece> {
                 ),
               ),
               SizedBox(height: 20,),
-              Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("About Course:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text("“Electronics and Communication Engineering” is one of the fastest growing field of engineering courses. It involves the transmission of information across the channel.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 130,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("“Electronics and Communication Engineering” is one of the fastest growing field of engineering courses. It involves the transmission of information across the channel.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 10,),
-              Text("Electronics and Communication Engineering deals with the electronic devices and software applications. It is an interface of chip level hardware and information technology.\n\nThe basic study of ECE is just as the electronics engineering, and communication engineering is an additional field in electronics engineering.At that time the Electronics and Communication Engineering was known as the Radio Engineering.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 120,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("Electronics and Communication Engineering deals with the electronic devices and software applications. It is an interface of chip level hardware and information technology.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
+              SizedBox(height: 10,),
+              Container(
+                  height: 150,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("The basic study of ECE is just as the electronics engineering, and communication engineering is an additional field in electronics engineering.At that time the Electronics and Communication Engineering was known as the Radio Engineering.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
-              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text("Some job titles are listed here:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: _data,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                  height: 230,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text("Some job titles are listed here:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        SizedBox(height: 10,),
+                        FlutterBulletList(data: _data,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white),bulletColor: Colors.white,),
+                      ],
+                    ),
+                  )),
               SizedBox(height: 20,),
-              Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: skills,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                  height: 280,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(child: FlutterBulletList(data: skills,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white),bulletColor: Colors.white,)),
+                  )),
+              SizedBox(height: 20,),
+              Text("Core companies to hire ECE graduates:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              Text("Core companies to hire ECE graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Container(
+                  height: 250,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: FlutterBulletList(data: comp,bulletSize: 1,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white))),
+                  )),
+              SizedBox(height: 20,),
+              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: comp,bulletSize: 1,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
-              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
-              SizedBox(height: 10,),
-              Text("Between 3.5 LPA and 4.5 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Container(
+                  height:50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.deepPurple,),
+                  child: Center(child: Text("Between 3.5 LPA and 4.5 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),
         ),

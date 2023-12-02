@@ -64,11 +64,11 @@ class _businessexamState extends State<businessexam> {
                   height: 315,
                   width: 600,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Center(child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.deepPurple,data: nat,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                    child: Center(child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.white,data: nat,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
                   )),
               SizedBox(height: 20,),
               Center(
@@ -94,7 +94,7 @@ class _businessexamState extends State<businessexam> {
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Center(child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.pinkAccent,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                    child: Center(child: FlutterBulletList(spaceBetweenItem:15,bulletColor:Colors.white,data: state,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
                   )),
             ],
           ),

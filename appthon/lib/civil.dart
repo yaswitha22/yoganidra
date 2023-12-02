@@ -43,7 +43,7 @@ class _civilState extends State<civil> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey,Colors.black]
+                  colors: [Colors.pinkAccent,Colors.deepPurple]
               )
           ),
         ),
@@ -66,28 +66,103 @@ class _civilState extends State<civil> {
                 ),
               ),
               SizedBox(height: 20,),
-              Text("About Course",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("About Course",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text("Civil engineering is a STEM field focused on designing and constructing the environments in which humans live. Civil engineers typically focus on large construction projects such as buildings, roads, bridges, subway systems, dams, and water supply networks.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 150,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("Civil engineering is a STEM field focused on designing and constructing the environments in which humans live. Civil engineers typically focus on large construction projects such as buildings, roads, bridges, subway systems, dams, and water supply networks.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 10,),
-              Text("As with any engineering field, civil engineering relies heavily on math and physics. Civil engineers need to be able to calculate the stresses on a structure to make sure it is engineered to avoid mechanical failure.\n\nMost building projects also require an engineer to understand design and the properties of materials. Successful civil engineers often oversee large aspects of a building project, so financial and leadership skills are also a must, as are strong writing and speaking skills.",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 130,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("As with any engineering field, civil engineering relies heavily on math and physics. Civil engineers need to be able to calculate the stresses on a structure to make sure it is engineered to avoid mechanical failure.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
+              SizedBox(height: 10,),
+              Container(
+                height: 160,
+                width: 600,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("Most building projects also require an engineer to understand design and the properties of materials. Successful civil engineers often oversee large aspects of a building project, so financial and leadership skills are also a must, as are strong writing and speaking skills.",style: TextStyle(fontSize: 17,color: Colors.white),)),
+                  )),
               SizedBox(height: 20,),
-              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("Career Oppurtunities",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text("Some job titles are listed here:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                height: 240,
+                width: 600,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      Text("Some job titles are listed here:",style: TextStyle(fontSize: 17,color: Colors.white,)),
+                      SizedBox(height: 10,),
+                      FlutterBulletList(data: _data,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                    ],
+                  ),
+                ),
+              ),
               SizedBox(height: 20,),
-              Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic),),
+              Text("Skills Required",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                  height: 200,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: FlutterBulletList(data: skills,bulletSize: 2,bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                  )),
+              SizedBox(height: 20,),
+              Text("Core companies to hire CIVIL graduates:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              Text("Core companies to hire CIVIL graduates:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
+              Container(
+                  height: 250,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16,color: Colors.white),bulletColor: Colors.white,),
+                  )),
+              SizedBox(height: 20,),
+              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: comp,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
-              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
-              SizedBox(height: 10,),
-              Text("Between 3 LPA and 4.9 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Container(
+                  height: 50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("Between 3 LPA and 4.9 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),
         ),

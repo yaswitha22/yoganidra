@@ -46,7 +46,14 @@ class _engineeringState extends State<engineering> {
                           children: [
                             ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image: AssetImage("assets/be.jpg")))),
                             SizedBox(height: 20,),
-                            Text("B.E",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("B.E",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                                SizedBox(width: 20,),
+                                IconButton(onPressed: (){},icon: Icon(Icons.favorite_outline_sharp),)
+                              ],
+                            )
                           ],
                         ),
                       ),
@@ -71,10 +78,11 @@ class _engineeringState extends State<engineering> {
                             ClipRRect(borderRadius: BorderRadius.circular(20),child: Container(child: Image(image:AssetImage('assets/btech.jpg')))),
                             SizedBox(height: 20,),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text("B.TECH",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                                 SizedBox(width: 20,),
-                                Icon(Icons.favorite_outlined,color: Colors.black,),
+                                Icon(Icons.favorite_outline_sharp,color: Colors.black,),
                               ],
                             )
                           ],

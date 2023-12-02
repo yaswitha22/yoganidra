@@ -47,9 +47,19 @@ class _businessState extends State<business> {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: AssetImage('assets/bba.jpg')),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                              child: Image(image: AssetImage('assets/bba.jpg'))),
                           SizedBox(height: 20,),
-                          Text("BBA",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("BBA",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 30,),
+                              IconButton(onPressed: (){}, icon: Icon(Icons.favorite_outline_sharp))
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -71,9 +81,18 @@ class _businessState extends State<business> {
                       padding: EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Image(image: AssetImage('assets/bbm.jpg')),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                              child: Image(image: AssetImage('assets/bbm.jpg'))),
                           SizedBox(height: 20,),
-                          Text("BBM",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("BBM",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                              SizedBox(width: 20,),
+                              IconButton(onPressed: (){}, icon: Icon(Icons.favorite_outline_sharp))
+                            ],
+                          )
                         ],
                       ),
                     ),

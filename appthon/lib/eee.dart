@@ -51,7 +51,7 @@ class _eeeState extends State<eee> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blueGrey, Colors.black]
+                  colors: [Colors.pinkAccent, Colors.deepPurple]
               )
           ),
         ),
@@ -76,47 +76,131 @@ class _eeeState extends State<eee> {
                 ),
               ),
               SizedBox(height: 20,),
-              Text("About Course", style: TextStyle(fontSize: 20,
-                  color: Colors.pink,
-                  fontStyle: FontStyle.italic),),
+              Text("About Course:", style: TextStyle(fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text(
-                "Electrical & electronics engineering is an integrated branch of engineering. It also includes the concepts of power generation & distribution communication & machine control .\n\nThis course deals with the technological aspects of electricity, especially the design & application of circuitry & electronic equipment.",
-                style: TextStyle(fontSize: 17, color: Colors.black),),
+              Container(
+                height: 120,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Text(
+                      "Electrical & electronics engineering is an integrated branch of engineering. It also includes the concepts of power generation & distribution communication & machine control.", style: TextStyle(fontSize: 17, color: Colors.white),),
+                  ),
+                ),
+              ),
               SizedBox(height: 20,),
-              Text(
-                "The electrical & electronics engineering (EEE) involves with the power. It can be existed in various forms like turbine, hydro, gas, fuel cell, solar, wind or geothermal energy. It involves the use, storage and generation of the power and energy.", style: TextStyle(fontSize: 17, color: Colors.black),),
+              Container(
+                  height: 100,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text("This course deals with the technological aspects of electricity, especially the design & application of circuitry & electronic equipment.",style: TextStyle(fontSize: 17, color: Colors.white),),
+                  )),
               SizedBox(height: 20,),
-              Text("Career Oppurtunities", style: TextStyle(fontSize: 20,
-                  color: Colors.pink,
-                  fontStyle: FontStyle.italic),),
+              Container(
+                height: 115,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Center(
+                    child: Text(
+                      "The electrical & electronics engineering (EEE) involves with the power. It can be existed in various forms like turbine, hydro, gas, fuel cell, solar, wind or geothermal energy.", style: TextStyle(fontSize: 17, color: Colors.white),),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text("Career Oppurtunities:", style: TextStyle(fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              Text("Some of the specific fields of career development are:",
-                style: TextStyle(fontSize: 17, color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(
-                data: _data, bulletSize: 1, bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                height: 230,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      Text("Some of the specific fields of career development are:",
+                        style: TextStyle(fontSize: 17, color: Colors.white),),
+                      SizedBox(height: 10,),
+                      FlutterBulletList(
+                          data: _data, bulletSize: 1, bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                    ],
+                  ),
+                ),
+              ),
               SizedBox(height: 20,),
               Text("Skills Required", style: TextStyle(fontSize: 20,
-                  color: Colors.pink,
-                  fontStyle: FontStyle.italic),),
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),),
               SizedBox(height: 10,),
-              FlutterBulletList(
-                data: skills, bulletSize: 1, bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                height: 280,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: FlutterBulletList(
+                    data: skills, bulletSize: 1, bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                ),
+              ),
               SizedBox(height: 10,),
               Text("Core companies to hire EEE graduates:", style: TextStyle(
                   fontSize: 20,
-                  color: Colors.pink,
-                  fontStyle: FontStyle.italic)),
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              FlutterBulletList(
-                data: comp, bulletSize: 1, bulletType: BulletType.square,textStyle: TextStyle(fontSize: 16)),
+              Container(
+                height: 260,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: FlutterBulletList(
+                    data: comp, bulletSize: 1, bulletType: BulletType.square,bulletColor:Colors.white,textStyle: TextStyle(fontSize: 16,color: Colors.white)),
+                ),
+              ),
+              SizedBox(height: 20,),
               Text("Average starting salary:", style: TextStyle(fontSize: 20,
-                  color: Colors.pink,
-                  fontStyle: FontStyle.italic)),
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              Text("Between 2.5 LPA and 5 LPA",
-                style: TextStyle(fontSize: 17, color: Colors.black),)
+              Container(
+                height:50,
+                width: 300,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.deepPurple,),
+                child: Center(
+                  child: Text("Between 2.5 LPA and 5 LPA",
+                    style: TextStyle(fontSize: 18, color: Colors.white),),
+                ),
+              )
             ],
           ),
         ),

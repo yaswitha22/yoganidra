@@ -78,15 +78,12 @@ class _bbaState extends State<bba> {
                   height: 130,
                   width: 500,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(child: Text("BBA specialisation is available in accounting, finance management, cost and management accounting, human resource management, marketing, strategic management, entrepreneurship, hospitality, and tourism.",style: TextStyle(fontSize: 17,color: Colors.white),)),
-                    ),
+                    padding: const EdgeInsets.all(16.0),
+                    child: Center(child: Text("BBA specialisation is available in accounting, finance management, cost and management accounting, human resource management, marketing, strategic management, entrepreneurship, hospitality, and tourism.",style: TextStyle(fontSize: 17,color: Colors.white),)),
                   )),
               SizedBox(height: 20,),
               Container(
@@ -110,7 +107,7 @@ class _bbaState extends State<bba> {
                 height: 150,
                 width: 500,
                 decoration: BoxDecoration(
-                    color: Colors.pinkAccent,
+                    color: Colors.deepPurple,
                     borderRadius: BorderRadius.circular(30)
                 ),
                 child: Padding(
@@ -138,7 +135,7 @@ class _bbaState extends State<bba> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: Center(child: FlutterBulletList(bulletColor:Colors.pinkAccent,data: data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white),)),
+                    child: Center(child: FlutterBulletList(bulletColor:Colors.white,data: data,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white),)),
                   )),
               SizedBox(height: 20,),
               Text("Skills Required:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
@@ -147,27 +144,48 @@ class _bbaState extends State<bba> {
                   height: 150,
                   width: 500,
                   decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: Center(child: FlutterBulletList(data: skills,bulletColor:Colors.deepPurple,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
+                    child: Center(child: FlutterBulletList(data: skills,bulletColor:Colors.white,bulletSize: 2,bulletType: BulletType.square,textStyle: TextStyle(fontSize: 18,color: Colors.white))),
                   )),
               SizedBox(height: 20,),
-              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.pink)),
+              Text("Career Oppurtunities:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black)),
               SizedBox(height: 10,),
-              Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BBA are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.black),),
+              Container(
+                  height: 505,
+                  width: 500,
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Text("Depending on your skills and academic records, you can easily get a perfect job profile in a core company of your field.\n\nSome of the job profiles that you can opt for after completing the BBA are listed as follows:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        SizedBox(height: 20,),
+                        FlutterBulletList(data: fl,bulletType: BulletType.square,bulletColor:Colors.white,bulletSize: 1,textStyle: TextStyle(fontSize: 18,color: Colors.white)),
+                        SizedBox(height: 10,),
+                        Text("A few companies that recruit BBA graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.white),),
+                        SizedBox(height: 10,),
+                        FlutterBulletList(data: comp,bulletSize: 2,textStyle: TextStyle(fontSize: 18,color: Colors.white),bulletType: BulletType.square,bulletColor: Colors.white,),
+                        SizedBox(height: 10,),
+                      ],
+                    ),
+                  )),
+              SizedBox(height: 20,),
+              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              FlutterBulletList(data: fl,bulletType: BulletType.square,bulletSize: 1,textStyle: TextStyle(fontSize: 18)),
-              SizedBox(height: 10,),
-              Text("A few companies that recruit BBA graduates regularly are:",style: TextStyle(fontSize: 17,color: Colors.black),),
-              SizedBox(height: 10,),
-              FlutterBulletList(data: comp,bulletSize: 2,textStyle: TextStyle(fontSize: 18),bulletType: BulletType.square,),
-              SizedBox(height: 10,),
-              Text("Average starting salary:",style: TextStyle(fontSize: 20,color: Colors.pink,fontStyle: FontStyle.italic)),
-              SizedBox(height: 10,),
-              Text("Between 2 LPA and 11.5 LPA",style: TextStyle(fontSize: 17,color: Colors.black),)
+              Container(
+                  height:50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.deepPurple,),
+                  child: Center(child: Text("Between 2 LPA and 11.5 LPA",style: TextStyle(fontSize: 17,color: Colors.white),)))
             ],
           ),
         ),

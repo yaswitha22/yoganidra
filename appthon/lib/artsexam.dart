@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bullet_list/flutter_bullet_list.dart';
 class artsexam extends StatefulWidget {
@@ -28,7 +30,7 @@ class _artsexamState extends State<artsexam> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.deepPurple]
+                  colors: [Colors.deepPurple,Colors.pinkAccent]
               )
           ),
         ),
@@ -47,7 +49,7 @@ class _artsexamState extends State<artsexam> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-                          colors: [Colors.deepPurple]
+                          colors: [Colors.deepPurple,Colors.pinkAccent]
                       )
                   ),
                   child: Center(child: Text("National Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
@@ -62,7 +64,7 @@ class _artsexamState extends State<artsexam> {
                       borderRadius: BorderRadius.circular(30)
                   ),child: Padding(
                     padding: const EdgeInsets.all(18.0),
-                    child: Center(child: FlutterBulletList(data: nat,bulletColor:Colors.deepPurple,spaceBetweenItem:15,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
+                    child: Center(child: FlutterBulletList(data: nat,bulletColor:Colors.white,spaceBetweenItem:15,bulletType: BulletType.square,bulletSize: 2,textStyle: TextStyle(fontSize: 20,color: Colors.white),)),
                   )),
               SizedBox(height: 20,),
               Center(
@@ -72,7 +74,7 @@ class _artsexamState extends State<artsexam> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       gradient: LinearGradient(
-                          colors: [Colors.deepPurple]
+                          colors: [Colors.deepPurple,Colors.pinkAccent]
                       )
                   ),
                   child: Center(child: Text("State Level",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
