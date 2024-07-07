@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
+import'Signuppage.dart';
 import 'package:yn/loginpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 
