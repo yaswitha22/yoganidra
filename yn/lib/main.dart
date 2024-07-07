@@ -1,11 +1,15 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
+import 'dart:ui';
 import 'package:yn/loginpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
       MyApp());
 }
@@ -66,7 +70,7 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
       }
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(seconds: 1),
+        duration: Duration(seconds: 3),
         curve: Curves.easeInOut,
       );
     });
