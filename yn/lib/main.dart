@@ -1,18 +1,28 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
-import'Signuppage.dart';
+import 'package:provider/provider.dart';
 import 'package:yn/loginpage.dart';
+import 'package:yn/music.dart';
+import 'package:yn/musicScreen.dart';
+import 'home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
-      MyApp());
+      MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (_) => AudioPlayerModel()),
+          ],
+          child:MyApp()
+      ));
 }
 
 class MyApp extends StatelessWidget {
@@ -36,18 +46,16 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
   int _currentPage = 0;
   final List<Map<String, dynamic>> _pages = [
     {
-      'imageUrl':
-      'https://www.infinumgrowth.com/wp-content/uploads/2020/06/Yoganidra.jpg',
-      'description': 'Explore the tranquility of Yoga'
+      'imageUrl': 'https://www.infinumgrowth.com/wp-content/uploads/2020/06/Yoganidra.jpg',
+      'description': 'Explore the tranquility of Yoga',
     },
     {
-      'imageUrl':
-      'https://img.freepik.com/premium-vector/vector-design-music-player-icon-style_822882-127142.jpg?w=740',
-      'description': 'Discover scenic landscapes'
+      'imageUrl': 'https://img.freepik.com/premium-vector/vector-design-music-player-icon-style_822882-127142.jpg?w=740',
+      'description': 'Discover scenic landscapes',
     },
     {
       'imageUrl': 'https://img.freepik.com/free-vector/chakras-concept_23-2148568321.jpg?t=st=1720255185~exp=1720258785~hmac=4c1136b8be749083ff1bd02e50bfa3afb49b74279601acfc69bca5a1eb371374&w=740',
-      'description': 'Experience the wonders of nature'
+      'description': 'Experience the wonders of nature',
     },
   ];
   final Shader _linearGradient = const LinearGradient(
@@ -63,7 +71,7 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
   }
 
   void _startAutoSlide() {
-    _timer = Timer.periodic(Duration(seconds: 2), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 3), (timer) {
       if (_currentPage < _pages.length - 1) {
         _currentPage++;
       } else {
@@ -71,7 +79,7 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
       }
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(seconds: 3),
+        duration: Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
     });
@@ -138,7 +146,7 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
                   ),
                   child: Column(
                     children: [
-                      SizedBox(height: 40,),
+                      SizedBox(height: 40),
                       Text(
                         'Yoga Nidra',
                         style: TextStyle(
@@ -261,7 +269,14 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
     return stars;
   }
 }
+final List<Pair> playlist = [
+  Pair('assets/audio1.mp3', false),
+  Pair('assets/audio2.mp3', false),
+  Pair('assets/audio3.mp3', false)
+];
 
-
-
-
+class Pair {
+  String str;
+  bool vis;
+  Pair(this.str,this.vis);
+}

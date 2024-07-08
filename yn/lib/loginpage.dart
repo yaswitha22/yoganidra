@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'Signuppage.dart';
 import 'dart:ui';
 import 'dart:math';
-
+import 'home.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -217,9 +217,10 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 30),
                   ElevatedButton(
                     onPressed: () {
-                      if (key.currentState!.validate()) {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>NewHome()));
+                      /*if (key.currentState!.validate()) {
                         login(email.text.trim(), pass.text.trim());
-                      }
+                      }*/
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -254,7 +255,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(width: 3),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Signuppage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => NewHome()));
                         },
                         child: Text(
                           "Signup",
@@ -273,19 +274,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-class NewHome extends StatefulWidget {
-  const NewHome({super.key});
 
-  @override
-  State<NewHome> createState() => _NewHomeState();
-}
-
-class _NewHomeState extends State<NewHome> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
 
 class Star extends StatelessWidget {
   final double size;
