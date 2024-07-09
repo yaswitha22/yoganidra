@@ -33,8 +33,8 @@ class AudioListScreen extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (BuildContext context) => PaypalCheckout(
                     sandboxMode: true,
-                    clientId: "AT3N9ZFKrIQhWQVMnXU5YaDe9DfeuMNosgjQHJwERK75e-vG198CcDvIAEPNlWMnKcChsZQGKqoxeOMe",
-                    secretKey: "EAbIVkA7pd8xTms1bSFUgiQUe5JvT7SD5K2fth6sAYe-67QmOk0fkAgTfi3qoUEqLjLBQzQyUskph6dF",
+                    clientId: "ur key",
+                    secretKey: "ur key",
                     returnURL: "www.google.com",
                     cancelURL: "www.google.com",
                     transactions: const [
