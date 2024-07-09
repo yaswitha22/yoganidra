@@ -143,6 +143,8 @@ class _SignuppageState extends State<Signuppage> {
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(color: Colors.white),
                         ),
+                        labelText: "Email",
+                        labelStyle: TextStyle(color: Colors.white),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(color: Colors.white),
@@ -166,6 +168,8 @@ class _SignuppageState extends State<Signuppage> {
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(color: Colors.white),
                         ),
+                        labelText: "Password",
+                        labelStyle: TextStyle(color: Colors.white),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(color: Colors.white),

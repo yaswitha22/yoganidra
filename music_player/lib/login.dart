@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.push(context, MaterialPageRoute(builder: (context) => AuthChange()));
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-credential') {
-        _showErrorDialog('User not found', 'The email address is not registered. Would you like to sign up?');
+        _showErrorDialog('Error', 'The email address is not registered/Incorrect Password');
       } else if (e.code == 'wrong-password') {
         _showErrorDialog('Incorrect Password', 'The password you entered is incorrect.');
       }
@@ -60,13 +60,7 @@ class _LoginPageState extends State<LoginPage> {
             },
             child: Text("OK"),
           ),
-          if (title == 'User not found') // Show Signup button only for user not found error
-            TextButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Signuppage()));
-              },
-              child: Text("Signup"),
-            ),
+
         ],
       ),
     );
@@ -92,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         );
       }).onError((error, stackTrace) {
-        _showErrorDialog('Not registered?', 'The email address is not registered. Would you like to sign up?');
+        _showErrorDialog('Not registered?', 'The email address is not registered/Incorrect password');
       });
     } catch (err) {
       _showErrorDialog('Error', 'An unexpected error occurred. Please try again.');

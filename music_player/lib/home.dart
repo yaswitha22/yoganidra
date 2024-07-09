@@ -67,6 +67,7 @@ class _NewHomeState extends State<NewHome> with SingleTickerProviderStateMixin {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),
         child: AppBar(
+          automaticallyImplyLeading: false, // Disable the back arrow
           shadowColor: Colors.yellow,
           title: Center(
             child: Text(
@@ -162,12 +163,26 @@ class Bubble {
   late double x;
   late double y;
   late double size;
+  late double dx;
+  late double dy;
 
   Bubble() {
     final random = Random();
     x = random.nextDouble();
     y = random.nextDouble();
-    size = 5.0 + random.nextDouble() * 10.0;
+    size = 2.0 + random.nextDouble() * 10.0;
+    dx = (random.nextDouble() - 0.5) * 0.01; // horizontal velocity
+    dy = (random.nextDouble() - 0.5) * 0.01; // vertical velocity
+  }
+
+  void move() {
+    x += dx;
+    y += dy;
+    // Wrap around the screen edges
+    if (x < 0) x = 1.0;
+    if (x > 1.0) x = 0.0;
+    if (y < 0) y = 1.0;
+    if (y > 1.0) y = 0.0;
   }
 }
 
@@ -182,6 +197,8 @@ class AnimatedBubble extends StatelessWidget {
     return AnimatedBuilder(
       animation: controller,
       builder: (context, child) {
+        bubble.move(); // Update the bubble's position
+
         return Positioned(
           left: bubble.x * MediaQuery.of(context).size.width,
           top: bubble.y * MediaQuery.of(context).size.height,
