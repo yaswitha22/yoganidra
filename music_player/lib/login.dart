@@ -5,6 +5,7 @@ import 'package:music_player/auth.dart';
 import 'dart:ui';
 import 'dart:math';
 import 'home.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -13,16 +14,16 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final key = GlobalKey<FormState>();
-  final email = TextEditingController();
-  final pass = TextEditingController();
+  final GlobalKey<FormState> key = GlobalKey<FormState>();
+  final TextEditingController email = TextEditingController();
+  final TextEditingController pass = TextEditingController();
   List<Map<String, dynamic>> stars = [];
   final Random random = Random();
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       final Size screenSize = MediaQuery.of(context).size;
       setState(() {
         stars = generateStars(screenSize);
@@ -30,23 +31,49 @@ class _LoginPageState extends State<LoginPage> {
     });
   }
 
-  Future login(String email, String pass) async {
+  Future<void> login(String email, String pass) async {
     try {
       final FirebaseAuth auth = FirebaseAuth.instance;
       await auth.signInWithEmailAndPassword(email: email, password: pass);
-      Navigator.push(context, MaterialPageRoute(builder: (context)=> AuthChange()));
-    }on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        print('Not an User');
+      Navigator.push(context, MaterialPageRoute(builder: (context) => AuthChange()));
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'invalid-credential') {
+        _showErrorDialog('User not found', 'The email address is not registered. Would you like to sign up?');
       } else if (e.code == 'wrong-password') {
-        print("Invalid password");
+        _showErrorDialog('Incorrect Password', 'The password you entered is incorrect.');
       }
-    }catch (err) {
-      throw Exception(err);
+    } catch (err) {
+      _showErrorDialog('Error', 'An unexpected error occurred. Please try again.');
     }
   }
 
-  Future forgotPass(String email) async {
+  void _showErrorDialog(String title, String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(title),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: Text("OK"),
+          ),
+          if (title == 'User not found') // Show Signup button only for user not found error
+            TextButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Signuppage()));
+              },
+              child: Text("Signup"),
+            ),
+        ],
+      ),
+    );
+  }
+
+
+  Future<void> forgotPass(String email) async {
     final FirebaseAuth auth = FirebaseAuth.instance;
     try {
       await auth.sendPasswordResetEmail(email: email).then((value) {
@@ -65,23 +92,10 @@ class _LoginPageState extends State<LoginPage> {
           ),
         );
       }).onError((error, stackTrace) {
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: Text("Not registered?"),
-            actions: [
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Signuppage()));
-                },
-                child: Text("Signup"),
-              )
-            ],
-          ),
-        );
+        _showErrorDialog('Not registered?', 'The email address is not registered. Would you like to sign up?');
       });
     } catch (err) {
-      throw Exception(err);
+      _showErrorDialog('Error', 'An unexpected error occurred. Please try again.');
     }
   }
 
@@ -208,12 +222,11 @@ class _LoginPageState extends State<LoginPage> {
                           validator: (val) => val!.isEmpty ? "Enter Password" : null,
                         ),
                       ),
-                  
+
                       SizedBox(height: 30),
                       ElevatedButton(
                         onPressed: () {
                           if (key.currentState!.validate()) {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthChange()));
                             login(email.text.trim(), pass.text.trim());
                           }
                         },
@@ -225,7 +238,7 @@ class _LoginPageState extends State<LoginPage> {
                           backgroundColor: Colors.yellow,
                           fixedSize: Size(150, 50),
                         ),
-                        child: Text("Login",style: TextStyle(color:Colors.black),),
+                        child: Text("Login", style: TextStyle(color: Colors.black)),
                       ),
                       SizedBox(height: 20),
                       GestureDetector(
@@ -270,8 +283,6 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-
 
 class Star extends StatelessWidget {
   final double size;

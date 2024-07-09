@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:music_player/SignupPage.dart';
 import 'package:music_player/firebase_options.dart';
 import 'package:music_player/home.dart';
 import 'package:music_player/login.dart';
@@ -10,6 +9,7 @@ import 'dart:math';
 import 'dart:ui';
 import 'package:provider/provider.dart';
 import 'music.dart';
+
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -231,7 +231,7 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
     final random = Random();
 
     // Position stars randomly across the screen, avoiding image area
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 30; i++) {
       double starSize = random.nextInt(10).toDouble() + 5;
       double starLeft = random.nextDouble() * screenWidth;
       double starTop = random.nextDouble() * screenHeight;
@@ -270,7 +270,6 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
   }
 }
 final List<Pair> playlist = [
-  Pair('assets/audio1.mp3', false),
   Pair('assets/audio2.mp3', false),
   Pair('assets/audio3.mp3', false)
 ];

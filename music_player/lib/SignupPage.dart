@@ -2,25 +2,26 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/auth.dart';
 import 'login.dart';
-import 'dart:ui';
+import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Signuppage extends StatefulWidget {
   Signuppage({super.key});
+
   @override
   State<Signuppage> createState() => _SignuppageState();
 }
 
 class _SignuppageState extends State<Signuppage> {
   String? errorMessage = '';
-  String? currentUserUID = '';
   final key = GlobalKey<FormState>();
   final email = TextEditingController();
   final pass = TextEditingController();
   final name = TextEditingController();
 
   final auth = FirebaseAuth.instance;
-  Future usernameadd(String name, String email, String uid) async {
+
+  Future<void> usernameadd(String name, String email, String uid) async {
     await FirebaseFirestore.instance.collection('users').doc(auth.currentUser!.uid).set({
       'name': name,
       'uid': uid,
@@ -33,31 +34,45 @@ class _SignuppageState extends State<Signuppage> {
       await auth.createUserWithEmailAndPassword(
         email: email.text,
         password: pass.text,
-      ).then((value) async{
+      ).then((value) async {
         await usernameadd(name.text, email.text, FirebaseAuth.instance.currentUser!.uid);
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> AuthChange()));
-      }).onError((error, stackTrace) {
-
+        Navigator.push(context, MaterialPageRoute(builder: (context) => AuthChange()));
+      }).catchError((error) {
+        setState(() {
+          errorMessage = error.message;
+        });
+        _showErrorDialog(errorMessage);
       });
     } on FirebaseAuthException catch (e) {
       setState(() {
         errorMessage = e.message;
       });
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text("Already a Member..!!!"),
-          actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
-              },
-              child: Text("Login"),
-            ),
-          ],
-        ),
-      );
+      _showErrorDialog(errorMessage);
     }
+  }
+
+  void _showErrorDialog(String? message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text("Error"),
+        content: Text(message ?? "An error occurred. Please try again."),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: Text("OK"),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+            },
+            child: Text("Login"),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -66,6 +81,11 @@ class _SignuppageState extends State<Signuppage> {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
+          Positioned.fill(
+            child: Stack(
+              children: _buildStars(context),
+            ),
+          ),
           SingleChildScrollView(
             padding: const EdgeInsets.all(18.0),
             child: Form(
@@ -201,5 +221,32 @@ class _SignuppageState extends State<Signuppage> {
         ],
       ),
     );
+  }
+
+  List<Widget> _buildStars(BuildContext context) {
+    final List<Widget> stars = [];
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final random = Random();
+
+    for (int i = 0; i < 30; i++) {
+      double starSize = random.nextInt(10).toDouble() + 5;
+      double starLeft = random.nextDouble() * screenWidth;
+      double starTop = random.nextDouble() * screenHeight;
+
+      stars.add(
+        Positioned(
+          left: starLeft,
+          top: starTop,
+          child: Icon(
+            Icons.star,
+            color: Colors.yellow,
+            size: starSize,
+          ),
+        ),
+      );
+    }
+
+    return stars;
   }
 }

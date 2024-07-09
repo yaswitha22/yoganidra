@@ -1,38 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-
 import 'main.dart';
 
-class MusicApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: musicsrc(),
-      ),
-    );
-  }
-}
-
-class musicsrc extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => AudioPlayerModel(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Music Player',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: AudioListScreen(),
-      ),
-    );
-  }
-}
 
 class AudioListScreen extends StatelessWidget {
   const AudioListScreen({super.key});
@@ -214,6 +187,11 @@ class CircularProgress extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
+        Positioned.fill(
+          child: CustomPaint(
+            painter: BackgroundStarsPainter(),
+          ),
+        ),
         CircularPercentIndicator(
           radius: 150.0,
           lineWidth: 15.0,
@@ -471,3 +449,27 @@ class AudioPlayerModel with ChangeNotifier {
   }
 }
 
+class BackgroundStarsPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.yellow // Color of the stars
+      ..strokeWidth = 1.0
+      ..style = PaintingStyle.fill;
+
+    final random = Random();
+    final numStars = 200; // Number of stars
+    for (int i = 0; i < numStars; i++) {
+      double x = random.nextDouble() * size.width;
+      double y = random.nextDouble() * size.height;
+      double radius = random.nextDouble() * 1.5; // Star size
+
+      canvas.drawCircle(Offset(x, y), radius, paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
+}

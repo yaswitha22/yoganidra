@@ -39,8 +39,8 @@ dependencies:
   just_audio:
   provider:
   font_awesome_flutter:
-  assets_audio_player: ^3.1.1
   flutter_paypal_checkout:
+  shared_preferences: ^2.0.8
 
 dev_dependencies:
 
