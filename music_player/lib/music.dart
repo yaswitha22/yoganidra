@@ -1,118 +1,10 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'Audio.dart';
 import 'main.dart';
-
-
-class AudioListScreen extends StatelessWidget {
-  const AudioListScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final model = context.watch<AudioPlayerModel>();
-    final double listViewHeight = MediaQuery.of(context).size.height * 0.5;
-
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.black,
-        title: Text(
-          'Audio List',
-          style: TextStyle(color: Colors.white),
-        ),
-        iconTheme: IconThemeData(color: Colors.white),
-      ),
-      backgroundColor: Colors.black,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              SizedBox(height: 30,),
-              MusicPlayerScreen(),
-              SizedBox(height: 30),
-              Container(
-                height: 38,
-                decoration: BoxDecoration(
-                  color: Colors.yellowAccent,
-                  borderRadius: BorderRadius.circular(40),
-                ),
-                child: Center(
-                  child: Text(
-                    "Audio PlayList...",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                height: listViewHeight,
-                child: ListView.builder(
-                  itemCount: playlist.length,
-                  itemBuilder: (context, index) {
-                    final track = playlist[index];
-                    return Column(
-                      children: [
-                        ListTile(
-                          title: Text(
-                            'Audio-${index + 1}',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20
-                            ),
-                          ),
-                          subtitle: Text(
-                            model.durationText,
-                            style: TextStyle(color: Colors.white70),
-                          ),
-                          trailing: IconButton(
-                            icon: Icon(Icons.play_arrow, color: Colors.white),
-                            onPressed: () {
-                              if (index == 0 || playlist[index - 1].vis) {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => MusicPlayerScreen()),
-                                );
-                                model.loadTrackAtIndex(index);
-                              } else {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('You must complete the previous audio to listen to this one.'),
-                                  ),
-                                );
-                              }
-                            },
-                          ),
-                        ),
-                        Divider(color: Colors.white54),
-                      ],
-                    );
-                  },
-                ),
-              ),
-              SizedBox(height: 20),
-              if (model.isStageCompleted)
-                ElevatedButton(
-                  onPressed: () {
-                    // Handle stage completion action
-                  },
-                  child: Text('Complete Stage'),
-                ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+import 'dart:math';
 
 class MusicPlayerScreen extends StatelessWidget {
   @override
@@ -121,28 +13,25 @@ class MusicPlayerScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
-        title: Text(
-          'Music Player',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: Text('Music Player',style: TextStyle(color: Colors.white),),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       backgroundColor: Colors.black,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          SizedBox(height: 20),
-          CircularProgress(),
-          SizedBox(height: 20),
-          TrackInfo(),
-          SizedBox(height: 20),
-          ProgressBar(),
-          SizedBox(height: 20),
-          PlayerControls(),
+      body: Stack(
+        children: [
+          BackgroundStars(), // Stars background
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircularProgress(),
+              SizedBox(height: 20),
+              TrackInfo(),
+              SizedBox(height: 20),
+              ProgressBar(),
+              SizedBox(height: 20),
+              PlayerControls(),
+            ],
+          ),
         ],
       ),
     );
@@ -158,20 +47,12 @@ class TrackInfo extends StatelessWidget {
       children: [
         Text(
           model.currentTrackTitle,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.white),
         ),
         SizedBox(height: 8),
         Text(
           model.currentTrackArtist,
-          style: TextStyle(
-            fontSize: 18,
-            fontStyle: FontStyle.italic,
-            color: Colors.white,
-          ),
+          style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic,color: Colors.white),
         ),
       ],
     );
@@ -187,11 +68,6 @@ class CircularProgress extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Positioned.fill(
-          child: CustomPaint(
-            painter: BackgroundStarsPainter(),
-          ),
-        ),
         CircularPercentIndicator(
           radius: 150.0,
           lineWidth: 15.0,
@@ -203,11 +79,9 @@ class CircularProgress extends StatelessWidget {
               width: wi * 0.80,
               height: wi * 0.80,
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  Colors.yellow,
-                  Colors.white,
-                  Colors.yellow
-                ]),
+                gradient: LinearGradient(
+                    colors: [Colors.yellow,Colors.white,Colors.yellow]
+                ),
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage('assets/koyya.png'),
@@ -217,10 +91,10 @@ class CircularProgress extends StatelessWidget {
             ),
             radius: 135,
             lineWidth: 20,
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.greenAccent,
           ),
-          progressColor: Colors.yellow,
-          backgroundColor: Colors.grey,
+          progressColor: Colors.deepPurple,
+          backgroundColor: Colors.white,
           circularStrokeCap: CircularStrokeCap.round,
         ),
       ],
@@ -239,7 +113,7 @@ class ProgressBar extends StatelessWidget {
           value: model.position.inSeconds.toDouble(),
           max: model.duration.inSeconds.toDouble(),
           onChanged: (value) {
-            model.seek(Duration(seconds: value.toInt()));
+            // model.seek(Duration(seconds: value.toInt()));
           },
         ),
         Padding(
@@ -247,14 +121,8 @@ class ProgressBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                model.positionText,
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                model.durationText,
-                style: TextStyle(color: Colors.white),
-              ),
+              Text(model.positionText,style: TextStyle(color: Colors.white)),
+              Text(model.durationText,style: TextStyle(color: Colors.white)),
             ],
           ),
         ),
@@ -279,19 +147,15 @@ class PlayerControls extends StatelessWidget {
               child: Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.skip_previous, size: 35, color: Colors.white),
+                    icon: Icon(Icons.skip_previous, size: 35,color: Colors.white,),
                     onPressed: model.previousTrack,
                   ),
                   IconButton(
-                    icon: Icon(
-                      model.isPlaying ? Icons.pause : Icons.play_arrow,
-                      size: 35,
-                      color: Colors.white,
-                    ),
+                    icon: Icon(model.isPlaying ? Icons.pause : Icons.play_arrow, size: 35,color: Colors.white,),
                     onPressed: model.togglePlayPause,
                   ),
                   IconButton(
-                    icon: Icon(Icons.skip_next, size: 35, color: Colors.white),
+                    icon: Icon(Icons.skip_next, size: 35,color: Colors.white,),
                     onPressed: () => model.nextTrack(context),
                   ),
                 ],
@@ -314,18 +178,15 @@ class PlaybackSpeedControl extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Speed: ',
-          style: TextStyle(color: Colors.white),
-        ),
+        Text('Speed: ',style: TextStyle(color: Colors.white),),
         DropdownButton<double>(
           value: model.playbackSpeed,
           dropdownColor: Colors.black,
           items: [
-            DropdownMenuItem(value: 0.5, child: Text('0.5x', style: TextStyle(color: Colors.white))),
-            DropdownMenuItem(value: 1.0, child: Text('1.0x', style: TextStyle(color: Colors.white))),
-            DropdownMenuItem(value: 1.5, child: Text('1.5x', style: TextStyle(color: Colors.white))),
-            DropdownMenuItem(value: 2.0, child: Text('2.0x', style: TextStyle(color: Colors.white))),
+            DropdownMenuItem(value: 0.5, child: Text('0.5x',style: TextStyle(color: Colors.white))),
+            DropdownMenuItem(value: 1.0, child: Text('1.0x',style: TextStyle(color: Colors.white))),
+            DropdownMenuItem(value: 1.5, child: Text('1.5x',style: TextStyle(color: Colors.white))),
+            DropdownMenuItem(value: 2.0, child: Text('2.0x',style: TextStyle(color: Colors.white))),
           ],
           onChanged: (value) {
             model.setPlaybackSpeed(value ?? 1.0);
@@ -336,6 +197,53 @@ class PlaybackSpeedControl extends StatelessWidget {
   }
 }
 
+class BackgroundStars extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return CustomPaint(
+      painter: StarsPainter(),
+      size: Size.infinite, // Fill the entire available space
+    );
+  }
+}
+
+class StarsPainter extends CustomPainter {
+  final List<Color> _starColors = [
+    Colors.white,
+    Colors.yellow,
+    Colors.blue,
+    Colors.red,
+    Colors.green,
+  ];
+
+  final Paint _paint = Paint()
+    ..strokeWidth = 2 // Adjust the stroke width for larger stars
+    ..strokeCap = StrokeCap.round;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final random = Random();
+
+    // Adjust density based on screen size
+    final double density = size.width * size.height * 0.0001;
+
+    for (int i = 0; i < density; i++) {
+      double x = random.nextDouble() * size.width;
+      double y = random.nextDouble() * size.height;
+      Color color = _starColors[random.nextInt(_starColors.length)];
+
+      _paint.color = color;
+      canvas.drawCircle(Offset(x, y), 2, _paint); // Increase the radius of the circle for larger stars
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
+}
+
+
 class AudioPlayerModel with ChangeNotifier {
   final AudioPlayer _player = AudioPlayer();
   int _currentTrackIndex = 0;
@@ -344,10 +252,6 @@ class AudioPlayerModel with ChangeNotifier {
 
   Duration _duration = Duration.zero;
   Duration _position = Duration.zero;
-
-  bool _isStageCompleted = false;
-
-  bool get isStageCompleted => _isStageCompleted;
 
   AudioPlayerModel() {
     _player.positionStream.listen((position) {
@@ -371,7 +275,6 @@ class AudioPlayerModel with ChangeNotifier {
     if (_isPlaying) {
       _player.play();
     }
-    checkStageCompletion();
   }
 
   String get currentTrackTitle => 'Audio- ${_currentTrackIndex + 1}';
@@ -385,6 +288,12 @@ class AudioPlayerModel with ChangeNotifier {
 
   bool get isPlaying => _isPlaying;
   double get playbackSpeed => _playbackSpeed;
+
+  int get completedTracks => _currentTrackIndex;
+
+  String getDurationText(String path) {
+    return _duration.toString();
+  }
 
   void togglePlayPause() {
     if (_isPlaying) {
@@ -406,10 +315,7 @@ class AudioPlayerModel with ChangeNotifier {
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(
-            'You must complete the current audio to move to the next one.',
-            style: TextStyle(color: Colors.white),
-          ),
+          content: Text('You must complete the current audio to move to the next one.',style: TextStyle(color: Colors.white),),
         ),
       );
     }
@@ -441,35 +347,5 @@ class AudioPlayerModel with ChangeNotifier {
     final minutes = duration.inMinutes.remainder(60).toString().padLeft(2, '0');
     final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
     return '$minutes:$seconds';
-  }
-
-  void checkStageCompletion() {
-    _isStageCompleted = playlist.every((track) => track.vis);
-    notifyListeners();
-  }
-}
-
-class BackgroundStarsPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.yellow // Color of the stars
-      ..strokeWidth = 1.0
-      ..style = PaintingStyle.fill;
-
-    final random = Random();
-    final numStars = 200; // Number of stars
-    for (int i = 0; i < numStars; i++) {
-      double x = random.nextDouble() * size.width;
-      double y = random.nextDouble() * size.height;
-      double radius = random.nextDouble() * 1.5; // Star size
-
-      canvas.drawCircle(Offset(x, y), radius, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return false;
   }
 }

@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 import 'music.dart';
 
 
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SlideAnimationExample(),
+      home:SlideAnimationExample(),
     );
   }
 }
@@ -231,7 +232,7 @@ class _SlideAnimationExampleState extends State<SlideAnimationExample> {
     final random = Random();
 
     // Position stars randomly across the screen, avoiding image area
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 20; i++) {
       double starSize = random.nextInt(10).toDouble() + 5;
       double starLeft = random.nextDouble() * screenWidth;
       double starTop = random.nextDouble() * screenHeight;
